@@ -107,7 +107,7 @@
             {capture name='displayProductListReviews'}{hook h='displayProductListReviews' product=$product}{/capture}
             {if $smarty.capture.displayProductListReviews}
                 <div class="hook-reviews">
-                    {hook h='displayProductListReviews' product=$product}
+                    {$smarty.capture.displayProductListReviews}
                 </div>
             {/if}
 
