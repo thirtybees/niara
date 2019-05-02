@@ -1,6 +1,31 @@
-.btn-primary {
-  font-weight:  bold;
-}
-.label-success {
-  color: #000;
+.tm-hp{
+  margin-bottom: 40px;
+  h2{
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: capitalize;
+    position: relative;
+    &:before{
+      content: "";
+      display: block;
+      border-top: solid 1px #ddd;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+    }
+    .tm-over{
+      display: inline-block;
+      background: #fff;
+      padding: 0 40px;
+      position: relative;
+      z-index: 2;
+      font-style: normal;
+      font-weight: 600;
+    }
+    span{
+      font-style: italic;
+      font-weight: 300;
+    }
+  }
 }
