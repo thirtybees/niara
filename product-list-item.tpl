@@ -38,6 +38,7 @@
                   >
                 {/if}
                 <!--[if IE 9]></video><![endif]-->
+
                 <img class="img-responsive center-block"
                      {if !empty($lazy_load)}src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="{/if}
                      {if !empty($lazy_load)}srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w" data-{/if}srcset="
@@ -51,59 +52,31 @@
                      width="{getWidthSize|intval type='home_default'}"
                      height="{getHeightSize|intval type='home_default'}"
                 >
-              </picture>
-            </a>
-
-            {if isset($quick_view) && $quick_view}
+                {hook h='productImageHover' id_product = $product.id_product}
+                {if isset($quick_view) && $quick_view}
                 <a class="quick-view show-if-product-item-hover"
                    href="{$product.link|escape:'html':'UTF-8'}"
                    title="{l s='Open quick view window'}"
                    data-fancybox-target="{$product.link|escape:'html':'UTF-8'}"
                 >
-                    <i class="icon icon-eye-open"></i>
+                    <i class="icon icon-fullscreen"></i>
                 </a>
             {/if}
-
-            {if (!$PS_CATALOG_MODE && ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
-                <div class="content_price show-if-product-grid-hover" itemprop="offers" itemscope
-                     itemtype="https://schema.org/Offer">
-                    {if isset($product.show_price) && $product.show_price && !isset($restricted_country_mode)}
-                        <span itemprop="price" class="price product-price">
-            {hook h="displayProductPriceBlock" product=$product type="before_price"}
-                            {if !$priceDisplay}{convertPrice price=$product.price}{else}{convertPrice price=$product.price_tax_exc}{/if}
-          </span>
-                        <meta itemprop="priceCurrency" content="{$currency->iso_code}">
-                        {if $product.price_without_reduction > 0 && isset($product.specific_prices) && $product.specific_prices && isset($product.specific_prices.reduction) && $product.specific_prices.reduction > 0}
-                            {hook h="displayProductPriceBlock" product=$product type="old_price"}
-                            <span class="old-price product-price">
-              {displayWtPrice p=$product.price_without_reduction}
-            </span>
-                            {if $product.specific_prices.reduction_type == 'percentage'}
-                                <span class="price-percent-reduction">-{$product.specific_prices.reduction * 100} %</span>
-                            {/if}
-                        {/if}
-                        {if $PS_STOCK_MANAGEMENT && isset($product.available_for_order) && $product.available_for_order && !isset($restricted_country_mode)}
-                            <span class="unvisible">
-              {if ($product.allow_oosp || $product.quantity > 0)}
-                  <link itemprop="availability" href="https://schema.org/InStock">
-                  {if $product.quantity <= 0}{if $product.allow_oosp}{if isset($product.available_later) && $product.available_later}{$product.available_later}{else}{l s='In Stock'}{/if}{/if}{else}{if isset($product.available_now) && $product.available_now}{$product.available_now}{else}{l s='In Stock'}{/if}{/if}
-              {elseif (isset($product.quantity_all_versions) && $product.quantity_all_versions > 0)}
-
-                  <link itemprop="availability" href="https://schema.org/LimitedAvailability">
-                  {l s='Product available with different options'}
-              {else}
-
-                  <link itemprop="availability" href="https://schema.org/OutOfStock">
-                  {l s='Out of stock'}
-              {/if}
-            </span>
-                        {/if}
-                        {hook h="displayProductPriceBlock" product=$product type="price"}
-                        {hook h="displayProductPriceBlock" product=$product type="unit_price"}
-                        {hook h="displayProductPriceBlock" product=$product type='after_price'}
+            {if $show_functional_buttons}
+                <div class="functional-buttons clearfix show-if-product-grid-hover">
+                    {hook h='displayProductListFunctionalButtons' product=$product}
+                    {if isset($comparator_max_item) && $comparator_max_item}
+                        <div class="compare">
+                            <a class="add_to_compare" title="{l s='Add to Compare'}" href="{$product.link|escape:'html':'UTF-8'}"
+                               data-id-product="{$product.id_product}">
+                                <i class="icon icon-plus"></i> {l s='Add to Compare'}
+                            </a>
+                        </div>
                     {/if}
                 </div>
             {/if}
+              </picture>
+            </a>
 
             <div class="product-label-container">
                 {if (!$PS_CATALOG_MODE AND ((isset($product.show_price) && $product.show_price) || (isset($product.available_for_order) && $product.available_for_order)))}
@@ -183,18 +156,31 @@
                                data-id-product-attribute="{$product.id_product_attribute|intval}"
                                data-id-product="{$product.id_product|intval}"
                                data-minimal_quantity="{if isset($product.product_attribute_minimal_quantity) && $product.product_attribute_minimal_quantity >= 1}{$product.product_attribute_minimal_quantity|intval}{else}{$product.minimal_quantity|intval}{/if}">
-                                <span>{l s='Add to cart'}</span>
+
+                                <span><i class="icon icon-shopping-basket"></i>{l s='Add to cart'}</span>
                             </a>
                         {else}
                             <span class="ajax_add_to_cart_button btn btn-primary disabled">
-              <span>{l s='Add to cart'}</span>
+              <span><i class="icon icon-shopping-basket"></i>{l s='Add to cart'}</span>
             </span>
                         {/if}
                     {/if}
-                    <a class="btn btn-default" href="{$product.link|escape:'html':'UTF-8'}" title="{l s='View'}">
+                    <!--<a class="btn btn-default" href="{$product.link|escape:'html':'UTF-8'}" title="{l s='View'}">
                         <span>{if (isset($product.customization_required) && $product.customization_required)}{l s='Customize'}{else}{l s='More'}{/if}</span>
-                    </a>
+                    </a>-->
                 </div>
+                {if $show_functional_buttons}
+                <div class="compare_mb">
+                    {if isset($comparator_max_item) && $comparator_max_item}
+                        <div class="compare">
+                            <a class="add_to_compare" title="{l s='Add to Compare'}" href="{$product.link|escape:'html':'UTF-8'}"
+                               data-id-product="{$product.id_product}">
+                                <i class="icon icon-plus"></i> {l s='Add to Compare'}
+                            </a>
+                        </div>
+                    {/if}
+                </div>
+            {/if}
             </div>
 
             {if isset($product.color_list)}
@@ -214,19 +200,6 @@
                         {/if}
                     </div>
                 {/if}
-            {/if}
-            {if $show_functional_buttons}
-                <div class="functional-buttons clearfix show-if-product-grid-hover">
-                    {hook h='displayProductListFunctionalButtons' product=$product}
-                    {if isset($comparator_max_item) && $comparator_max_item}
-                        <div class="compare">
-                            <a class="add_to_compare" href="{$product.link|escape:'html':'UTF-8'}"
-                               data-id-product="{$product.id_product}">
-                                <i class="icon icon-plus"></i> {l s='Add to Compare'}
-                            </a>
-                        </div>
-                    {/if}
-                </div>
             {/if}
         </div>
 
