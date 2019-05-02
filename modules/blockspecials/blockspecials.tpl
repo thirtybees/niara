@@ -43,12 +43,12 @@
 
                             </a>
                             <div class="product-content">
-                                <h3 class="product-title">
+                                <h5 class="product-title">
                                     <a class="product-name" href="{$special.link|escape:'html':'UTF-8'}"
                                        title="{$special.name|escape:'html':'UTF-8'}">
                                         {$special.name|escape:'html':'UTF-8'}
                                     </a>
-                                </h3>
+                                </h5>
                                 {if isset($special.description_short) && $special.description_short}
                                     <p class="product-description">
                                         {$special.description_short|strip_tags:'UTF-8'|truncate:40}
@@ -85,7 +85,7 @@
                             class="btn btn-primary"
                             href="{$link->getPageLink('prices-drop')|escape:'html':'UTF-8'}"
                             title="{l s='All specials' mod='blockspecials'}">
-                        <span>{l s='All specials' mod='blockspecials'} <i class="icon icon-chevron-right"></i></span>
+                        <span>{l s='All specials' mod='blockspecials'}</span>
                     </a>
                 </div>
             {else}
