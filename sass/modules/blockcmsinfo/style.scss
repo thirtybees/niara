@@ -6,3 +6,18 @@ em {
   font-size: 24px!important;
   padding-right: 10px;
 }
+
+.cmsinfo-wrap{
+  background: #f4f4f4;
+  margin-bottom: 40px;
+  .blockcmsinfo-block{
+    padding: 20px;
+    h6{
+      margin-top: 6px;
+      margin-bottom: 6px;
+    }
+    p{
+      font-size: 12px;
+    }
+  }
+}
