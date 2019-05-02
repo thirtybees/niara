@@ -134,14 +134,19 @@
     </div>
 
 </header>
-
+{capture name='displayTopColumn'}{hook h='displayTopColumn'}{/capture}
+{if !empty($smarty.capture.displayTopColumn)}
+    <div class="top_column_wrapper">
+        <div id="top_column" class="container">
+            <div class="row">
+                {$smarty.capture.displayTopColumn}
+            </div>
+        </div>
+    </div>
+{/if}
 <div id="columns" class="container">
     {if $page_name !='index' && $page_name !='pagenotfound'}
         {include file="$tpl_dir./breadcrumb.tpl"}
-    {/if}
-    {capture name='displayTopColumn'}{hook h='displayTopColumn'}{/capture}
-    {if !empty($smarty.capture.displayTopColumn)}
-        <div id="top_column" class="row">{$smarty.capture.displayTopColumn}</div>
     {/if}
     <div class="row">
         {if isset($left_column_size) && !empty($left_column_size)}
