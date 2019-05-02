@@ -50,7 +50,7 @@
   padding: 10px;
   margin: 0 0 15px;
   background: #fbfbfb;
-  border: 1px solid #d6d4d4;
+  border: 1px solid #eee;
 }
 
 .comments_advices {
@@ -60,7 +60,7 @@
 #product_comments_block_tab .comment {
   margin: 0 0 20px;
   padding-top: 10px;
-  border-top: 1px solid #d6d4d4;
+  border-top: 1px solid #eee;
 }
 
 #product_comments_block_tab .comment:first-child {
@@ -77,7 +77,7 @@
     text-align: center;
   }
   .comment .comment_details {
-    border-left: 1px solid #d6d4d4;
+    border-left: 1px solid #eee;
     padding-left: 15px;
   }
 }

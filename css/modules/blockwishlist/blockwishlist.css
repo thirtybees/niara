@@ -23,7 +23,7 @@
 }
 
 #wishlist_block .ajax_cart_block_remove_link:hover {
-  color: black;
+  color: #ff6f61;
 }
 
 #wishlist_block .cart_block_product_name {
@@ -49,7 +49,7 @@
 #wishlist_block_list dl.products.no-products {
   font-weight: 700;
   padding: 0 0 15px 0;
-  border-bottom: 1px solid #d6d4d4;
+  border-bottom: 1px solid #eee;
 }
 
 #wishlist_block_list dl.products.no-products dt {
@@ -62,12 +62,12 @@
 }
 
 #wishlist_block_list dl.products {
-  border-bottom: 1px solid #d6d4d4;
+  border-bottom: 1px solid #eee;
 }
 
 #wishlist_block_list dl.products dt {
   padding: 20px 0 0;
-  border-top: 1px solid #d6d4d4;
+  border-top: 1px solid #eee;
 }
 
 #wishlist_block_list dl.products dd {
@@ -98,7 +98,7 @@
 }
 
 #module-blockwishlist-mywishlist .wishlistLinkTop ul.display_list {
-  border-bottom: 1px solid #d6d4d4;
+  border-bottom: 1px solid #eee;
   margin-bottom: 20px;
 }
 
@@ -109,7 +109,7 @@
 }
 
 #module-blockwishlist-mywishlist .wishlistLinkTop ul.display_list a:hover {
-  color: black;
+  color: #ff6f61;
 }
 
 #module-blockwishlist-mywishlist .wishlistLinkTop li {
@@ -133,7 +133,7 @@ ul.wlp_bought_list li {
 
 ul.wlp_bought_list li .product_image {
   padding: 9px;
-  border: 1px solid #d6d4d4;
+  border: 1px solid #eee;
   margin: 0 0 20px 0;
   max-width: 270px;
 }

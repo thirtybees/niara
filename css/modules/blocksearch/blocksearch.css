@@ -20,12 +20,30 @@
   }
 }
 
+#search_block_top #search_query_top {
+  height: 34px;
+  font-size: 14px;
+  border-top: none;
+  box-shadow: none;
+  border-left: none;
+  border-right: none;
+}
+
+#search_block_top .btn {
+  height: 34px;
+  padding: 0 10px;
+  background: transparent;
+  color: #ddd;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
 .blocksearch.ac_results {
-  border: 1px solid #d6d4d4;
+  border: 1px solid #eee;
   margin-top: -1px;
 }
 
 .blocksearch.ac_results li.ac_over {
   color: #fff;
-  background-color: black;
+  background-color: #ff6f61;
 }

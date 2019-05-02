@@ -1,6 +1,7 @@
 #blockcart {
   position: relative;
   margin-top: 30px;
+  text-align: right;
 }
 
 @media (max-width: 767px) {
@@ -29,21 +30,49 @@
   height: 46px;
   padding: 0 16px;
   line-height: 46px;
-  background: black;
-  color: #fad629;
+  background: transparent;
+  color: #121212;
   display: block;
   overflow: hidden;
-  font-weight: bold;
+  font-weight: 300;
 }
 
-#blockcart-header:after {
-  content: "\f0d7";
+#blockcart-header:before {
+  content: "\f291";
   font-family: "FontAwesome";
-  float: right;
+  font-size: 1.6em;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: 6%;
+  color: #ff6f61;
 }
 
-#blockcart-header:hover:after {
-  content: "\f0d8";
+#blockcart-header:hover:before {
+  color: #121212;
+}
+
+#blockcart-header b {
+  font-weight: 500;
+}
+
+#blockcart-header .ajax_cart_product_txt,
+#blockcart-header .ajax_cart_product_txt_s,
+#blockcart-header .ajax_cart_no_product {
+  display: none !important;
+}
+
+#blockcart-header .ajax_cart_quantity {
+  position: absolute;
+  top: 0;
+  right: 38px;
+  display: block !important;
+  min-width: 20px;
+  min-height: 20px;
+  line-height: 20px;
+  background: #121212;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
 }
 
 #blockcart-dropdown {
@@ -51,9 +80,11 @@
   z-index: 4;
   background: #fff;
   width: 100%;
-  border: 1px solid #ccc;
   border-top: none;
   padding: 10px;
+  text-align: left;
+  font-size: 13px;
+  box-shadow: 0 0 18px 0 rgba(41, 44, 58, 0.15);
 }
 
 #blockcart-dropdown dl {
@@ -61,17 +92,16 @@
 }
 
 #blockcart-dropdown dt {
-  font-weight: normal;
-  margin-bottom: 10px;
+  font-weight: 300;
+  margin-bottom: 5px;
   position: relative;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
 }
 
 #blockcart-dropdown dt:last-of-type {
   margin-bottom: 0;
-}
-
-#blockcart-dropdown .product-attributes {
-  padding-bottom: 5px;
+  border-bottom: none;
 }
 
 #blockcart-dropdown .vouchers {
@@ -82,10 +112,14 @@
   padding: 5px;
 }
 
+#blockcart-dropdown .ajax_cart_block_remove_link i {
+  color: #888;
+}
+
 .cart_block_customizations {
   padding: 5px 0;
   margin-bottom: 10px;
-  border: 1px dashed #333;
+  border: 1px dashed #ddd;
   border-left: none;
   border-right: none;
 }
@@ -113,17 +147,12 @@
   padding-right: 10px;
 }
 
-.cart-info .product-name {
-  padding-bottom: 5px;
-}
-
 .cart-prices {
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
 .cart-prices-line {
-  border-top: 1px solid #333;
   padding: 5px 0;
 }
 

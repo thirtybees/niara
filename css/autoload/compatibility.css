@@ -173,13 +173,13 @@ p.checkbox input[type="checkbox"] {
 
 .button.ajax_add_to_cart_button {
   padding: 0 0;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.3333333;
   border-radius: 0;
   padding: 0;
   color: #fff;
-  background-color: #007ab7;
-  border-color: #006fa8;
+  background-color: #121212;
+  border-color: #121212;
 }
 
 .button.ajax_add_to_cart_button span {
@@ -189,8 +189,21 @@ p.checkbox input[type="checkbox"] {
 }
 
 .button.ajax_add_to_cart_button:hover {
-  background-color: #005f8e;
-  border-color: #00476b;
+  background-color: black;
+  border-color: black;
+}
+
+.button.ajax_add_to_cart_button:hover {
+  background: #ff6f61;
+  border: #ff6f61;
+}
+
+button {
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 ul {

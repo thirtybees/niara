@@ -1,9 +1,13 @@
 #blocksocial {
-  padding: 0 15px 15px;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 15px;
+  padding: 10px 15px 10px;
+  border-bottom: 1px solid #333;
+  border-top: 1px solid #333;
+  margin: 15px 0 0;
+  text-align: right;
 }
 
-.social-header {
+#blocksocial .social-header {
   display: inline;
+  font-size: 16px;
+  color: #fff;
 }

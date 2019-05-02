@@ -3,3 +3,21 @@ em {
   font-size: 24px !important;
   padding-right: 10px;
 }
+
+.cmsinfo-wrap {
+  background: #f4f4f4;
+  margin-bottom: 40px;
+}
+
+.cmsinfo-wrap .blockcmsinfo-block {
+  padding: 20px;
+}
+
+.cmsinfo-wrap .blockcmsinfo-block h6 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.cmsinfo-wrap .blockcmsinfo-block p {
+  font-size: 12px;
+}

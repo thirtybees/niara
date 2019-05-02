@@ -1,35 +1,23 @@
-.btn-facebook {
-  color: #fff;
-  background-color: #435f9f;
-}
-
-.btn-facebook:hover {
-  color: #ccc;
-}
-
-.btn-twitter {
-  color: #fff;
-  background-color: #00aaf0;
-}
-
-.btn-twitter:hover, .btn-twitter:focus {
-  color: #fff;
-}
-
-.btn-google-plus {
-  color: #fff;
-  background-color: #e04b34;
-}
-
-.btn-google-plus:hover, .btn-google-plus:focus {
-  color: #fff;
-}
-
+.btn-facebook,
+.btn-twitter,
+.btn-google-plus,
 .btn-pinterest {
-  color: #fff;
-  background-color: #ce1f21;
+  font-size: 0;
+  color: #ccc;
+  background-color: transparent;
+  padding: 6px;
 }
 
-.btn-pinterest:hover, .btn-pinterest:focus {
-  color: #fff;
+.btn-facebook:hover,
+.btn-twitter:hover,
+.btn-google-plus:hover,
+.btn-pinterest:hover {
+  color: #c1a95e;
+}
+
+.btn-facebook i,
+.btn-twitter i,
+.btn-google-plus i,
+.btn-pinterest i {
+  font-size: initial;
 }

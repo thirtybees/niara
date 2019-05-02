@@ -6,10 +6,17 @@
   position: relative;
   cursor: pointer;
   background: #fff;
+  padding: 0;
+  border: none;
 }
 
 #image-block:hover .span_link {
   display: block;
+}
+
+.thumbnail {
+  padding: 0;
+  border: none;
 }
 
 .span_link {
@@ -37,19 +44,25 @@
   margin-top: 0;
 }
 
+.pb-center-column b {
+  font-weight: 400;
+}
+
+.pb-center-column p {
+  margin-bottom: 15px;
+}
+
 #product-description {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .box-info-product {
-  padding: 10px;
-  background-color: #f6f6f6;
-  border: 1px solid #ccc;
+  background-color: #fff;
+  border: 1px solid none;
 }
 
-.content_prices {
-  text-align: center;
-  margin-bottom: 10px;
+#short_description_block {
+  border-bottom: 1px solid #ddd;
 }
 
 .content_prices p {
@@ -57,17 +70,18 @@
 }
 
 .our_price_display {
-  font-size: 2.2em;
+  font-size: 2em;
 }
 
 .our_price_display .price {
-  font-weight: bold;
+  font-weight: 500;
+  color: #ff6f61;
 }
 
 #old_price {
   display: inline-block;
   text-decoration: line-through;
-  color: #b1b1b1;
+  color: #ccc;
   font-size: 1.5em;
 }
 
@@ -76,17 +90,50 @@
   display: inline-block;
   margin-right: 0.25em;
   font-size: 1.5em;
-  color: #fff;
-  background: #f00;
+  color: #cc0000;
+  background: none;
   padding: 0 0.25em;
 }
 
-#quantity_wanted_p {
-  margin-bottom: 15px;
+#quantity_wanted_p .input-group {
+  float: left;
 }
 
-#attributes {
-  margin-bottom: 15px;
+#quantity_wanted_p .input-group #quantity_wanted {
+  width: 50px;
+  height: 50px;
+  border-right: none;
+}
+
+#quantity_wanted_p .input-group .input-group-btn {
+  float: left;
+}
+
+#quantity_wanted_p .input-group .input-group-btn a {
+  height: 25px;
+  width: 25px;
+  line-height: 25px;
+  padding: 0;
+}
+
+#quantity_wanted_p .input-group .input-group-btn .button-minus {
+  top: 25px;
+}
+
+.box-cart-bottom #add_to_cart {
+  display: inline-block;
+}
+
+.box-cart-bottom #add_to_cart .btn {
+  height: 50px;
+}
+
+#attributes .form-group {
+  margin: 0;
+}
+
+#attributes .form-control {
+  width: auto;
 }
 
 .attribute_list ul {
@@ -129,7 +176,7 @@
   float: left;
   margin: 0 3px 3px 0;
   padding: 1px;
-  border: 1px solid #d6d4d4;
+  border: 1px solid #eee;
   width: 26px;
   height: 26px;
 }
@@ -198,6 +245,10 @@
 
 .accessories-block .product_list.grid .product-container {
   margin-bottom: 50px;
+}
+
+#availability_statut {
+  display: none !important;
 }
 
 .content_only .primary_block {

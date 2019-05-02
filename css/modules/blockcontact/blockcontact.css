@@ -1,6 +1,7 @@
 #blockcontact-phone .navbar-text {
   margin-left: 15px;
   margin-right: 15px;
+  line-height: 20px;
 }
 
 @media (max-width: 767px) {
