@@ -2,34 +2,18 @@
 @import "./../../theme_variables";
 @import "./../../vendor_variables";
 
-.btn-facebook {
-  color: #fff;
-  background-color: #435f9f;
+.btn-facebook,
+.btn-twitter,
+.btn-google-plus,
+.btn-pinterest{
+  font-size: 0;
+  color: #ccc;
+  background-color: transparent;
+  padding: 6px;
   &:hover {
-    color: #ccc;
+    color: #c1a95e;
   }
-}
-
-.btn-twitter {
-  color: #fff;
-  background-color: #00aaf0;
-  &:hover, &:focus {
-    color: #fff;
-  }
-}
-
-.btn-google-plus {
-  color: #fff;
-  background-color: #e04b34;
-  &:hover, &:focus {
-    color: #fff;
-  }
-}
-
-.btn-pinterest {
-  color: #fff;
-  background-color: #ce1f21;
-  &:hover, &:focus {
-    color: #fff;
+  i{
+    font-size: initial;
   }
 }
