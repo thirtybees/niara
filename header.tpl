@@ -66,6 +66,7 @@
     </script>
     <script src="{$tpl_uri|escape:'htmlall':'UTF-8'}js/vendor/picturefill.min.js" data-keepinline async></script>
     <script src="{$tpl_uri|escape:'htmlall':'UTF-8'}js/vendor/picturefill-mutation.min.js" data-keepinline async></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
 
 </head>
 <body{if isset($page_name)} id="{$page_name|escape:'html':'UTF-8'}"{/if}
