@@ -2,6 +2,12 @@
 @import "./../../../theme_variables";
 @import "./../../../vendor_variables";
 
+#index{
+  #block_top_menu {
+  padding-bottom: 0;
+  }
+}
 #block_top_menu {
   padding-top: 25px;
+  padding-bottom: 25px;
 }
