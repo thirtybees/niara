@@ -38,4 +38,90 @@ label {
 
 .btn {
   padding: 6px 12px;
+  &:hover{
+    background: $link-hover-color;
+    border: 1px solid $link-hover-color;
+  }
+}
+
+label{
+	position: relative;
+	color: #666;
+	font-size: 14px;
+    margin: 10px 0;
+    padding-left: 0 !important;
+}
+
+input[type="checkbox"], input[type="radio"]{
+	position: absolute;
+	right: 9000px;
+}
+
+/*Check box*/
+input[type="checkbox"] + .label-text:before{
+	content: "\f0c8";
+	font-family: "FontAwesome";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing:antialiased;
+	width: 1em;
+	display: inline-block;
+	margin-right: 5px;
+    color: #ddd;
+  font-size: 18px;
+}
+
+input[type="checkbox"]:checked + .label-text:before{
+	content: "\f14a";
+	color: #2980b9;
+	animation: effect 250ms ease-in;
+}
+
+input[type="checkbox"]:disabled + .label-text{
+	color: #aaa;
+}
+
+input[type="checkbox"]:disabled + .label-text:before{
+	content: "\f0c8";
+	color: #ccc;
+}
+
+/*Radio*/
+
+input[type="radio"] + .label-text:before{
+	content: "\f10c";
+	font-family: "FontAwesome";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing:antialiased;
+	width: 1em;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+input[type="radio"]:checked + .label-text:before{
+	content: "\f192";
+	color: #8e44ad;
+	animation: effect 250ms ease-in;
+}
+
+input[type="radio"]:disabled + .label-text{
+	color: #aaa;
+}
+
+input[type="radio"]:disabled + .label-text:before{
+	content: "\f111";
+	color: #ccc;
+}
+
+.form-control{
+  box-shadow: none;
 }

@@ -13,7 +13,7 @@
           {foreach from=$genders key=k item=gender}
             <label for="id_gender{$gender->id}" class="radio-inline">
               <input type="radio" name="id_gender" id="id_gender{$gender->id}" value="{$gender->id}"{if isset($smarty.post.id_gender) && $smarty.post.id_gender == $gender->id} checked="checked"{/if}>
-              {$gender->name}
+              <span class="label-text">{$gender->name}</span>
             </label>
           {/foreach}
         </div>
@@ -73,7 +73,9 @@
         <div class="checkbox">
           <label for="newsletter">
             <input type="checkbox" name="newsletter" id="newsletter" value="1" {if isset($smarty.post.newsletter) && $smarty.post.newsletter == '1'}checked="checked"{/if}>
+            <span class="label-text">
             {l s='Sign up for our newsletter!'}
+            </span>
           </label>
         </div>
       {/if}
@@ -81,7 +83,9 @@
         <div class="checkbox">
           <label for="optin">
             <input type="checkbox" name="optin" id="optin" value="1" {if isset($smarty.post.optin) && $smarty.post.optin == '1'}checked="checked"{/if}>
+            <span class="label-text">
             {l s='Receive special offers from our partners!'}
+            </span>
           </label>
         </div>
       {/if}
@@ -177,7 +181,9 @@
       <div class="checkbox">
         <label for="invoice_address">
           <input type="checkbox" name="invoice_address" id="invoice_address"{if (isset($smarty.post.invoice_address) && $smarty.post.invoice_address) || (isset($smarty.post.invoice_address) && $smarty.post.invoice_address)} checked="checked"{/if} autocomplete="off">
+          <span class="label-text">
           {l s='Please use another address for invoice'}
+          </span>
         </label>
       </div>
       <div id="opc_invoice_address"  class="unvisible">

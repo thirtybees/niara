@@ -73,7 +73,7 @@
               {foreach from=$genders key=k item=gender}
                 <label for="id_gender{$gender->id_gender}" class="radio-inline">
                   <input type="radio" name="id_gender" id="id_gender{$gender->id_gender}" value="{$gender->id_gender}"{if isset($smarty.post.id_gender) && $smarty.post.id_gender == $gender->id_gender || (isset($guestInformations) && $guestInformations.id_gender == $gender->id_gender)} checked="checked"{/if}>
-                  {$gender->name}
+                  <span class="label-text">{$gender->name}</span>
                 </label>
               {/foreach}
             </div>
@@ -133,7 +133,7 @@
             <div class="checkbox">
               <label for="newsletter">
                 <input type="checkbox" name="newsletter" id="newsletter" value="1"{if isset($guestInformations) && isset($guestInformations.newsletter) && $guestInformations.newsletter} checked="checked"{/if} autocomplete="off">
-                {l s='Sign up for our newsletter!'}
+                <span class="label-text">{l s='Sign up for our newsletter!'}</span>
                 {if array_key_exists('newsletter', $field_required)}
                   <sup> *</sup>
                 {/if}
@@ -144,7 +144,7 @@
             <div class="checkbox">
               <label for="optin">
                 <input type="checkbox" name="optin" id="optin" value="1"{if isset($guestInformations) && isset($guestInformations.optin) && $guestInformations.optin} checked="checked"{/if} autocomplete="off">
-                {l s='Receive special offers from our partners!'}
+                <span class="label-text">{l s='Receive special offers from our partners!'}</span>
                 {if array_key_exists('optin', $field_required)}
                   <sup> *</sup>
                 {/if}
@@ -175,7 +175,7 @@
                         checked="checked"
                       {/if}
                     >
-                    {l s='Yes, I qualify for VAT Relief!'}
+                    <span class="label-text">{l s='Yes, I qualify for VAT Relief!'}</span>
                   </label>
                 </div>
                 <p id="vat-exemption-hint" class="help-block" style="display: none;">
@@ -287,7 +287,7 @@
           <div class="checkbox">
             <label for="invoice_address">
               <input type="checkbox" name="invoice_address" id="invoice_address"{if (isset($smarty.post.invoice_address) && $smarty.post.invoice_address) || (isset($guestInformations) && isset($guestInformations.invoice_address) && $guestInformations.invoice_address)} checked="checked"{/if} autocomplete="off">
-              {l s='Please use another address for invoice'}
+              <span class="label-text">{l s='Please use another address for invoice'}</span>
             </label>
           </div>
 

@@ -52,7 +52,9 @@
                     checked="checked"
                   {/if}
                 >
+                <span class="label-text">
                 {l s='Yes, I qualify for VAT Relief!'}
+                </span>
               </label>
             </div>
             <p id="vat-exemption-hint" class="help-block" style="display: none;">

@@ -27,7 +27,7 @@
                     <table class="resume table table-bordered{if !$option.unique_carrier} hide{/if}">
                       <tr>
                         <td class="delivery_option_radio">
-                          <input id="delivery_option_{$id_address|intval}_{$option@index}" class="delivery_option_radio" type="radio" name="delivery_option[{$id_address|intval}]" data-key="{$key}" data-id_address="{$id_address|intval}" value="{$key}"{if isset($delivery_option[$id_address]) && $delivery_option[$id_address] == $key} checked="checked"{/if}>
+                          <input id="delivery_option_{$id_address|intval}_{$option@index}" class="delivery_option_radio" type="radio" name="delivery_option[{$id_address|intval}]" data-key="{$key}" data-id_address="{$id_address|intval}" value="{$key}"{if isset($delivery_option[$id_address]) && $delivery_option[$id_address] == $key} checked="checked"{/if}><span class="label-text"></span>
                         </td>
                         <td class="delivery_option_logo">
                           {foreach $option.carrier_list as $carrier}
@@ -85,7 +85,7 @@
                         <tr>
                           {if !$option.unique_carrier}
                             <td rowspan="{$option.carrier_list|@count}" class="delivery_option_radio">
-                              <input id="delivery_option_{$id_address|intval}_{$option@index}" class="delivery_option_radio" type="radio" name="delivery_option[{$id_address|intval}]" data-key="{$key}" data-id_address="{$id_address|intval}" value="{$key}"{if isset($delivery_option[$id_address]) && $delivery_option[$id_address] == $key} checked="checked"{/if}>
+                              <input id="delivery_option_{$id_address|intval}_{$option@index}" class="delivery_option_radio" type="radio" name="delivery_option[{$id_address|intval}]" data-key="{$key}" data-id_address="{$id_address|intval}" value="{$key}"{if isset($delivery_option[$id_address]) && $delivery_option[$id_address] == $key} checked="checked"{/if}><span class="label-text"></span>
                             </td>
                           {/if}
                           {assign var="first" value=current($option.carrier_list)}
@@ -271,7 +271,7 @@
         <div class="checkbox recyclable">
           <label for="recyclable">
             <input type="checkbox" name="recyclable" id="recyclable" value="1"{if $recyclable == 1} checked="checked"{/if}>
-            {l s='I would like to receive my order in recycled packaging.'}
+            <span class="label-text">{l s='I would like to receive my order in recycled packaging.'}</span>
           </label>
         </div>
       {/if}
@@ -283,7 +283,7 @@
         <div class="checkbox gift">
           <label for="gift">
             <input type="checkbox" name="gift" id="gift" value="1"{if $cart->gift == 1} checked="checked"{/if}>
-            {l s='I would like my order to be gift wrapped.'}
+            <span class="label-text">{l s='I would like my order to be gift wrapped.'}</span>
             {if $gift_wrapping_price > 0}
               &nbsp;<i>({l s='Additional cost of'}
               <span class="price" id="gift-price">
@@ -322,7 +322,7 @@
         <div class="checkbox">
           <label for="cgv">
             <input type="checkbox" name="cgv" id="cgv" value="1" {if $checkedTOS}checked="checked"{/if}>
-            {l s='I agree to the terms of service and will adhere to them unconditionally.'}
+            <span class="label-text">{l s='I agree to the terms of service and will adhere to them unconditionally.'}</span>
           </label>
           <a href="{$link_conditions|escape:'html':'UTF-8'}" class="iframe" rel="nofollow">{l s='(Read the Terms of Service)'}</a>
         </div>

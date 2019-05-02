@@ -423,7 +423,7 @@
                                 {foreach from=$group.attributes key=id_attribute item=group_attribute}
                                   <li>
                                     <input type="radio" class="attribute_radio" name="{$groupName|escape:'html':'UTF-8'}" value="{$id_attribute}" {if ($group.default == $id_attribute)} checked="checked"{/if}>
-                                    <span>{$group_attribute|escape:'html':'UTF-8'}</span>
+                                    <span class="label-text">{$group_attribute|escape:'html':'UTF-8'}</span>
                                   </li>
                                 {/foreach}
                               </ul>

@@ -431,7 +431,7 @@
     <div class="checkbox">
       <label for="allow_seperated_package" class="inline">
         <input type="checkbox" name="allow_seperated_package" id="allow_seperated_package" {if $cart->allow_seperated_package}checked="checked"{/if} autocomplete="off">
-        {l s='Send available products first'}
+        <span class="label-text">{l s='Send available products first'}</span>
       </label>
     </div>
   {/if}

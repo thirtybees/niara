@@ -29,7 +29,7 @@
       <div class="checkbox addressesAreEquals"{if $cart->isVirtualCart()} style="display:none;"{/if}>
         <label for="addressesAreEquals">
           <input type="checkbox" name="same" id="addressesAreEquals" value="1"{if $cart->id_address_invoice == $cart->id_address_delivery || $addresses|@count == 1} checked="checked"{/if}>
-          {l s='Use the delivery address as the billing address.'}
+          <span class="label-text">{l s='Use the delivery address as the billing address.'}</span>
         </label>
       </div>
     </div>

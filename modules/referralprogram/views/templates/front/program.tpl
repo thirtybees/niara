@@ -87,7 +87,7 @@
         <div class="checkbox">
           <label for="conditionsValided">
             <input type="checkbox" name="conditionsValided" id="conditionsValided" value="1" {if isset($smarty.post.conditionsValided) AND $smarty.post.conditionsValided eq 1}checked="checked"{/if}>
-            {l s='I agree to the terms of service and adhere to them unconditionally.' mod='referralprogram'}
+            <span class="label-text">{l s='I agree to the terms of service and adhere to them unconditionally.' mod='referralprogram'}</span>
           </label>
           <a href="{$link->getModuleLink('referralprogram', 'rules', ['height' => '500', 'width' => '400'], true)|escape:'html':'UTF-8'}" class="thickbox" title="{l s='Conditions of the referral program' mod='referralprogram'}" rel="nofollow">{l s='Read conditions.' mod='referralprogram'}</a>
         </div>
