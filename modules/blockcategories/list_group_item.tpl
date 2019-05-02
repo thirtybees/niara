@@ -11,7 +11,7 @@
       <span>{$list_item.name|escape:'html':'UTF-8'}</span>
     </a>
     <a class="btn-toggle{if empty($list_item.expanded)} collapsed{/if} ilvl-{$level|intval}" href="#{$list_item_id|escape:'html':'UTF-8'}" data-toggle="collapse" title="{l s='Expand/Collapse' mod='blockcategories'}">
-      <i class="icon icon-angle-up"></i>
+      <i class="icon icon-caret-up"></i>
     </a>
   </div>
   <div {if empty($list_item.expanded)} class="list-group collapse" style="height: 0px;"{else} class="list-group collapse in" style="height: auto;"{/if} id="{$list_item_id|escape:'html':'UTF-8'}">

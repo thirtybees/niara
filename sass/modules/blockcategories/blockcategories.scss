@@ -25,7 +25,7 @@ $ct-toggle-btn-width: 32px;
   &:focus {
     color: $text;
     border-color: $border;
-    background-color: darken($bg, 3.5%);
+    background-color: #fff;
   }
 }
 
@@ -36,18 +36,25 @@ $ct-toggle-btn-width: 32px;
 
 @mixin colors-level-2()
 {
-  @include color-level(lighten($brand-primary, 10%), #fff, $list-group-border);
+  @include color-level(#fff, lighten($text-color, 10%), $list-group-border);
 }
 
 @mixin colors-level-3()
 {
-  @include color-level(lighten($brand-primary, 20%), #fff, $list-group-border);
+  @include color-level( #fff,lighten($text-color, 20%), $list-group-border);
 }
 
 .blockcategories {
+  .title_block{
+    margin: 0;
+  }
   .list-group-item {
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding: 0 20px 0 0;
+    line-height: 40px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-top: 1px solid $list-group-border;
     &.active {
       // margin-bottom: 0;
       border-color: $list-group-border;
@@ -75,12 +82,13 @@ $ct-toggle-btn-width: 32px;
       top: 0;
       line-height: $ct-toggle-btn-width;
       text-align: center;
-      border: 1px solid $ct-toggle-border;
+      border: 1px solid $list-group-border;
       border-left: none;
+      border-right: none;
       font-size: 20px;
       padding-top:5px;
       &.collapsed > .icon:before {
-        content: "\f107";
+        content: "\f0d7";
       }
     }
   }
@@ -93,7 +101,7 @@ $ct-toggle-btn-width: 32px;
       left: -5px;
       font-size: 20px;
       line-height: 20px;
-      color: $state-warning-bg;
+      color: $link-hover-color;
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: #666;
       height: 20px;
@@ -111,28 +119,27 @@ $ct-toggle-btn-width: 32px;
   .ilvl-1 {
     &.btn-toggle {
       color: $ct-toggle-text-color;
-      background-color: $list-group-hover-bg;
     }
     &:hover {
-      @include color-level($brand-primary, #fff, $list-group-border);
+      @include color-level(#fff, $brand-primary, $list-group-border);
     }
   }
   .ilvl-2 {
     @include colors-level-2();
     &:hover {
-      color: #fff;
+      color: $brand-primary;
     }
   }
   .ilvl-3 {
     @include colors-level-3();
     &:hover {
-      color: #fff;
+      color: $brand-primary;
     }
   }
 
   .list-group-item-wrapper.active {
     > .ilvl-1 {
-      @include color-level($brand-primary, #fff, $list-group-border);
+      @include color-level(#fff, $brand-primary, $list-group-border);
     }
     > .ilvl-2 {
       @include colors-level-2();
