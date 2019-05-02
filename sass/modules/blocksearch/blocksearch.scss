@@ -13,6 +13,22 @@
   @media (min-width: $screen-md) and (max-width: $screen-md-max) {
     margin-top: 20px;
   }
+  #search_query_top{
+    height: 34px;
+    font-size: 14px;
+    border-top: none;
+    box-shadow: none;
+    border-left: none;
+    border-right: none;
+  }
+  .btn{
+    height: 34px;
+    padding: 0 10px;
+    background: transparent;
+    color: #ddd;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
 }
 
 // .ac_results results is appended to body,
