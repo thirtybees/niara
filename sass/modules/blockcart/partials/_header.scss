@@ -1,9 +1,10 @@
-$bc-header-bg: $brand-primary;
-$bc-header-color: #fad629;
+$bc-header-bg: transparent;
+$bc-header-color: #121212;
 
 #blockcart {
   position: relative;
   margin-top: 30px;
+  text-align: right;
 
   @media (max-width: $screen-xs-max) {
     margin-top: 15px;
@@ -35,18 +36,41 @@ $bc-header-color: #fad629;
   color: $bc-header-color;
   display: block;
   overflow: hidden;
-  font-weight: bold;
+  font-weight: 300;
 
-  &:after {
-    content: "\f0d7";
+  &:before{
+    content: "\f291";
     font-family: $font-icon;
-    float: right;
+    font-size: 1.6em;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: 6%;
+    color: $link-hover-color
   }
-
   &:hover {
-    &:after {
-      content: "\f0d8";
+    &:before {
+      color: $gray-darker;
     }
   }
-
+  b{
+    font-weight: 500;
+  }
+  .ajax_cart_product_txt,
+  .ajax_cart_product_txt_s,
+  .ajax_cart_no_product{
+    display: none !important;
+  }
+  .ajax_cart_quantity{
+    position: absolute;
+    top: 0;
+    right: 38px;
+    display: block !important;
+    min-width: 20px;
+    min-height: 20px;
+    line-height: 20px;
+    background: $gray-darker;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+  }
 }

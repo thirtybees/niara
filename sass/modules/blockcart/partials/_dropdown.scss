@@ -5,25 +5,29 @@ $bc-dropdown-border: $input-border;
   z-index: 4;
   background: #fff;
   width: 100%;
-  border: 1px solid $bc-dropdown-border;
   border-top: none;
   padding: 10px;
+  text-align: left;
+  font-size: 13px;
+  box-shadow: 0 0 18px 0 rgba(41,44,58,.15);
 
   dl {
     margin-bottom: 10px;
   }
 
   dt {
-    font-weight: normal;
-    margin-bottom: 10px;
+    font-weight: 300;
+    margin-bottom: 5px;
     position: relative;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
     &:last-of-type {
       margin-bottom: 0;
+      border-bottom: none;
     }
   }
 
   .product-attributes {
-    padding-bottom: 5px;
   }
 
   .vouchers {
@@ -32,13 +36,16 @@ $bc-dropdown-border: $input-border;
       padding: 5px;
     }
   }
+  .ajax_cart_block_remove_link i{
+    color: #888;
+  }
 }
 
 // dd element
 .cart_block_customizations {
   padding: 5px 0;
   margin-bottom: 10px;
-  border: 1px dashed #333;
+  border: 1px dashed #ddd;
   border-left: none;
   border-right: none;
   > li {
@@ -66,17 +73,15 @@ $bc-dropdown-border: $input-border;
 .cart-info {
   padding-right: 10px;
   .product-name {
-    padding-bottom: 5px;
   }
 }
 
 .cart-prices {
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
 .cart-prices-line {
-  border-top: 1px solid #333;
   padding: 5px 0;
   &:last-of-type {
     padding-bottom: 0;
