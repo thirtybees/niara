@@ -1,20 +1,21 @@
-$block-heading-bg: #f5f5f5;
-$block-heading-border: #ccc;
-$block-line-border: #ccc;
+$block-heading-bg: #fff;
+$block-heading-border: #ededed;
+$block-line-border: #ededed;
 
+@import "../theme_variables";
 .block {
-
   margin-bottom: 25px;
+  padding: 20px;
+  border: 1px solid $ps-border-color;
 
   .title_block {
-    color: $text-color;
+    color: $gray-darker;
     font-size: $font-size-h4;
     line-height: $line-height-base;
-    font-weight: bold;
-    background: $block-heading-bg;
-    border-bottom: 1px solid $block-heading-border;
-    padding: 10px 15px;
-    margin: 0 0 15px;
+    font-weight: 700;
+    margin: 0 0 20px;
+    padding: 10px 0;
+    text-transform: uppercase;
   }
   h3 .product-name {
     font-size: 17px;
@@ -69,6 +70,9 @@ $block-line-border: #ccc;
         overflow: hidden;
         h5 {
           margin-top: 0;
+        }
+        .product-description{
+          font-size: 12px;
         }
       }
     }

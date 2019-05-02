@@ -35,28 +35,27 @@
 
 .product-label {
   font-size: 0.9em;
-  margin: 4px 0 0 4px;
+  margin: 8px 0 0 8px;
   padding: 2px 5px;
-  font-weight: bold;
-  background-color: #ccc;
+  font-weight: 500;
+  background-color: $gray-darker;
   color: #fff;
-  @include box-shadow(0 1px 2px rgba(0,0,0,0.15));
+  text-transform: uppercase;
   &:last-of-type {
     margin-right: 0;
   }
 }
 
 .product-label-new {
-  background: #000;
-  color: #fad629;
+  color: #fff;
 }
 
 .product-label-sale {
-  background: #f13340;
+  background: $link-hover-color;
 }
 
 .product-label-discount {
-  background-color: #f13340;
+  background-color: $link-hover-color;
 }
 
 .product-label-online {

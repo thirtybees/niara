@@ -1,14 +1,14 @@
 .page-heading {
-  padding: 10px;
-  background-color: #f5f5f5;
   margin: 0 0 20px;
-  border-bottom: 1px solid $ps-border-color;
 
    &.product-listing > h1 {
     margin-top: 0;
     margin-bottom: 0;
    }
-  // .heading-counter {}
+   .heading-counter {
+     background: none;
+     color: $gray-darker;
+  }
 
   @include clearfix(); // .heading-counter is using float-right;
                        // This fixes element height when the is overflow
@@ -29,5 +29,5 @@
   padding: 10px;
   margin: 0 0 15px;
   border-bottom: 1px solid $ps-border-color;
-  background: #f5f5f5;
+  background: $navbar-default-bg;
 }

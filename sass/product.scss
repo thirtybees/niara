@@ -2,8 +2,8 @@
 @import "theme_variables";
 @import "vendor_variables";
 
-$buy-box-bg     : #f6f6f6;
-$buy-box-border : #ccc;
+$buy-box-bg     : #fff;
+$buy-box-border : none;
 
 .primary_block {
   margin-bottom: 30px;
@@ -17,12 +17,20 @@ $buy-box-border : #ccc;
   position: relative;
   cursor: pointer;
   background: #fff;
+  padding: 0;
+  border: none;
   &:hover {
     .span_link {
       display: block;
     }
   }
 }
+
+  .thumbnail{
+    padding: 0;
+    border: none;
+  }
+
 
 // #view_full_size: .span_link is unique, don't nest selector
 $zoom-in-size: 110px;
@@ -52,10 +60,16 @@ $zoom-in-size: 110px;
   h1 {
     margin-top: 0;
   }
+  b{
+    font-weight: 400;
+  }
+  p{
+    margin-bottom: 15px;
+  }
 }
 
 #product-description {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 //
@@ -63,23 +77,25 @@ $zoom-in-size: 110px;
 //
 
 .box-info-product {
-  padding: 10px;
   background-color: $buy-box-bg;
   border: 1px solid $buy-box-border;
 }
 
+#short_description_block{
+  border-bottom: 1px solid #ddd;
+}
+
 .content_prices {
-  text-align: center;
-  margin-bottom: 10px;
   p {
     margin: 0;
   }
 }
 
 .our_price_display {
-  font-size: 2.2em;
+  font-size: 2em;
   .price {
-    font-weight: bold;
+    font-weight: 500;
+    color: $link-hover-color;
   }
 }
 
@@ -101,11 +117,44 @@ $zoom-in-size: 110px;
 }
 
 #quantity_wanted_p {
-  margin-bottom: 15px;
+  .input-group{
+    float: left;
+    #quantity_wanted{
+      width: 50px;
+      height: 50px;
+      border-right: none;
+    }
+    .input-group-btn{
+      float: left;
+      a{
+        height: 25px;
+        width: 25px;
+        line-height: 25px;
+        padding: 0;
+      }
+      .button-minus{
+        top: 25px;
+      }
+    }
+  }
+}
+
+.box-cart-bottom{
+  #add_to_cart{
+    display: inline-block;
+    .btn{
+      height: 50px;
+    }
+  }
 }
 
 #attributes {
-  margin-bottom: 15px;
+  .form-group{
+    margin: 0;
+  }
+  .form-control{
+    width: auto;
+  }
 }
 
 .attribute_list {
@@ -189,6 +238,9 @@ $zoom-in-size: 110px;
   .product_list.grid .product-container {
     margin-bottom: 50px; // Slider doesn't take 'tail' (.functional-buttons) into height calculations
   }
+}
+#availability_statut{
+      display: none !important;
 }
 
 //

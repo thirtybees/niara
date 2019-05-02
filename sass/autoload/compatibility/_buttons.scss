@@ -45,8 +45,8 @@ $btn-legacy-default-bg    : #f7f7f7;
 $btn-legacy-default-border: #b7b7b7;
 
 $btn-legacy-buy-color     : #fff;
-$btn-legacy-buy-bg        : #007ab7;
-$btn-legacy-buy-border    : #006fa8;
+$btn-legacy-buy-bg        : $gray-darker;
+$btn-legacy-buy-border    : $gray-darker;
 
 // Buttons from PS 1.5?
 // A single class to render a button (as opposed to .button.button-small)
@@ -129,6 +129,17 @@ $btn-legacy-buy-border    : #006fa8;
 }
 
 .button.ajax_add_to_cart_button {
-  @include button-size(0, 0, $font-size-large, $line-height-large, $border-radius-large);
+  @include button-size(0, 0, $font-size-base, $line-height-large, $border-radius-large);
   @include legacy-button(10px, 10px, $btn-legacy-buy-color, $btn-legacy-buy-bg, $btn-legacy-buy-border);
+}
+.button.ajax_add_to_cart_button:hover{
+  background: $link-hover-color;
+  border: $link-hover-color;
+}
+button{
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
 }

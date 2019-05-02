@@ -1,6 +1,6 @@
 $header-banner-bg: #2c2125;
-$page-body-bg: #edecec;
-$page-content-bg: #fff;
+$page-body-bg: #fff;
+$page-content-bg: transparent;
 
 body {
   background-color: $page-body-bg;
@@ -20,6 +20,9 @@ body {
   padding-bottom: 50px;
   padding-top: 15px;
   background-color: $page-content-bg;
+  .breadcrumb{
+  font-size: 13px;
+  }
 }
 
 #header-banners {
@@ -29,5 +32,14 @@ body {
 #header {
   .navbar {
     margin-bottom: 0;
+    font-size: 12px;
+  }
+}
+
+#header-blocks .center-block{
+  margin-left: 0;
+  @media screen and (max-width: $screen-xs) {
+    margin-left: auto;
+    margin-right: auto;
   }
 }

@@ -1,15 +1,46 @@
 #footer {
-  background: #f8f8f8;
-  border-top: 1px solid #e7e7e7;
+  background: #121212;
+  border-top: 1px solid #333;
   padding: 15px 0;
+  color: $gray-light;
+  .footer-title,
+  .title_block{
+    font-size:16px;
+    color: #fff;
+    font-weight: 300;
+  }
+  a{
+    color: $gray-light;
+  }
+  a:hover{
+    color: $link-hover-color;
+  }
+  li{
+    line-height: 30px;
+  }
+  .icon-2x{
+    font-size: 1.4em;
+  }
+  #newsletter-input.form-control{
+    background: #121212;
+    border-color: $gray-light;
+    color: $gray-light;
+  }
+  .btn{
+    background: #121212;
+    border-top: 1px solid $gray-light;
+    border-right: 1px solid $gray-light;
+    border-bottom: 1px solid $gray-light;
+    border-left:none;
+    color: $gray-light;
+  }
+  #blockcontactinfos .icon{
+    display: none;
+  }
 }
 
 #copyright-footer {
   margin-top: 10px;
-  padding-top: 15px;
-  border-top: 1px solid #ccc;
   text-align: center;
-}
-.footer-title {
-  font-size:20px;
+  font-size: 12px;
 }
