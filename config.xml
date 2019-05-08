@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme version="1.1.0" name="community-theme-default" directory="community-theme-default">
-    <author name="Gytis Škema &amp; Krystian Podemski" email="info@thirtybees.com" url="https://thirtybees.com"/>
+<theme version="1.1.0" name="Niara" directory="niara">
+    <author name="thirty bees community" email="contact@thirtybees.com"
+            url="https://github.com/thirtybees/niara"/>
     <descriptions>
-        <description iso="en">Community theme is a theme developed and maintained by the thirty bees community.</description>
+        <description iso="en">Niara is a theme developed and maintained by the thirty bees community and default theme since thirty bees 1.1.0.</description>
     </descriptions>
     <variations>
-        <variation name="community-theme-default" directory="community-theme-default" responsive="1"
-                   default_left_column="1" default_right_column="0" product_per_page="12" from="1.6.1.3" to="1.6.1.6"/>
+        <variation name="Niara" directory="niara" responsive="1"
+                   default_left_column="1" default_right_column="0"
+                   product_per_page="12" from="1.6.1.3" to="1.6.1.6"/>
     </variations>
     <docs></docs>
     <metas>
@@ -130,7 +132,6 @@
             <hook module="blocksocial" hook="displayFooter" position="1"/>
             <hook module="blockcategories" hook="displayLeftColumn" position="2"/>
             <hook module="blockcategories" hook="displayHeader" position="6"/>
-            <!-- hook module="blockcategories" hook="displayFooter" position="3"/ -->
             <hook module="blockcategories" hook="actionCategoryAdd" position="1"/>
             <hook module="blockcategories" hook="actionCategoryUpdate" position="1"/>
             <hook module="blockcategories" hook="actionCategoryDelete" position="1"/>

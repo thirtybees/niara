@@ -1,5 +1,5 @@
 {
-  "name": "community-theme-default",
+  "name": "niara",
   "private": true,
   "devDependencies": {
     "del": "^2.2.0",
@@ -18,7 +18,7 @@
     "gulp-rename": "^1.2.2"
   },
   "options": {
-    "themeName": "community-theme-default",
+    "themeName": "Niara",
     "themeModulePrefix": "ct",
     "sourcemaps": false
   },
