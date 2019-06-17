@@ -7,7 +7,7 @@
              style="background:transparent url({Link::getGenericImageLink(
                  'scenes',
                  $scene->id_scene,
-                 'scene_default',
+                 'scene',
                  (ImageManager::retinaSupport()) ? '2x' : ''
              )|escape:'htmlall':'UTF-8'});
              height: {$largeSceneImageType.height|intval}px;
