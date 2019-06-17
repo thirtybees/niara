@@ -50,26 +50,26 @@
                 >
                   {if !empty($lazy_load)}
                     <noscript>
-                      <img src="{$link->getImageLink($product.link_rewrite, $product.cover, 'home_default', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
+                      <img src="{$link->getImageLink($product.link_rewrite, $product.cover, 'home', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
                            alt="{$product.name|escape:'html':'UTF-8'}"
-                           width="{getWidthSize|intval type='home_default'}"
-                           height="{getHeightSize|intval type='home_default'}"
+                           width="{getWidthSize|intval type='home'}"
+                           height="{getHeightSize|intval type='home'}"
                       >
                     </noscript>
                   {/if}
                   <picture class="replace-2x img-responsive{if !empty($lazy_load)} tb-lazy-image{/if}">
                     <!--[if IE 9]><video style="display: none;"><![endif]-->
                     {if !empty($webp)}
-                      <source {if !empty($lazy_load)}srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w" data-{/if}srcset="{$link->getImageLink($product.link_rewrite, $product.cover, 'home_default', 'webp', ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
+                      <source {if !empty($lazy_load)}srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w" data-{/if}srcset="{$link->getImageLink($product.link_rewrite, $product.cover, 'home', 'webp', ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
                               type="image/webp"
                       >
                     {/if}
                     <!--[if IE 9]></video><![endif]-->
-                    <img {if !empty($lazy_load)}srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w" data-{/if}srcset="{$link->getImageLink($product.link_rewrite, $product.cover, 'home_default', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
+                    <img {if !empty($lazy_load)}srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w" data-{/if}srcset="{$link->getImageLink($product.link_rewrite, $product.cover, 'home', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
                          {if !empty($lazy_load)}src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="{/if}
                          alt="{$product.name|escape:'html':'UTF-8'}"
-                         width="{getWidthSize|intval type='home_default'}"
-                         height="{getHeightSize|intval type='home_default'}"
+                         width="{getWidthSize|intval type='home'}"
+                         height="{getHeightSize|intval type='home'}"
                     >
                   </picture>
                 </a>
