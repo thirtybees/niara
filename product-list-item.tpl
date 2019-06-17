@@ -12,7 +12,7 @@
                        src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
                        srcset="
                      {$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default_smallest', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'} 211w,
-                     {$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default_smaller', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'} 218w,
+                     {$link->getImageLink($product.link_rewrite, $product.id_image, 'home_smaller', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'} 218w,
                      {$link->getImageLink($product.link_rewrite, $product.id_image, 'home', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'} 250w"
                        sizes="(min-width: 1200px) 250px, (min-width: 992px) 218px, (min-width: 768px) 211px, 250px"
                        alt="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}"
@@ -29,7 +29,7 @@
                   <source class="img-responsive center-block"
                           {if !empty($lazy_load)}srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w" data-{/if}srcset="
                           {$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default_smallest', 'webp', ImageManager::retinaSupport())|escape:'html':'UTF-8'} 211w,
-                          {$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default_smaller', 'webp', ImageManager::retinaSupport())|escape:'html':'UTF-8'} 218w,
+                          {$link->getImageLink($product.link_rewrite, $product.id_image, 'home_smaller', 'webp', ImageManager::retinaSupport())|escape:'html':'UTF-8'} 218w,
                           {$link->getImageLink($product.link_rewrite, $product.id_image, 'home', 'webp', ImageManager::retinaSupport())|escape:'html':'UTF-8'} 250w"
                           sizes="(min-width: 1200px) 250px, (min-width: 992px) 218px, (min-width: 768px) 211px, 250px"
                           title="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}"
@@ -43,7 +43,7 @@
                      {if !empty($lazy_load)}src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="{/if}
                      {if !empty($lazy_load)}srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w" data-{/if}srcset="
                      {$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default_smallest', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'} 211w,
-                     {$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default_smaller', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'} 218w,
+                     {$link->getImageLink($product.link_rewrite, $product.id_image, 'home_smaller', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'} 218w,
                      {$link->getImageLink($product.link_rewrite, $product.id_image, 'home', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'} 250w"
                      sizes="(min-width: 1200px) 250px, (min-width: 992px) 218px, (min-width: 768px) 211px, 250px"
                      alt="{if !empty($product.legend)}{$product.legend|escape:'html':'UTF-8'}{else}{$product.name|escape:'html':'UTF-8'}{/if}"
