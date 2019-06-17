@@ -285,7 +285,7 @@
     <image name="cart" width="80" height="80"
            products="true" categories="false" manufacturers="false"
            suppliers="false" scenes="false" stores="false"/>
-    <image name="small_default" width="98" height="98"
+    <image name="small" width="98" height="98"
            products="true" categories="false" manufacturers="true"
            suppliers="true" scenes="false" stores="false"/>
     <image name="medium_default" width="125" height="125"
