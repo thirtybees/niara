@@ -306,7 +306,7 @@
     <image name="thickbox" width="800" height="800"
            products="true" categories="false" manufacturers="false"
            suppliers="false" scenes="false" stores="false"/>
-    <image name="category_default" width="870" height="217"
+    <image name="category" width="870" height="217"
            products="false" categories="true" manufacturers="false"
            suppliers="false" scenes="false" stores="false"/>
     <image name="scene_default" width="870" height="270"

@@ -14,13 +14,13 @@
                       <img src="{Link::getGenericImageLink(
                                'categories',
                                $category->id_image,
-                               'category_default',
+                               'category',
                                (ImageManager::retinaSupport()) ? '2x' : ''
                            )|escape:'htmlall':'UTF-8'}"
                            alt="{$category->name|escape:'html':'UTF-8'}"
                            title="{$category->name|escape:'html':'UTF-8'}"
-                           width="{getWidthSize|intval type='category_default'}"
-                           height="{getHeightSize|intval type='category_default'}"
+                           width="{getWidthSize|intval type='category'}"
+                           height="{getHeightSize|intval type='category'}"
                            class="img-responsive"
                       >
                     </noscript>
@@ -32,7 +32,7 @@
                               data-{/if}srcset="{Link::getGenericImageLink(
                                   'categories',
                                   $category->id_image,
-                                  'category_default',
+                                  'category',
                                   (ImageManager::retinaSupport()) ? '2x' : ''
                               )|escape:'htmlall':'UTF-8'}"
                               title="{$category->name|escape:'html':'UTF-8'}"
@@ -44,14 +44,14 @@
                          data-{/if}srcset="{Link::getGenericImageLink(
                              'categories',
                              $category->id_image,
-                             'category_default',
+                             'category',
                              (ImageManager::retinaSupport()) ? '2x' : ''
                          )|escape:'htmlall':'UTF-8'}"
                          {if !empty($lazy_load)}src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="{/if}
                          alt="{$category->name|escape:'html':'UTF-8'}"
                          title="{$category->name|escape:'html':'UTF-8'}"
-                         width="{getWidthSize|intval type='category_default'}"
-                         height="{getHeightSize|intval type='category_default'}"
+                         width="{getWidthSize|intval type='category'}"
+                         height="{getHeightSize|intval type='category'}"
                          class="img-responsive"
                     >
                   </picture>
