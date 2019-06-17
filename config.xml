@@ -297,7 +297,7 @@
     <image name="home_smaller" width="218" height="218"
            products="true" categories="false" manufacturers="false"
            suppliers="false" scenes="false" stores="false"/>
-    <image name="home_default_smallest" width="211" height="211"
+    <image name="home_smallest" width="211" height="211"
             products="true" categories="false" manufacturers="false"
            suppliers="false" scenes="false" stores="false"/>
     <image name="large_default" width="458" height="458"
