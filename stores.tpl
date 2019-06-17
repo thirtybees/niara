@@ -26,7 +26,7 @@
                 <img src="{Link::getGenericImageLink(
                          'stores',
                          $store.id_store,
-                         'medium_default',
+                         'medium',
                          (ImageManager::retinaSupport()) ? '2x' : ''
                      )|escape:'htmlall':'UTF-8'}"
                      alt="{$store.name|escape:'html':'UTF-8'}"

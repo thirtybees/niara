@@ -86,13 +86,13 @@
                                              src="{Link::getGenericImageLink(
                                                  'categories',
                                                  $subcategory.id_image,
-                                                 'medium_default',
+                                                 'medium',
                                                  (ImageManager::retinaSupport()) ? '2x' : ''
                                              )|escape:'htmlall':'UTF-8'}"
                                              alt="{$subcategory.name|escape:'html':'UTF-8'}"
                                              title="{$subcategory.name|escape:'html':'UTF-8'}"
-                                             width="{getWidthSize|intval type='medium_default'}"
-                                             height="{getHeightSize|intval type='medium_default'}"
+                                             width="{getWidthSize|intval type='medium'}"
+                                             height="{getHeightSize|intval type='medium'}"
                                         >
                                     </a>
                                 {/if}

@@ -288,7 +288,7 @@
     <image name="small" width="98" height="98"
            products="true" categories="false" manufacturers="true"
            suppliers="true" scenes="false" stores="false"/>
-    <image name="medium_default" width="125" height="125"
+    <image name="medium" width="125" height="125"
            products="true" categories="true" manufacturers="true"
            suppliers="true" scenes="false" stores="true"/>
     <image name="home_default" width="250" height="250"

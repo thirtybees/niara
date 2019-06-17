@@ -1,7 +1,7 @@
 {capture name=path}{l s='Manufacturers:'}{/capture}
 
-{assign var='mediumDefaultWidth' value={getWidthSize|intval type='medium_default'}}
-{assign var='mediumDefaultHeight' value={getHeightSize|intval type='medium_default'}}
+{assign var='mediumDefaultWidth' value={getWidthSize|intval type='medium'}}
+{assign var='mediumDefaultHeight' value={getHeightSize|intval type='medium'}}
 {if ImageManager::retinaSupport()}
   {assign var='mediumDefaultWidth' value=$mediumDefaultWidth * 2}
   {assign var='mediumDefaultHeight' value=$mediumDefaultHeight * 2}
@@ -51,7 +51,7 @@
                   <img src="{Link::getGenericImageLink(
                            'manufacturers',
                            $manufacturer.id_manufacturer,
-                           'medium_default',
+                           'medium',
                            (ImageManager::retinaSupport()) ? '2x' : ''
                        )|escape:'htmlall':'UTF-8'}"
                        alt="{$manufacturer.name|escape:'htmlall':'UTF-8'}"
@@ -68,7 +68,7 @@
                           data-{/if}srcset="{Link::getGenericImageLink(
                               'manufacturers',
                               $manufacturer.id_manufacturer,
-                              'medium_default',
+                              'medium',
                               (ImageManager::retinaSupport()) ? '2x' : '',
                               true
                           )|escape:'htmlall':'UTF-8'}"
@@ -81,7 +81,7 @@
                      data-{/if}srcset="{Link::getGenericImageLink(
                         'manufacturers',
                         $manufacturer.id_manufacturer,
-                        'medium_default',
+                        'medium',
                         (ImageManager::retinaSupport()) ? '2x' : ''
                      )|escape:'htmlall':'UTF-8'}"
                      {if !empty($lazy_load)}src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="{/if}
