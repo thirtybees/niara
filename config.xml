@@ -300,7 +300,7 @@
     <image name="home_smallest" width="211" height="211"
             products="true" categories="false" manufacturers="false"
            suppliers="false" scenes="false" stores="false"/>
-    <image name="large_default" width="458" height="458"
+    <image name="large" width="458" height="458"
            products="true" categories="false" manufacturers="true"
            suppliers="true" scenes="false" stores="false"/>
     <image name="thickbox_default" width="800" height="800"
