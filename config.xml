@@ -312,7 +312,7 @@
     <image name="scene" width="870" height="270"
            products="false" categories="false" manufacturers="false"
            suppliers="false" scenes="true" stores="false"/>
-    <image name="m_scene_default" width="161" height="58"
+    <image name="m_scene" width="161" height="58"
            products="false" categories="false" manufacturers="false"
            suppliers="false" scenes="true" stores="false"/>
   </images>

@@ -87,7 +87,7 @@
                        src="{Link::getGenericImageLink(
                            'scenes_thumbs',
                            $scene->id_scene,
-                           'm_scene_default',
+                           'm_scene',
                            (ImageManager::retinaSupport()) ? '2x' : ''
                        )|escape:'htmlall':'UTF-8'}"
                        width="{$thumbSceneSize.width|intval}"
