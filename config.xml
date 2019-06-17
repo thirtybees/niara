@@ -282,7 +282,7 @@
     </hooks>
   </modules>
   <images>
-    <image name="cart_default" width="80" height="80"
+    <image name="cart" width="80" height="80"
            products="true" categories="false" manufacturers="false"
            suppliers="false" scenes="false" stores="false"/>
     <image name="small_default" width="98" height="98"

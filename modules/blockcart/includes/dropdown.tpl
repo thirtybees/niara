@@ -11,27 +11,27 @@
             <a class="cart-images" href="{$link->getProductLink($product.id_product, $product.link_rewrite, $product.category)|escape:'html':'UTF-8'}" title="{$product.name|escape:'html':'UTF-8'}">
               {if !empty($lazy_load)}
                 <noscript>
-                  <img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'cart_default', 'webp', ImageManager::retinaSupport())}"
+                  <img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'cart', 'webp', ImageManager::retinaSupport())}"
                        alt="{$product.name|escape:'html':'UTF-8'}"
-                       width="{getWidthSize|intval type='cart_default'}"
-                       height="{getHeightSize|intval type='cart_default'}"
+                       width="{getWidthSize|intval type='cart'}"
+                       height="{getHeightSize|intval type='cart'}"
                   >
                 </noscript>
               {/if}
               <picture {if !empty($lazy_load)}class="tb-lazy-image"{/if}>
                 <!--[if IE 9]><video style="display: none;"><![endif]-->
                 {if !empty($webp)}
-                <source {if !empty($lazy_load)}srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w" data-{/if}srcset="{$link->getImageLink($product.link_rewrite, $product.id_image, 'cart_default', 'webp', ImageManager::retinaSupport())}"
+                <source {if !empty($lazy_load)}srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w" data-{/if}srcset="{$link->getImageLink($product.link_rewrite, $product.id_image, 'cart', 'webp', ImageManager::retinaSupport())}"
                         alt="{$product.name|escape:'html':'UTF-8'}"
                         type="image/webp"
                 >
                 {/if}
                 <!--[if IE 9]></video><![endif]-->
-                <img {if !empty($lazy_load)}srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w" data-{/if}srcset="{$link->getImageLink($product.link_rewrite, $product.id_image, 'cart_default', null, ImageManager::retinaSupport())}"
+                <img {if !empty($lazy_load)}srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w" data-{/if}srcset="{$link->getImageLink($product.link_rewrite, $product.id_image, 'cart', null, ImageManager::retinaSupport())}"
                      {if !empty($lazy_load)}src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="{/if}
                      alt="{$product.name|escape:'html':'UTF-8'}"
-                     width="{getWidthSize|intval type='cart_default'}"
-                     height="{getHeightSize|intval type='cart_default'}"
+                     width="{getWidthSize|intval type='cart'}"
+                     height="{getHeightSize|intval type='cart'}"
                 >
               </picture>
             </a>
