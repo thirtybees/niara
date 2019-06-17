@@ -152,7 +152,7 @@
                         style="display: inline-block"
                     >
                       {if $jqZoomEnabled && $have_image && !$content_only}
-                        <a href="{$link->getImageLink($product->link_rewrite, $imageIds, 'thickbox_default', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
+                        <a href="{$link->getImageLink($product->link_rewrite, $imageIds, 'thickbox', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
                            class="thumbnail fancybox"
                            title="{$imageTitle}"
                            data-fancybox-group="product"
@@ -188,7 +188,7 @@
                           </picture>
                         </a>
                       {else}
-                        <a href="{$link->getImageLink($product->link_rewrite, $imageIds, 'thickbox_default', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
+                        <a href="{$link->getImageLink($product->link_rewrite, $imageIds, 'thickbox', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
                            class="thumbnail fancybox{if $image.id_image == $cover.id_image} shown{/if}"
                            title="{$imageTitle|escape:'htmlall':'UTF-8'}"
                            data-fancybox-group="product"

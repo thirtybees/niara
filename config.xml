@@ -303,7 +303,7 @@
     <image name="large" width="458" height="458"
            products="true" categories="false" manufacturers="true"
            suppliers="true" scenes="false" stores="false"/>
-    <image name="thickbox_default" width="800" height="800"
+    <image name="thickbox" width="800" height="800"
            products="true" categories="false" manufacturers="false"
            suppliers="false" scenes="false" stores="false"/>
     <image name="category_default" width="870" height="217"
