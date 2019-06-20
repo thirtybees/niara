@@ -263,12 +263,6 @@
       <hook module="themeconfigurator" hook="displayBackOfficeHeader" position="1"/>
       <hook module="themeconfigurator" hook="displayTopColumn" position="2"/>
       <hook module="themeconfigurator" hook="actionObjectLanguageAddAfter" position="2"/>
-      <hook module="productcomments" hook="displayHeader" position="32"/>
-      <hook module="productcomments" hook="displayRightColumnProduct" position="2"/>
-      <hook module="productcomments" hook="displayProductTab" position="1"/>
-      <hook module="productcomments" hook="displayProductTabContent" position="1"/>
-      <hook module="productcomments" hook="displayProductComparison" position="1"/>
-      <hook module="productcomments" hook="displayProductListReviews" position="1"/>
       <hook module="sendtoafriend" hook="displayHeader" position="33"/>
       <hook module="sendtoafriend" hook="displayLeftColumnProduct" position="1"/>
     </hooks>
