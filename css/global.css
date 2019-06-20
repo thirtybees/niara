@@ -9604,7 +9604,8 @@ body.content_only {
 }
 
 #footer li {
-  line-height: 30px;
+  padding-bottom: 0.3em;
+  padding-top: 0.3em;
 }
 
 #footer .icon-2x {
