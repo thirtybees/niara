@@ -263,8 +263,6 @@
       <hook module="themeconfigurator" hook="displayBackOfficeHeader" position="1"/>
       <hook module="themeconfigurator" hook="displayTopColumn" position="2"/>
       <hook module="themeconfigurator" hook="actionObjectLanguageAddAfter" position="2"/>
-      <hook module="sendtoafriend" hook="displayHeader" position="33"/>
-      <hook module="sendtoafriend" hook="displayLeftColumnProduct" position="1"/>
     </hooks>
   </modules>
   <images>
