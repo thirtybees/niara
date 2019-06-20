@@ -63,7 +63,6 @@
     <module action="enable" name="blocksocial"/>
     <module action="enable" name="blockcategories"/>
     <module action="enable" name="blockcurrencies"/>
-    <module action="enable" name="blockfacebook"/>
     <module action="enable" name="blocklanguages"/>
     <module action="enable" name="blocklayered"/>
     <module action="enable" name="blockcms"/>
@@ -92,6 +91,7 @@
     <module action="enable" name="themeconfigurator"/>
     <module action="disable" name="advancedeucompliance"/>
     <module action="disable" name="blockcustomerprivacy"/>
+    <module action="disable" name="blockfacebook"/>
     <module action="disable" name="blocklink"/>
     <module action="disable" name="blockpermanentlinks"/>
     <module action="disable" name="blockreinsurance"/>
@@ -144,8 +144,6 @@
       <hook module="blockcategories" hook="actionAdminLanguagesControllerStatusBefore" position="1"/>
       <hook module="blockcurrencies" hook="displayHeader" position="7"/>
       <hook module="blockcurrencies" hook="displayNav" position="2"/>
-      <hook module="blockfacebook" hook="displayHome" position="2"/>
-      <hook module="blockfacebook" hook="displayHeader" position="8"/>
       <hook module="blocklanguages" hook="displayHeader" position="9"/>
       <hook module="blocklanguages" hook="displayNav" position="3"/>
       <hook module="blocklayered" hook="displayLeftColumn" position="3"/>
