@@ -263,14 +263,6 @@
       <hook module="themeconfigurator" hook="displayBackOfficeHeader" position="1"/>
       <hook module="themeconfigurator" hook="displayTopColumn" position="2"/>
       <hook module="themeconfigurator" hook="actionObjectLanguageAddAfter" position="2"/>
-      <hook module="blockwishlist" hook="displayHeader" position="31"/>
-      <hook module="blockwishlist" hook="actionCartSave" position="1"/>
-      <hook module="blockwishlist" hook="displayTop" position="7"/>
-      <hook module="blockwishlist" hook="displayAdminCustomers" position="1"/>
-      <hook module="blockwishlist" hook="displayCustomerAccount" position="1"/>
-      <hook module="blockwishlist" hook="displayProductButtons" position="1"/>
-      <hook module="blockwishlist" hook="displayMyAccountBlock" position="1"/>
-      <hook module="blockwishlist" hook="displayProductListFunctionalButtons" position="1"/>
       <hook module="productcomments" hook="displayHeader" position="32"/>
       <hook module="productcomments" hook="displayRightColumnProduct" position="2"/>
       <hook module="productcomments" hook="displayProductTab" position="1"/>
