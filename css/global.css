@@ -9585,7 +9585,7 @@ body.content_only {
   background: #121212;
   border-top: 1px solid #333;
   padding: 15px 0;
-  color: #777777;
+  color: #c8c8c8;
 }
 
 #footer .footer-title,
@@ -9596,7 +9596,7 @@ body.content_only {
 }
 
 #footer a {
-  color: #777777;
+  color: #c8c8c8;
 }
 
 #footer a:hover {
@@ -9614,21 +9614,21 @@ body.content_only {
 
 #footer #newsletter-input.form-control {
   background: #121212;
-  border-color: #777777;
+  border-color: #c8c8c8;
   color: #777777;
 }
 
 #footer .btn {
   background: #121212;
-  border-top: 1px solid #777777;
-  border-right: 1px solid #777777;
-  border-bottom: 1px solid #777777;
+  border-top: 1px solid #c8c8c8;
+  border-right: 1px solid #c8c8c8;
+  border-bottom: 1px solid #c8c8c8;
   border-left: none;
-  color: #777777;
+  color: #c8c8c8;
 }
 
 #footer #blockcontactinfos .icon, #footer #blockcontactinfos [class^="icon-"] {
-  display: none;
+  /*display: none;*/
 }
 
 #copyright-footer {

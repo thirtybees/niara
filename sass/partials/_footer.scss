@@ -2,7 +2,7 @@
   background: #121212;
   border-top: 1px solid #333;
   padding: 15px 0;
-  color: $gray-light;
+  color: $gray-lighter;
   .footer-title,
   .title_block{
     font-size:16px;
@@ -10,7 +10,7 @@
     font-weight: 300;
   }
   a{
-    color: $gray-light;
+    color: $gray-lighter;
   }
   a:hover{
     color: $link-hover-color;
@@ -24,19 +24,19 @@
   }
   #newsletter-input.form-control{
     background: #121212;
-    border-color: $gray-light;
+    border-color: $gray-lighter;
     color: $gray-light;
   }
   .btn{
     background: #121212;
-    border-top: 1px solid $gray-light;
-    border-right: 1px solid $gray-light;
-    border-bottom: 1px solid $gray-light;
+    border-top: 1px solid $gray-lighter;
+    border-right: 1px solid $gray-lighter;
+    border-bottom: 1px solid $gray-lighter;
     border-left:none;
-    color: $gray-light;
+    color: $gray-lighter;
   }
   #blockcontactinfos .icon{
-    display: none;
+    /*display: none;*/
   }
 }
 
