@@ -418,19 +418,19 @@ th {
 }
 
 /* Block cart */
-#blockcart-header:after {
-  float: left;
+#blockcart-dropdown {
+  text-align: right;
 }
 
 .cart-images {
   float: right;
-  margin-right: 0;
   margin-left: 5px;
 }
 
 .cart-info {
-  padding-right: 0;
-  padding-left: 10px;
+  .price {
+    float: left;
+  }
 }
 
 .cart_block_shipping_cost,
