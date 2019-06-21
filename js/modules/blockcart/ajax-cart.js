@@ -114,46 +114,6 @@ var ajaxCart = {
         ajaxCart.add($('#product_page_product_id').val(), $('#idCombination').val(), true, null, $('#quantity_wanted').val(), null);
       });
     }
-
-    //for 'delete' buttons in the cart block...
-    $(document).off('click', '.cart_block_list .ajax_cart_block_remove_link').on('click', '.cart_block_list .ajax_cart_block_remove_link', function(e) {
-      e.preventDefault();
-      // Customized product management
-      var customizationId = 0;
-      var productId = 0;
-      var productAttributeId = 0;
-      var customizableProductDiv = $($(this).parent().parent()).find('div[data-id^=deleteCustomizableProduct_]');
-      var idAddressDelivery = false;
-
-      if (customizableProductDiv && $(customizableProductDiv).length) {
-        var ids = customizableProductDiv.data('id').split('_');
-        if (typeof(ids[1]) != 'undefined') {
-          customizationId = parseInt(ids[1]);
-          productId = parseInt(ids[2]);
-          if (typeof(ids[3]) != 'undefined')
-            productAttributeId = parseInt(ids[3]);
-          if (typeof(ids[4]) != 'undefined')
-            idAddressDelivery = parseInt(ids[4]);
-        }
-      }
-
-      // Common product management
-      if (!customizationId) {
-        //retrieve idProduct and idCombination from the displayed product in the block cart
-        var firstCut = $(this).parent().parent().data('id').replace('cart_block_product_', '');
-        firstCut = firstCut.replace('deleteCustomizableProduct_', '');
-        ids = firstCut.split('_');
-        productId = parseInt(ids[0]);
-
-        if (typeof(ids[1]) != 'undefined')
-          productAttributeId = parseInt(ids[1]);
-        if (typeof(ids[2]) != 'undefined')
-          idAddressDelivery = parseInt(ids[2]);
-      }
-
-      // Removing product from the cart
-      ajaxCart.remove(productId, productAttributeId, customizationId, idAddressDelivery);
-    });
   },
 
   // try to expand the cart
@@ -411,20 +371,6 @@ var ajaxCart = {
         });
       });
     }
-
-    var $removeLinks = $('.deleteCustomizableProduct[data-id="' + domIdProduct + '"]').find('.ajax_cart_block_remove_link');
-
-    // @TODO This is never called
-    if (!product.hasCustomizedDatas && !$removeLinks.length) {
-      $('div[data-id="' + domIdProduct + '"] span.remove_link').html('<a class="ajax_cart_block_remove_link" rel="nofollow" href="' +
-        baseUri + '?controller=cart&amp;delete=1&amp;id_product=' + product['id'] + '&amp;ipa=' + product['idCombination'] +
-        '&amp;token=' + static_token + '"><i class="icon icon-times"></i></a>');
-    }
-
-    // @TODO This is never called
-    if (product.is_gift) {
-      $('div[data-id="' + domIdProduct + '"] span.remove_link').html('');
-    }
   },
 
   /**
@@ -553,14 +499,6 @@ var ajaxCart = {
 
             content += '</div>';
 
-            if (typeof(p.is_gift) == 'undefined' || p.is_gift == 0) {
-              content += '<span class="remove_link"><a rel="nofollow" class="ajax_cart_block_remove_link" href="' + baseUri +
-                '?controller=cart&amp;delete=1&amp;id_product=' + productId + '&amp;token=' + static_token +
-                (p.hasAttributes ? '&amp;ipa=' + parseInt(p.idCombination) : '') + '"><i class="icon icon-times"></i></a></span>';
-            } else {
-              content += '<span class="remove_link"><i class="icon icon-times"></i></span>';
-            }
-
             content += '</dt>';
 
             if (p.hasAttributes) {
@@ -609,12 +547,6 @@ var ajaxCart = {
           }
 
           $('.cart_block dl.products .unvisible').slideDown().removeClass('unvisible');
-
-          // Remove default product remove button, leave remove buttons on customized rows only
-          var $removeLinks = $cartProductLine.find('a.ajax_cart_block_remove_link');
-          if (p.hasCustomizedDatas && $removeLinks.length) {
-            $removeLinks.remove();
-          }
         }
       });
   },
@@ -643,9 +575,7 @@ var ajaxCart = {
 
       content += '<li name="customization"><div class="deleteCustomizableProduct" data-id="deleteCustomizableProduct_' +
         customizationId + '_' + productId + '_' + (productAttributeId ?  productAttributeId : '0') +
-        '"><a rel="nofollow" class="ajax_cart_block_remove_link" href="' + baseUri + '?controller=cart&amp;delete=1&amp;id_product=' +
-        productId + '&amp;ipa=' + productAttributeId + '&amp;id_customization=' + customizationId + '&amp;token=' + static_token +
-        '"><i class="icon icon-times"></i></a></div>';
+        '"></div>';
 
       // Give to the customized product the first textfield value as name
       $(this.datas).each(function() {

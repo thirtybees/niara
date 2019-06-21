@@ -112,10 +112,6 @@
   padding: 5px;
 }
 
-#blockcart-dropdown .ajax_cart_block_remove_link i {
-  color: #888;
-}
-
 .cart_block_customizations {
   padding: 5px 0;
   margin-bottom: 10px;
@@ -130,12 +126,6 @@
 
 .deleteCustomizableProduct {
   float: right;
-}
-
-.cart_block_list .remove_link {
-  position: absolute;
-  right: 0;
-  top: 0;
 }
 
 .cart-images {
