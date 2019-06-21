@@ -35,7 +35,7 @@
                 >
               </picture>
             </a>
-            <div class="cart-info">
+            <div class="cart-info clearfix">
               <div class="product-name">
                 <span class="quantity-formatted">
                   <span class="quantity">{$product.cart_quantity|intval}</span> &times;
@@ -49,7 +49,7 @@
                   <a href="{$link->getProductLink($product, $product.link_rewrite, $product.category, null, null, $product.id_shop, $product.id_product_attribute)|escape:'html':'UTF-8'}" title="{l s='Product detail' mod='blockcart'}">{$product.attributes_small}</a>
                 </div>
               {/if}
-              <span class="price">
+              <div class="price">
                 {if !isset($product.is_gift) || !$product.is_gift}
                   {if $priceDisplay == $smarty.const.PS_TAX_EXC}{displayWtPrice p="`$product.total`"}{else}{displayWtPrice p="`$product.total_wt`"}{/if}
                   <span class="hookDisplayProductPriceBlock-price">
@@ -58,7 +58,7 @@
                 {else}
                   {l s='Free!' mod='blockcart'}
                 {/if}
-              </span>
+              </div>
             </div>
           </dt>
 

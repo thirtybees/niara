@@ -392,7 +392,8 @@ th {
 }
 
 .cart-info .price {
-  float: left;
+  right: auto;
+  left: 0;
 }
 
 .cart_block_shipping_cost,

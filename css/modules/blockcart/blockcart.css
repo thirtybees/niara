@@ -133,8 +133,15 @@
   margin-right: 5px;
 }
 
+.cart-info {
+  position: relative;
+}
+
 .cart-info .price {
-  float: right;
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  right: 0;
 }
 
 .cart-prices {
