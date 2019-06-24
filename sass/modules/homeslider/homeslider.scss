@@ -53,8 +53,6 @@
 
 .homeslider-description {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   cursor: pointer;
   h2 {
     font-size: 4em;
@@ -78,6 +76,6 @@
 }
 
 #homeslider-pager {
- display: none;
+  display: none;
 }
 
