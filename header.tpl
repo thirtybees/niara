@@ -48,6 +48,7 @@
             {/if}
         {/foreach}
     {/if}
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
     {if isset($js_defer) && !$js_defer && isset($js_files) && isset($js_def)}
         {$js_def}
         {foreach from=$js_files item=js_uri}
@@ -66,7 +67,7 @@
     </script>
     <script src="{$tpl_uri|escape:'htmlall':'UTF-8'}js/vendor/picturefill.min.js" data-keepinline async></script>
     <script src="{$tpl_uri|escape:'htmlall':'UTF-8'}js/vendor/picturefill-mutation.min.js" data-keepinline async></script>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+
 
 </head>
 <body{if isset($page_name)} id="{$page_name|escape:'html':'UTF-8'}"{/if}
