@@ -57,6 +57,7 @@
     <meta meta_page="statistics" left="1" right="0"/>
   </metas>
   <modules>
+    <module action="enable" name="beesblog"/>
     <module action="enable" name="blockbanner"/>
     <module action="enable" name="blockbestsellers"/>
     <module action="enable" name="blockcart"/>
@@ -66,7 +67,6 @@
     <module action="enable" name="blocklanguages"/>
     <module action="enable" name="blocklayered"/>
     <module action="enable" name="blockcms"/>
-    <module action="enable" name="blockcmsinfo"/>
     <module action="enable" name="blockcontact"/>
     <module action="enable" name="blockcontactinfos"/>
     <module action="enable" name="blockmanufacturer"/>
@@ -98,7 +98,7 @@
     <module action="disable" name="blockrss"/>
     <module action="disable" name="blocksharefb"/>
     <module action="disable" name="blockwishlist"/>
-    <module action="disable" name="beesblog"/>
+    <module action="disable" name="blockcmsinfo"/>
     <module action="disable" name="cookiebot"/>
     <module action="disable" name="crossselling"/>
     <module action="disable" name="dateofdelivery"/>
