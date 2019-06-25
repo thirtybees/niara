@@ -72,6 +72,7 @@ body {
 
   .navbar-nav {
     float: right !important;
+
     & > {
       li {
         float: right;
@@ -83,9 +84,11 @@ body {
     float: left !important;
     margin-left: -15px;
     margin-right: 0;
+
     .dropdown-menu {
-      right: 0;
-      left: auto;
+      left: 0;
+      right: auto;
+
       & > {
         li {
           a {
@@ -117,6 +120,7 @@ body {
   & > {
     li {
       float: right;
+
       & > {
         a {
           margin-right: 0;
@@ -135,9 +139,16 @@ th {
   float: left;
 }
 
+#product-list-switcher {
+  .btn {
+    padding: 6px 0 0 10px;
+  }
+}
+
 .product-label-container {
   right: 0;
   left: auto;
+
   .product-label {
     float: right;
   }
@@ -146,6 +157,7 @@ th {
 .product-label {
   margin: 4px 4px 0 0;
   font-weight: 700;
+
   &:last-of-type {
     margin-right: 4px;
     margin-left: 0;
@@ -168,6 +180,7 @@ th {
       }
     }
   }
+
   .next {
     & > {
       a, span {
@@ -177,10 +190,27 @@ th {
   }
 }
 
-.radio label,
-.checkbox label {
-  padding-left: 0;
-  padding-right: 20px;
+.payment_module {
+  a {
+    padding: 33px 99px 34px 40px;
+
+    &.bankwire {
+      background-position-x: calc(100% - 15px);
+    }
+    &.bankwire:after,
+    &.cash:after {
+      content: "\f053";
+      right: auto;
+      left: 15px;
+    }
+  }
+}
+
+.cart_unit,
+.cart_total,
+.cart_discount_price,
+#cart_summary tfoot td {
+  text-align: left;
 }
 
 .radio input[type="radio"],
@@ -189,6 +219,17 @@ th {
 .checkbox-inline input[type="checkbox"] {
   margin-left: 0;
   margin-right: -20px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  right: auto;
+  left: 9000px;
+}
+
+input[type="checkbox"] + .label-text:before {
+  margin-right: 0;
+  margin-left: 5px;
 }
 
 .radio-inline, .checkbox-inline {
@@ -220,11 +261,13 @@ th {
         margin-right: -1px;
       }
     }
+
     &:first-child {
       margin-right: 0;
       margin-left: -1px;
     }
   }
+
   .btn-group {
     & + {
       .btn, .btn-group {
@@ -245,6 +288,7 @@ th {
       }
     }
   }
+
   .list-block li {
     padding: 6px 6px 6px 0;
   }
@@ -260,6 +304,7 @@ th {
     float: right;
     margin-right: 0;
     margin-left: 3px;
+
     &:last-of-type {
       margin-left: 0;
     }
@@ -283,6 +328,7 @@ th {
 .bx-next {
   left: 10px;
   right: auto;
+
   &:before {
     content: "\f137";
   }
@@ -291,6 +337,7 @@ th {
 .bx-prev {
   right: 10px;
   left: auto;
+
   &:before {
     content: "\f138";
   }
@@ -316,13 +363,6 @@ th {
   margin: 0 0 3px 3px;
 }
 
-.quick-view {
-  right: auto;
-  left: 0;
-  border-right: 1px solid #ccc;
-  border-left: none;
-}
-
 .product-image-container .content_price {
   right: 0;
   left: auto;
@@ -333,14 +373,55 @@ th {
 }
 
 .product_list.grid {
+  .button-container a i {
+    margin-right: 0;
+    margin-left: 7px;
+  }
+
   .functional-buttons {
     left: auto;
     right: 0;
     margin-left: 0;
     margin-right: -1px;
+
     & > div {
       float: right;
     }
+  }
+}
+
+.product_list .show-if-product-item-hover {
+  right: auto;
+  left: 0;
+  transform: translate3d(-50px, 0px, 0px);
+}
+
+#quantity_wanted_p {
+  .input-group {
+    float: right;
+
+    #quantity_wanted {
+      border-left: none;
+      border-right: 1px solid rgb(221, 221, 221);
+    }
+
+    .input-group-btn {
+      float: right;
+    }
+  }
+}
+
+.input-group-btn:last-child {
+  & > .btn,
+  & > .btn-group {
+    margin-left: 0;
+    margin-right: -1px;
+  }
+}
+
+.input-group {
+  .form-control {
+    float: right;
   }
 }
 
@@ -349,10 +430,23 @@ th {
   padding-right: 2em;
 }
 
+#header-blocks {
+  .center-block {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+/* Block social */
+#blocksocial {
+  text-align: left;
+}
+
 /* Block search */
 .ac_results {
   direction: rtl !important;
   text-align: right;
+
   li {
     direction: rtl !important;
     text-align: right;
@@ -364,8 +458,7 @@ th {
   & > {
     li {
       float: right;
-      border-right: 0;
-      border-left: 1px solid #d6d4d4;
+
       & > {
         ul {
           & > {
@@ -373,12 +466,18 @@ th {
               float: right;
               padding-left: 15px;
               padding-right: 0;
+
               &.category-thumbnail {
                 padding-left: 0;
+
                 & > div {
                   float: right;
                   padding-right: 10px;
                   padding-left: 0;
+
+                  &:first-child {
+                    padding-right: 0;
+                  }
                 }
               }
             }
@@ -387,11 +486,13 @@ th {
       }
     }
   }
+
   li {
     ul {
       right: 0;
       left: auto;
     }
+
     li {
       li {
         a {
@@ -410,6 +511,7 @@ th {
   li {
     &.category-thumbnail {
       padding-left: 0;
+
       div {
         float: right;
       }
@@ -418,6 +520,10 @@ th {
 }
 
 /* Block cart */
+#blockcart {
+  text-align: left;
+}
+
 #blockcart-dropdown {
   text-align: right;
 }
@@ -448,9 +554,22 @@ th {
 
 #layer_cart {
   right: 0;
+
   .cross {
     right: auto;
     left: 15px;
+  }
+}
+
+#blockcart-header {
+  &:before {
+    margin-right: 0;
+    margin-left: 5px;
+  }
+
+  .ajax_cart_quantity {
+    right: auto;
+    left: 38px;
   }
 }
 
@@ -461,6 +580,7 @@ th {
       margin-right: 0;
       margin-left: 32px;
     }
+
     .btn-toggle {
       right: auto;
       left: 0;
@@ -468,11 +588,15 @@ th {
       border-left: 1px solid #ddd;
     }
   }
+
   .list-group-item {
+    padding: 0 0 0 20px;
+
     &.ilvl-2 {
       padding-left: 15px;
       padding-right: 25px;
     }
+
     &.ilvl-3 {
       padding-left: 15px;
       padding-right: 35px;
@@ -484,8 +608,8 @@ th {
 #layered_form {
   .layered_filter label a span {
     display: inline-block;
-    margin-right: 5px;
   }
+
   #enabled_filters ul li a {
     float: left;
   }
@@ -511,6 +635,36 @@ th {
   content: "\f054";
 }
 
+/* Homeslider */
+.homeslider-wrapper {
+  left: auto;
+  right: 0;
+  padding: 3% 40px 3% 50%;
+}
+
+#homepage-slider {
+  .bx-wrapper {
+    .bx-prev {
+      &:before {
+        content: "\f054";
+      }
+    }
+
+    .bx-next {
+      &:before {
+        content: "\f053";
+      }
+    }
+  }
+}
+
+#footer {
+  .btn {
+    border-left: 1px solid #c8c8c8;
+    border-right: none;
+  }
+}
+
 /* Fancybox */
 .fancybox-button--left::after {
   -webkit-transform: rotate(45deg);
@@ -530,6 +684,15 @@ th {
     float: right;
     margin-right: 0;
     margin-left: 0.15em;
+  }
+}
+
+/* Block CMS info */
+.cmsinfo-wrap {
+  em {
+    float: right;
+    padding-right: 0;
+    padding-left: 10px;
   }
 }
 
