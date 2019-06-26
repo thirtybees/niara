@@ -125,3 +125,11 @@ input[type="radio"]:disabled + .label-text:before{
 .form-control{
   box-shadow: none;
 }
+
+// Fixing social titles not being aligned
+
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+	margin-top: 10px;
+	margin-left: 10px; // space out consecutive inline controls
+}
