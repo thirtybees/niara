@@ -9466,6 +9466,12 @@ input[type="radio"]:disabled + .label-text:before {
   box-shadow: none;
 }
 
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   text-transform: uppercase;

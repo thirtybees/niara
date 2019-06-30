@@ -58,6 +58,10 @@
   </metas>
   <modules>
     <module action="enable" name="beesblog"/>
+    <module action="enable" name="beesblogcategories"/>
+    <module action="enable" name="beesblogpopularposts"/>
+    <module action="enable" name="beesblogrecentposts"/>
+    <module action="enable" name="beesblogrelatedproducts"/>
     <module action="enable" name="blockbanner"/>
     <module action="enable" name="blockbestsellers"/>
     <module action="enable" name="blockcart"/>
@@ -118,6 +122,11 @@
       <hook module="socialsharing" hook="actionObjectProductUpdateAfter" position="1"/>
       <hook module="socialsharing" hook="actionObjectProductDeleteAfter" position="1"/>
       <hook module="socialsharing" hook="displayCompareExtraInformation" position="1"/>
+      <hook module="beesblog" hook="displayHeader" position="1"/>
+      <hook module="beesblog" hook="moduleRoutes" position="1"/>
+      <hook module="beesblog" hook="displayBackOfficeHeader" position="1"/>
+      <hook module="beesblog" hook="GSitemapAppendUrls" position="1"/>
+      <hook module="beesblogrecentposts" hook="displayHome" position="4"/>
       <hook module="blockbanner" hook="displayHeader" position="2"/>
       <hook module="blockbanner" hook="displayBanner" position="1"/>
       <hook module="blockbanner" hook="actionObjectLanguageAddAfter" position="1"/>
@@ -127,8 +136,7 @@
       <hook module="blockbestsellers" hook="actionProductUpdate" position="1"/>
       <hook module="blockbestsellers" hook="actionProductDelete" position="1"/>
       <hook module="blockbestsellers" hook="actionOrderStatusPostUpdate" position="1"/>
-      <hook module="blockbestsellers" hook="displayHomeTab" position="3"/>
-      <hook module="blockbestsellers" hook="displayHomeTabContent" position="3"/>
+      <hook module="blockbestsellers" hook="displayHome" position="3"/>
       <hook module="blockcart" hook="displayHeader" position="4"/>
       <hook module="blockcart" hook="displayTop" position="2"/>
       <hook module="blockcart" hook="actionCartListOverride" position="1"/>
@@ -176,7 +184,6 @@
       <hook module="blockcms" hook="actionObjectCmsDeleteAfter" position="1"/>
       <hook module="blockcms" hook="actionShopDataDuplication" position="1"/>
       <hook module="blockcms" hook="actionAdminStoresControllerUpdate_optionsAfter" position="1"/>
-      <hook module="blockcmsinfo" hook="displayHome" position="3"/>
       <hook module="blockcontact" hook="displayHeader" position="12"/>
       <hook module="blockcontact" hook="displayNav" position="4"/>
       <hook module="blockcontactinfos" hook="displayHeader" position="13"/>
@@ -194,13 +201,12 @@
       <hook module="blockmyaccountfooter" hook="displayFooter" position="5"/>
       <hook module="blockmyaccountfooter" hook="actionModuleRegisterHookAfter" position="2"/>
       <hook module="blockmyaccountfooter" hook="actionModuleUnRegisterHookAfter" position="2"/>
+      <hook module="blocknewproducts" hook="displayHome" position="1"/>
       <hook module="blocknewproducts" hook="displayLeftColumn" position="7"/>
       <hook module="blocknewproducts" hook="displayHeader" position="17"/>
       <hook module="blocknewproducts" hook="actionProductAdd" position="2"/>
       <hook module="blocknewproducts" hook="actionProductUpdate" position="2"/>
       <hook module="blocknewproducts" hook="actionProductDelete" position="2"/>
-      <hook module="blocknewproducts" hook="displayHomeTab" position="1"/>
-      <hook module="blocknewproducts" hook="displayHomeTabContent" position="1"/>
       <hook module="blocknewsletter" hook="displayHeader" position="18"/>
       <hook module="blocknewsletter" hook="displayFooter" position="1"/>
       <hook module="blocknewsletter" hook="actionCustomerAccountAdd" position="1"/>
@@ -255,12 +261,9 @@
       <hook module="homefeatured" hook="actionProductUpdate" position="4"/>
       <hook module="homefeatured" hook="actionProductDelete" position="4"/>
       <hook module="homefeatured" hook="actionCategoryUpdate" position="4"/>
-      <hook module="homefeatured" hook="displayHomeTab" position="2"/>
-      <hook module="homefeatured" hook="displayHomeTabContent" position="2"/>
       <hook module="productpaymentlogos" hook="displayHeader" position="29"/>
       <hook module="productpaymentlogos" hook="displayProductButtons" position="2"/>
       <hook module="themeconfigurator" hook="displayLeftColumn" position="14"/>
-      <hook module="themeconfigurator" hook="displayHome" position="1"/>
       <hook module="themeconfigurator" hook="displayHeader" position="30"/>
       <hook module="themeconfigurator" hook="displayFooter" position="8"/>
       <hook module="themeconfigurator" hook="displayBackOfficeHeader" position="1"/>
