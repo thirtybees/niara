@@ -92,6 +92,7 @@
     <module action="enable" name="homefeatured"/>
     <module action="enable" name="productpaymentlogos"/>
     <module action="enable" name="socialsharing"/>
+    <module action="enable" name="tbhtmlblock"/>
     <module action="enable" name="themeconfigurator"/>
     <module action="disable" name="advancedeucompliance"/>
     <module action="disable" name="blockcustomerprivacy"/>
