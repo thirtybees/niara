@@ -126,7 +126,6 @@
       <hook module="beesblog" hook="moduleRoutes" position="1"/>
       <hook module="beesblog" hook="displayBackOfficeHeader" position="1"/>
       <hook module="beesblog" hook="GSitemapAppendUrls" position="1"/>
-      <hook module="beesblogrecentposts" hook="displayHome" position="4"/>
       <hook module="blockbanner" hook="displayHeader" position="2"/>
       <hook module="blockbanner" hook="displayBanner" position="1"/>
       <hook module="blockbanner" hook="actionObjectLanguageAddAfter" position="1"/>
@@ -187,7 +186,6 @@
       <hook module="blockcontact" hook="displayHeader" position="12"/>
       <hook module="blockcontact" hook="displayNav" position="4"/>
       <hook module="blockcontactinfos" hook="displayHeader" position="13"/>
-      <hook module="blockcontactinfos" hook="displayFooter" position="6"/>
       <hook module="blockmanufacturer" hook="displayLeftColumn" position="5" exceptions="category"/>
       <hook module="blockmanufacturer" hook="displayHeader" position="14"/>
       <hook module="blockmanufacturer" hook="actionObjectManufacturerDeleteAfter" position="1"/>
@@ -257,6 +255,7 @@
       <hook module="homeslider" hook="displayTopColumn" position="1"/>
       <hook module="homeslider" hook="actionShopDataDuplication" position="3"/>
       <hook module="homefeatured" hook="displayHeader" position="28"/>
+      <hook module="homefeatured" hook="displayHome" position="2"/>
       <hook module="homefeatured" hook="actionProductAdd" position="4"/>
       <hook module="homefeatured" hook="actionProductUpdate" position="4"/>
       <hook module="homefeatured" hook="actionProductDelete" position="4"/>
