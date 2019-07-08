@@ -21,7 +21,7 @@
     <span class="navigation-pipe">{$navigationPipe|escape:'htmlall':'UTF-8'}</span>{$post->title}
 {/capture}
 <div id="beesblog-content" class="block">
-    <div itemtype="#" itemscope="" id="sdsblogArticle" class="blog-post">
+    <div id="sdsblogArticle" class="blog-post">
         <div id="beesblog-before-pos" class="row">
             {$displayBeesBlogBeforePost}
         </div>
