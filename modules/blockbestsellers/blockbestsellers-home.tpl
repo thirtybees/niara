@@ -1,5 +1,5 @@
 {**
- * Copyright (C) 2017-2018 thirty bees
+ * Copyright (C) 2017-2019 thirty bees
  * Copyright (C) 2007-2016 PrestaShop SA
  *
  * thirty bees is an extension to the PrestaShop software by PrestaShop SA.
@@ -16,7 +16,7 @@
  *
  * @author    thirty bees <modules@thirtybees.com>
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2017-2018 thirty bees
+ * @copyright 2017-2019 thirty bees
  * @copyright 2007-2016 PrestaShop SA
  * @license   Academic Free License (AFL 3.0)
  * PrestaShop is an internationally registered trademark of PrestaShop SA.
@@ -32,7 +32,7 @@
   {include file="$tpl_dir./product-list.tpl" products=$best_sellers class='blockbestsellers' id='blockbestsellers'}
 {else}
   <ul id="blockbestsellers" class="blockbestsellers">
-    <li class="alert alert-info">{l s='No best sellers at this time11.' mod='blockbestsellers'}</li>
+    <li class="alert alert-info">{l s='No best sellers at this time.' mod='blockbestsellers'}</li>
   </ul>
 {/if}
 </div>
