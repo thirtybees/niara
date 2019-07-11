@@ -1,8 +1,5 @@
 {**
- * Copyright (C) 2017-2019 thirty bees
- * Copyright (C) 2007-2016 PrestaShop SA
- *
- * thirty bees is an extension to the PrestaShop software by PrestaShop SA.
+ * Copyright (C) 2019 thirty bees
  *
  * NOTICE OF LICENSE
  *
@@ -15,11 +12,8 @@
  * to license@thirtybees.com so we can send you a copy immediately.
  *
  * @author    thirty bees <modules@thirtybees.com>
- * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2017-2019 thirty bees
- * @copyright 2007-2016 PrestaShop SA
+ * @copyright 2019 thirty bees
  * @license   Academic Free License (AFL 3.0)
- * PrestaShop is an internationally registered trademark of PrestaShop SA.
  *}
 
 <!-- MODULE Block new products -->
