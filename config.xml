@@ -87,7 +87,6 @@
     <module action="enable" name="homeslider"/>
     <module action="enable" name="socialsharing"/>
     <module action="enable" name="tbhtmlblock"/>
-    <module action="enable" name="themeconfigurator"/>
     <module action="enable" name="thememanager"/>
     <module action="disable" name="advancedeucompliance"/>
     <module action="disable" name="blockcmsinfo"/>
@@ -118,6 +117,7 @@
     <module action="disable" name="referralprogram"/>
     <module action="disable" name="sendtoafriend"/>
     <module action="disable" name="tawkto"/>
+    <module action="disable" name="themeconfigurator"/>
     <hooks>
       <hook module="beesblog" hook="GSitemapAppendUrls" position="1"/>
       <hook module="beesblog" hook="displayHeader" position="1"/>
@@ -255,12 +255,6 @@
       <hook module="socialsharing" hook="actionObjectProductUpdateAfter" position="1"/>
       <hook module="socialsharing" hook="displayCompareExtraInformation" position="1"/>
       <hook module="socialsharing" hook="displayRightColumnProduct" position="1"/>
-      <hook module="themeconfigurator" hook="displayHeader" position="30"/>
-      <hook module="themeconfigurator" hook="actionObjectLanguageAddAfter" position="2"/>
-      <hook module="themeconfigurator" hook="displayBackOfficeHeader" position="1"/>
-      <hook module="themeconfigurator" hook="displayFooter" position="8"/>
-      <hook module="themeconfigurator" hook="displayLeftColumn" position="14"/>
-      <hook module="themeconfigurator" hook="displayTopColumn" position="2"/>
     </hooks>
   </modules>
   <images>
