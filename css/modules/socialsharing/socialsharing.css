@@ -1,6 +1,5 @@
 .btn-facebook,
 .btn-twitter,
-.btn-google-plus,
 .btn-pinterest {
   font-size: 0;
   color: #ccc;
@@ -10,14 +9,12 @@
 
 .btn-facebook:hover,
 .btn-twitter:hover,
-.btn-google-plus:hover,
 .btn-pinterest:hover {
   color: #c1a95e;
 }
 
 .btn-facebook i,
 .btn-twitter i,
-.btn-google-plus i,
 .btn-pinterest i {
   font-size: initial;
 }
