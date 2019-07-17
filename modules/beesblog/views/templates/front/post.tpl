@@ -47,9 +47,6 @@
             <button data-type="facebook" type="button" class="btn btn-xs btn-facebook">
                 <i class="icon-facebook"></i> Share
             </button>
-            <button data-type="google-plus" type="button" class="btn btn-xs btn-google-plus">
-                <i class="icon-google-plus"></i> Google+
-            </button>
             <button data-type="pinterest" type="button" class="btn btn-xs btn-pinterest">
                 <i class="icon-pinterest"></i> Pinterest
             </button>
