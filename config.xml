@@ -62,7 +62,6 @@
     <module action="enable" name="beesblogpopularposts"/>
     <module action="enable" name="beesblogrecentposts"/>
     <module action="enable" name="beesblogrelatedproducts"/>
-    <module action="enable" name="blockbanner"/>
     <module action="enable" name="blockbestsellers"/>
     <module action="enable" name="blockcart"/>
     <module action="enable" name="blockcategories"/>
@@ -89,6 +88,7 @@
     <module action="enable" name="tbhtmlblock"/>
     <module action="enable" name="thememanager"/>
     <module action="disable" name="advancedeucompliance"/>
+    <module action="disable" name="blockbanner"/>
     <module action="disable" name="blockcmsinfo"/>
     <module action="disable" name="blockcontact"/>
     <module action="disable" name="blockcontactinfos"/>
@@ -123,9 +123,6 @@
       <hook module="beesblog" hook="displayHeader" position="1"/>
       <hook module="beesblog" hook="displayBackOfficeHeader" position="1"/>
       <hook module="beesblog" hook="moduleRoutes" position="1"/>
-      <hook module="blockbanner" hook="displayHeader" position="2"/>
-      <hook module="blockbanner" hook="actionObjectLanguageAddAfter" position="1"/>
-      <hook module="blockbanner" hook="displayBanner" position="1"/>
       <hook module="blockbestsellers" hook="displayHeader" position="3"/>
       <hook module="blockbestsellers" hook="actionOrderStatusPostUpdate" position="1"/>
       <hook module="blockbestsellers" hook="actionProductAdd" position="1"/>
