@@ -66,6 +66,7 @@
     <module action="enable" name="blockcart"/>
     <module action="enable" name="blockcategories"/>
     <module action="enable" name="blockcms"/>
+    <module action="enable" name="blockcontactinfos"/>
     <module action="enable" name="blockcurrencies"/>
     <module action="enable" name="blocklanguages"/>
     <module action="enable" name="blocklayered"/>
@@ -91,7 +92,6 @@
     <module action="disable" name="blockbanner"/>
     <module action="disable" name="blockcmsinfo"/>
     <module action="disable" name="blockcontact"/>
-    <module action="disable" name="blockcontactinfos"/>
     <module action="disable" name="blockcustomerprivacy"/>
     <module action="disable" name="blockfacebook"/>
     <module action="disable" name="blocklink"/>
@@ -149,6 +149,8 @@
       <hook module="blockcms" hook="displayFooter" position="4"/>
       <hook module="blockcms" hook="displayLeftColumn" position="4"/>
       <hook module="blockcurrencies" hook="displayHeader" position="7"/>
+      <hook module="blockcontactinfos" hook="displayHeader" position="14"/>
+      <hook module="blockcontactinfos" hook="displayFooter" position="6"/>
       <hook module="blockcurrencies" hook="displayNav" position="2"/>
       <hook module="blocklanguages" hook="displayHeader" position="9"/>
       <hook module="blocklanguages" hook="displayNav" position="3"/>
