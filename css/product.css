@@ -148,6 +148,8 @@
 .attribute_list input.attribute_radio {
   float: left;
   margin-left: 3px;
+  width: 100%;
+  cursor: pointer;
 }
 
 .attribute_list div.radio,
