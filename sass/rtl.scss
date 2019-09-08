@@ -224,7 +224,7 @@ th {
 input[type="checkbox"],
 input[type="radio"] {
   right: auto;
-  left: 9000px;
+  opacity: 0;
 }
 
 input[type="checkbox"] + .label-text:before {
