@@ -168,6 +168,8 @@ $zoom-in-size: 110px;
   input.attribute_radio {
     float: left;
     margin-left: 3px;
+    width: 100%;
+    cursor: pointer;
   }
   div.radio,
   div.radio span,
