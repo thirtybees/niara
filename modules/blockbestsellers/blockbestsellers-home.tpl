@@ -26,7 +26,7 @@
   {include file="$tpl_dir./product-list.tpl" products=$best_sellers class='blockbestsellers' id='blockbestsellers'}
 {else}
   <ul id="blockbestsellers" class="blockbestsellers">
-    <li class="alert alert-info">{l s='No best sellers at this time11.' mod='blockbestsellers'}</li>
+    <li class="alert alert-info">{l s='No best sellers at this time.' mod='blockbestsellers'}</li>
   </ul>
 {/if}
 </div>
