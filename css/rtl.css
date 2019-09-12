@@ -220,9 +220,16 @@ input[type="radio"] {
   left: 9000px;
 }
 
+input[type="radio"] + .label-text:before,
 input[type="checkbox"] + .label-text:before {
   margin-right: 0;
   margin-left: 5px;
+}
+
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-left: 0;
+  margin-right: 10px;
 }
 
 .radio-inline, .checkbox-inline {
@@ -345,10 +352,13 @@ input[type="checkbox"] + .label-text:before {
 }
 
 .product_list.grid .functional-buttons {
-  left: auto;
-  right: 0;
-  margin-left: 0;
-  margin-right: -1px;
+  left: 0;
+  right: auto;
+}
+
+.product_list.grid .show-if-product-grid-hover,
+.product_list.grid .hide-if-product-grid {
+  transform: translate3d(-50px, 0px, 0px);
 }
 
 .product_list.grid .functional-buttons > div {
