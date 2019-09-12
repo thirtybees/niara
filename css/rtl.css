@@ -138,6 +138,10 @@ th {
   text-align: right;
 }
 
+dd {
+  margin-right: 0;
+}
+
 .close {
   float: left;
 }
@@ -278,7 +282,7 @@ input[type="checkbox"] + .label-text:before {
   margin-left: 0;
 }
 
-.alert.alert-warning:before, .alert.alert-danger:before {
+.alert.alert-warning:before, .alert.alert-danger:before, .alert.alert-info:before {
   margin-right: 0;
   margin-left: 0.5em;
 }
@@ -601,6 +605,11 @@ input[type="checkbox"] + .label-text:before {
   float: right;
   padding-right: 0;
   padding-left: 10px;
+}
+
+/* Bees Blog */
+.beesblogrecentpostshome-content h5 span {
+  float: left;
 }
 
 @media (min-width: 768px) {

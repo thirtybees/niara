@@ -135,6 +135,10 @@ th {
   text-align: right;
 }
 
+dd {
+  margin-right: 0;
+}
+
 .close {
   float: left;
 }
@@ -197,6 +201,7 @@ th {
     &.bankwire {
       background-position-x: calc(100% - 15px);
     }
+
     &.bankwire:after,
     &.cash:after {
       content: "\f053";
@@ -312,7 +317,7 @@ input[type="checkbox"] + .label-text:before {
 }
 
 .alert {
-  &.alert-warning, &.alert-danger {
+  &.alert-warning, &.alert-danger, &.alert-info {
     &:before {
       margin-right: 0;
       margin-left: 0.5em;
@@ -693,6 +698,15 @@ input[type="checkbox"] + .label-text:before {
     float: right;
     padding-right: 0;
     padding-left: 10px;
+  }
+}
+
+/* Bees Blog */
+.beesblogrecentpostshome-content {
+  h5 {
+    span {
+      float: left;
+    }
   }
 }
 
