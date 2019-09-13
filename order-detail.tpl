@@ -95,7 +95,7 @@
     <table class="table table-bordered">
       <thead>
       <tr>
-        {if $return_allowed}<th><input type="checkbox"></th>{/if}
+        {if $return_allowed}<th class="order_cb"><div class="checkbox"><label><input type="checkbox"><span class="label-text"></span></label</div></th>{/if}
         <th>{l s='Reference'}</th>
         <th>{l s='Product'}</th>
         <th>{l s='Quantity'}</th>
@@ -257,7 +257,7 @@
 
           {if $product.product_quantity > $product.customizationQuantityTotal}
             <tr>
-              {if $return_allowed}<td class="order_cb"><input type="checkbox" id="cb_{$product.id_order_detail|intval}" name="ids_order_detail[{$product.id_order_detail|intval}]" value="{$product.id_order_detail|intval}"></td>{/if}
+                {if $return_allowed}<td class="order_cb"><div class="checkbox"><label for="cb_{$product.id_order_detail|intval}"><input type="checkbox" id="cb_{$product.id_order_detail|intval}" name="ids_order_detail[{$product.id_order_detail|intval}]" value="{$product.id_order_detail|intval}"><span class="label-text"></span></label></div></td>{/if}
               <td><label for="cb_{$product.id_order_detail|intval}">{if $product.product_reference}{$product.product_reference|escape:'html':'UTF-8'}{else}--{/if}</label></td>
               <td class="bold">
                 <label for="cb_{$product.id_order_detail|intval}">
@@ -281,7 +281,7 @@
               </td>
               <td class="return_quantity">
                 <input class="order_qte_input form-control text-center" name="order_qte_input[{$product.id_order_detail|intval}]" type="text" size="2" value="{$productQuantity|intval}">
-                <div class="clearfix return_quantity_buttons">
+                <div class="clearfix return_quantity_buttons pull-left">
                   <a href="#" class="return_quantity_down btn btn-default button-minus"><i class="icon icon-fw icon-minus"></i></a>
                   <a href="#" class="return_quantity_up btn btn-default button-plus"><i class="icon icon-fw icon-plus"></i></a>
                 </div>

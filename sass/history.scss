@@ -1,29 +1,51 @@
-
 @import "theme_variables";
 @import "vendor_variables";
 
 #order-detail-content table {
-  .return_quantity_buttons {
-    margin-top: 3px;
-    a {
-      display: none;
-      float: left;
-      &+a {
-        margin-left: 3px;
+  .return_quantity {
+    width: 107px;
+    text-align: center;
+    .return_quantity_buttons {
+      margin-top: 3px;
+
+      a {
+        display: none;
+        float: left;
+
+        & + a {
+          margin-left: 3px;
+        }
       }
     }
   }
+
   .order_qte_input {
     display: none;
     width: 91px;
   }
+
   label {
     font-weight: 400;
   }
+
+  .order_cb {
+    width: 40px;
+    text-align: center;
+
+    .checkbox {
+      margin-top: 0;
+      margin-bottom: 0;
+      .label-text:before {
+        margin-right: 0px;
+      }
+    }
+  }
+
 }
 
 #sendOrderMessage {
   margin-bottom: 30px;
+
   select.form-control {
     width: 263px;
   }
