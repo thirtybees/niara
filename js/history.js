@@ -35,10 +35,10 @@ function updateOrderLineDisplay(domCheckbox) {
 
   if ($(domCheckbox).is(':checked')) {
     lineQuantitySpan.hide();
-    lineQuantityInput.show();
+    lineQuantityInput.css('display', 'block');
     lineQuantityButtons.show();
   } else {
-    lineQuantityInput.hide();
+    lineQuantityInput.css('display', 'none');
     lineQuantityButtons.hide();
     lineQuantityInput.val(lineQuantitySpan.text());
     lineQuantitySpan.show();
