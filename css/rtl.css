@@ -14,54 +14,67 @@ body {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: right;
   }
+
   .col-sm-offset-0 {
     margin-right: 0%;
     margin-left: 0;
   }
+
   .col-sm-offset-1 {
     margin-right: 8.33333333%;
     margin-left: 0;
   }
+
   .col-sm-offset-2 {
     margin-right: 16.66666667%;
     margin-left: 0;
   }
+
   .col-sm-offset-3 {
     margin-right: 25%;
     margin-left: 0;
   }
+
   .col-sm-offset-4 {
     margin-right: 33.33333333%;
     margin-left: 0;
   }
+
   .col-sm-offset-5 {
     margin-right: 41.66666667%;
     margin-left: 0;
   }
+
   .col-sm-offset-6 {
     margin-right: 50%;
     margin-left: 0;
   }
+
   .col-sm-offset-7 {
     margin-right: 58.33333333%;
     margin-left: 0;
   }
+
   .col-sm-offset-8 {
     margin-right: 66.66666667%;
     margin-left: 0;
   }
+
   .col-sm-offset-9 {
     margin-right: 75%;
     margin-left: 0;
   }
+
   .col-sm-offset-10 {
     margin-right: 83.33333333%;
     margin-left: 0;
   }
+
   .col-sm-offset-11 {
     margin-right: 91.66666667%;
     margin-left: 0;
   }
+
   .col-sm-offset-12 {
     margin-right: 100%;
     margin-left: 0;
@@ -88,36 +101,45 @@ body {
   .navbar-header {
     float: right;
   }
+
   .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
     margin-right: -15px;
     margin-left: 0;
   }
+
   .navbar-nav {
     float: right !important;
   }
+
   .navbar-nav > li {
     float: right;
   }
+
   .navbar-right {
     float: left !important;
     margin-left: -15px;
     margin-right: 0;
   }
+
   .navbar-right .dropdown-menu {
     left: 0;
     right: auto;
   }
+
   .navbar-right .dropdown-menu > li a {
     text-align: right;
   }
+
   .productsSortForm {
     float: left;
     margin-left: 0;
     margin-right: 10px;
   }
+
   .product-count {
     float: right;
   }
+
   .compare-form {
     float: left;
     margin-left: 0;
@@ -462,6 +484,22 @@ input[type="checkbox"] + .label-text:before {
 
 #block_top_menu li.category-thumbnail div {
   float: right;
+}
+
+@media (max-width: 767px) {
+  .cat-title:after {
+    right: auto;
+    left: 15px;
+  }
+
+  .sf-menu > li {
+    float: none;
+  }
+
+  .sf-menu > li span {
+    right: auto;
+    left: 3px;
+  }
 }
 
 /* Block cart */

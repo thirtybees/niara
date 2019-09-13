@@ -384,28 +384,27 @@ input[type="checkbox"] + .label-text:before {
   float: right;
 }
 
-.product_list.grid {
-  .button-container a i {
-    margin-right: 0;
-    margin-left: 7px;
-  }
-
-  .functional-buttons {
-    left: 0;
-    right: auto;
-
-    & > div {
-      float: right;
-    }
-  }
-}
-
 .product_list {
   &.grid {
     .show-if-product-grid-hover, .hide-if-product-grid {
       transform: translate3d(-50px, 0px, 0px);
     }
+
+    .button-container a i {
+      margin-right: 0;
+      margin-left: 7px;
+    }
+
+    .functional-buttons {
+      left: 0;
+      right: auto;
+
+      & > div {
+        float: right;
+      }
+    }
   }
+
   .show-if-product-item-hover {
     right: auto;
     left: 0;
@@ -531,6 +530,23 @@ input[type="checkbox"] + .label-text:before {
 
       div {
         float: right;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .cat-title:after {
+    right: auto;
+    left: 15px;
+  }
+  .sf-menu {
+    & > li {
+      float: none;
+
+      span {
+        right: auto;
+        left: 3px;
       }
     }
   }
