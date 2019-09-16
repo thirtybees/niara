@@ -22,9 +22,10 @@
 	<div class="block_content">
 	{if $new_products !== false}
 		<ul class="product_images clearfix">
+		{$imageSize=Image::getSize('medium')}
 		{foreach from=$new_products item='product' name='newProducts'}
 			{if $smarty.foreach.newProducts.index < 2}
-				<li{if $smarty.foreach.newProducts.first} class="first"{/if}><a href="{$product.link|escape:'html'}" title="{$product.legend|escape:html:'UTF-8'}"><img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'medium')|escape:'html'}" height="{$mediumSize.height}" width="{$mediumSize.width}" alt="{$product.legend|escape:html:'UTF-8'}" /></a></li>
+				<li{if $smarty.foreach.newProducts.first} class="first"{/if}><a href="{$product.link|escape:'html'}" title="{$product.legend|escape:html:'UTF-8'}"><img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'medium')|escape:'html'}" height="{$imageSize.height}" width="{$imageSize.width}" alt="{$product.legend|escape:html:'UTF-8'}" /></a></li>
 			{/if}
 		{/foreach}
 		</ul>
