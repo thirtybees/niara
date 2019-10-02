@@ -1853,9 +1853,24 @@ table th[class*="col-"] {
     -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid #ddd;
   }
+  
   .table-responsive > .table {
     margin-bottom: 0;
   }
+  
+  .table-responsive table, 
+  .table-responsive thead,
+  .table-responsive tbody,
+  .table-responsive th,
+  .table-responsive td,
+  .table-responsive tr {
+    display: block;
+  }
+  
+  .table-responsive tfoot {
+	display: inline;
+  }
+  
   .table-responsive > .table > thead > tr > th,
   .table-responsive > .table > thead > tr > td,
   .table-responsive > .table > tbody > tr > th,
@@ -1863,31 +1878,65 @@ table th[class*="col-"] {
   .table-responsive > .table > tfoot > tr > th,
   .table-responsive > .table > tfoot > tr > td {
     white-space: nowrap;
+	border-bottom: 0;
   }
+  
   .table-responsive > .table-bordered {
     border: 0;
+  } 
+  
+  .table-responsive .unvisible,
+  .table-responsive thead tr, 
+  .table-responsive #cart_summary .cart_total_price #cart_voucher {
+	display: none;
   }
-  .table-responsive > .table-bordered > thead > tr > th:first-child,
-  .table-responsive > .table-bordered > thead > tr > td:first-child,
-  .table-responsive > .table-bordered > tbody > tr > th:first-child,
-  .table-responsive > .table-bordered > tbody > tr > td:first-child,
-  .table-responsive > .table-bordered > tfoot > tr > th:first-child,
-  .table-responsive > .table-bordered > tfoot > tr > td:first-child {
-    border-left: 0;
+  
+  .table-responsive .cart_total_price > td#total_product,
+  .table-responsive .cart_total_price > td#total_price_container,
+  .table-responsive .cart_total_delivery > td#total_shipping  {
+	border-top: 0;
   }
-  .table-responsive > .table-bordered > thead > tr > th:last-child,
-  .table-responsive > .table-bordered > thead > tr > td:last-child,
-  .table-responsive > .table-bordered > tbody > tr > th:last-child,
-  .table-responsive > .table-bordered > tbody > tr > td:last-child,
-  .table-responsive > .table-bordered > tfoot > tr > th:last-child,
-  .table-responsive > .table-bordered > tfoot > tr > td:last-child {
-    border-right: 0;
+  
+  .table-responsive .cart_quantity.text-center {
+	width: 100%;
   }
-  .table-responsive > .table-bordered > tbody > tr:last-child > th,
-  .table-responsive > .table-bordered > tbody > tr:last-child > td,
-  .table-responsive > .table-bordered > tfoot > tr:last-child > th,
-  .table-responsive > .table-bordered > tfoot > tr:last-child > td {
-    border-bottom: 0;
+  
+  .table-responsive .cart_quantity_input {
+	width: 80px;
+	float: left;
+	margin-right: 20px;
+  }
+    
+  .table-responsive .cart_quantity_button a.btn {
+	width: calc(50% - 60px);
+	float : left;
+  }
+  
+  .table-responsive .cart_quantity_button a.button-minus {
+	margin-right: 20px;
+  }
+  
+  .table-responsive #cart_summary > tbody > tr.cart_item > td.cart_unit {
+	width: 50%;
+	float: left;
+	display: inline-flex;
+	border-right: 0;
+  }
+  
+  .table-responsive #cart_summary > tbody > tr.cart_item > td.cart_quantity {
+	width: 15%;
+	float: left;
+	border-left: 0;
+  }
+  
+  .table-responsive #cart_summary > tbody > tr.cart_item > td.cart_quantity:before {
+	content: "x";
+  }
+
+  .table-responsive #cart_summary > tbody > tr.cart_item > td.cart_total {
+	width: 35%;
+	display: inline-block;
+	margin: 0;
   }
 }
 
