@@ -1851,11 +1851,24 @@ table th[class*="col-"] {
     margin-bottom: 15px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid #ddd;
   }
   .table-responsive > .table {
     margin-bottom: 0;
   }
+    
+  .table-responsive table, 
+  .table-responsive thead,
+  .table-responsive tbody,
+  .table-responsive th,
+  .table-responsive td,
+  .table-responsive tr {
+    display: block;
+  }
+  
+  .table-responsive tfoot {
+	display: inline;
+  }
+  
   .table-responsive > .table > thead > tr > th,
   .table-responsive > .table > thead > tr > td,
   .table-responsive > .table > tbody > tr > th,
@@ -1863,31 +1876,73 @@ table th[class*="col-"] {
   .table-responsive > .table > tfoot > tr > th,
   .table-responsive > .table > tfoot > tr > td {
     white-space: nowrap;
+	border-bottom: 0;
   }
+  
   .table-responsive > .table-bordered {
     border: 0;
+  } 
+  
+  .table-responsive .unvisible,
+  .table-responsive thead tr, 
+  .table-responsive #cart_summary .cart_total_price #cart_voucher {
+	display: none;
   }
-  .table-responsive > .table-bordered > thead > tr > th:first-child,
-  .table-responsive > .table-bordered > thead > tr > td:first-child,
-  .table-responsive > .table-bordered > tbody > tr > th:first-child,
-  .table-responsive > .table-bordered > tbody > tr > td:first-child,
-  .table-responsive > .table-bordered > tfoot > tr > th:first-child,
-  .table-responsive > .table-bordered > tfoot > tr > td:first-child {
-    border-left: 0;
+  
+  .table-responsive .cart_total_price > td#total_product,
+  .table-responsive .cart_total_price > td#total_price_container,
+  .table-responsive .cart_total_delivery > td#total_shipping  {
+	border-top: 0;
   }
-  .table-responsive > .table-bordered > thead > tr > th:last-child,
-  .table-responsive > .table-bordered > thead > tr > td:last-child,
-  .table-responsive > .table-bordered > tbody > tr > th:last-child,
-  .table-responsive > .table-bordered > tbody > tr > td:last-child,
-  .table-responsive > .table-bordered > tfoot > tr > th:last-child,
-  .table-responsive > .table-bordered > tfoot > tr > td:last-child {
-    border-right: 0;
+    
+  .table-responsive #cart_summary > tbody > tr.cart_item > td.cart_quantity {
+	width: 50%;
+	float: left;
+	border-left: 0;
+	border-right: 0;
+	padding: 0;
+	line-height: 34px;
   }
-  .table-responsive > .table-bordered > tbody > tr:last-child > th,
-  .table-responsive > .table-bordered > tbody > tr:last-child > td,
-  .table-responsive > .table-bordered > tfoot > tr:last-child > th,
-  .table-responsive > .table-bordered > tfoot > tr:last-child > td {
-    border-bottom: 0;
+  
+  .table-responsive #cart_summary > tbody > tr.cart_item > td.cart_quantity > .cart_quantity_input {
+	float: left;
+	width: 55px;
+	border: 0;
+  }
+  
+  .table-responsive #cart_summary > tbody > tr.cart_item > td.cart_quantity::before {
+	content: "x";
+	float: left;
+	left: 13px;
+	line-height: 34px;
+	position: relative;
+  }
+    
+  .table-responsive .cart_quantity_button a.btn {
+	border: 0;
+	background-color: #eee;
+	margin-top: 1px;
+  }
+  
+  .table-responsive .cart_quantity_button a.button-minus {
+	margin-right: 10px;
+  }
+  
+  .table-responsive #cart_summary > tbody > tr.cart_item > td.cart_unit {
+	float: left;
+	border-right: 0;
+  }
+  
+  .table-responsive #cart_summary > tbody > tr.cart_item > td.cart_delete {
+	position: relative;
+	bottom: 109px;
+	border: 0;
+	float: right;
+	margin-right: 15px;
+  }
+  
+  .table-responsive #cart_summary > tbody > tr.cart_item:last-of-type {
+	border-bottom: 1px solid #ddd;
   }
 }
 
