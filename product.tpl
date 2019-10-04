@@ -369,6 +369,7 @@
                   {/if}
                   {if !empty($product->unity) && $product->unit_price_ratio > 0.000000}
                     {math equation="pprice / punit_price" pprice=$productPrice  punit_price=$product->unit_price_ratio assign=unit_price}
+					<p>{l s='Content:'} {$product->content_value|string_format:"%.2f"|replace:".":","|replace:".00":""|replace:",00":""} {$product->content_unit|escape:'html':'UTF-8'}</p>
                     <p class="unit-price"><span id="unit_price_display">{convertPrice price=$unit_price}</span> {l s='per'} {$product->unity|escape:'html':'UTF-8'}</p>
                     {hook h="displayProductPriceBlock" product=$product type="unit_price"}
                   {/if}

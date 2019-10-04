@@ -45,8 +45,10 @@
       {else}
         {if !$priceDisplay}
           <li class="price{if isset($product.is_discounted) && $product.is_discounted && isset($product.reduction_applies) && $product.reduction_applies} special-price{/if}">{convertPrice price=$product.price_wt}</li>
+		  {assign var='productPrice' value=$product.price_wt}
         {else}
           <li class="price{if isset($product.is_discounted) && $product.is_discounted && isset($product.reduction_applies) && $product.reduction_applies} special-price{/if}">{convertPrice price=$product.price}</li>
+		  {assign var='productPrice' value=$product.price}
         {/if}
         {if isset($product.is_discounted) && $product.is_discounted && isset($product.reduction_applies) && $product.reduction_applies}
           <li class="price-percent-reduction small">
@@ -77,6 +79,13 @@
         {/if}
       {/if}
     </ul>
+	{if !empty($product.unity) && $product.unit_price_ratio > 0.000000}
+	<ul>
+	    {math equation="pprice / punit_price" pprice=$productPrice  punit_price=$product.unit_price_ratio assign=unit_price}
+		<li><small>{l s='Content:'} {$product.content_value|string_format:"%.2f"|replace:".":","|replace:".00":""|replace:",00":""} {$product.content_unit|escape:'html':'UTF-8'}</small></li>
+	    <li><small>{convertPrice price=$unit_price} {l s='per'} {$product.unity|escape:'html':'UTF-8'}</small></li>
+	</ul>
+	{/if}
   </td>
 
   <td class="cart_quantity text-center" data-title="{l s='Quantity'}">
