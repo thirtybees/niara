@@ -141,8 +141,16 @@
                                 {/if}
                             {/if}
                             {hook h="displayProductPriceBlock" product=$product type="price"}
-                            {hook h="displayProductPriceBlock" product=$product type="unit_price"}
                             {hook h="displayProductPriceBlock" product=$product type='after_price'}
+                            {if !empty($product.unity) && $product.unit_price_ratio > 0.000000}
+							    {if !$priceDisplay}{assign var='productPrice' value=$product.price}{else}{assign var='productPrice' value=$product.price_tax_exc}{/if}
+                                {math equation="pprice / punit_price" pprice=$productPrice  punit_price=$product.unit_price_ratio assign=unit_price}
+					            <p>
+								<small>{l s='Content:'} {$product.content_value|string_format:"%.2f"|replace:".":","|replace:".00":""|replace:",00":""} {$product.content_unit|escape:'html':'UTF-8'}<br />
+                                <span>{convertPrice price=$unit_price} {l s='per'} {$product.unity|escape:'html':'UTF-8'}</small>
+								</p>
+                                {hook h="displayProductPriceBlock" product=$product type="unit_price"}
+                            {/if}
                         {/if}
                     </div>
                 {/if}
