@@ -83,6 +83,7 @@
     <module action="enable" name="blocktopmenu"/>
     <module action="enable" name="blockuserinfo"/>
     <module action="enable" name="blockviewed"/>
+    <module action="enable" name="ctconfiguration"/>
     <module action="enable" name="homefeatured"/>
     <module action="enable" name="homeslider"/>
     <module action="enable" name="socialsharing"/>
@@ -104,7 +105,6 @@
     <module action="disable" name="blockwishlist"/>
     <module action="disable" name="cookiebot"/>
     <module action="disable" name="crossselling"/>
-    <module action="disable" name="ctconfiguration"/>
     <module action="disable" name="dateofdelivery"/>
     <module action="disable" name="eucookieconsent"/>
     <module action="disable" name="loyalty"/>
@@ -240,6 +240,7 @@
       <hook module="blockuserinfo" hook="displayTop" position="4"/>
       <hook module="blockviewed" hook="displayHeader" position="26"/>
       <hook module="blockviewed" hook="displayLeftColumn" position="13"/>
+      <hook module="ctconfiguration" hook="displayFooterProduct" position="1"/>
       <hook module="homefeatured" hook="displayHeader" position="28"/>
       <hook module="homefeatured" hook="actionCategoryUpdate" position="4"/>
       <hook module="homefeatured" hook="actionProductAdd" position="4"/>
