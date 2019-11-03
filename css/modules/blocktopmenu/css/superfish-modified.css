@@ -132,8 +132,8 @@
   display: block !important;
   opacity: 1 !important;
   background: none;
-  -webkit-box-shadow: transparent 0px 0px 0px;
-  box-shadow: transparent 0px 0px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
 }
 
 .sf-menu li li li ul {

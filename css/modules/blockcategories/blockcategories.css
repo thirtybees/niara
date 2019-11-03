@@ -92,12 +92,12 @@
 
 .blockcategories .ilvl-2 {
   background-color: #fff;
-  color: #4d4d4d;
+  color: #4d4c4c;
   border-color: #eee;
 }
 
 .blockcategories .ilvl-2.active, .blockcategories .ilvl-2:hover, .blockcategories .ilvl-2:focus {
-  color: #4d4d4d;
+  color: #4d4c4c;
   border-color: #eee;
   background-color: #fff;
 }
@@ -136,12 +136,12 @@
 
 .blockcategories .list-group-item-wrapper.active > .ilvl-2 {
   background-color: #fff;
-  color: #4d4d4d;
+  color: #4d4c4c;
   border-color: #eee;
 }
 
 .blockcategories .list-group-item-wrapper.active > .ilvl-2.active, .blockcategories .list-group-item-wrapper.active > .ilvl-2:hover, .blockcategories .list-group-item-wrapper.active > .ilvl-2:focus {
-  color: #4d4d4d;
+  color: #4d4c4c;
   border-color: #eee;
   background-color: #fff;
 }
