@@ -519,11 +519,7 @@
                       {/if}
                     {else}
                       {if $display_discount_price}
-                        {if $quantity_discount.reduction_tax == 0}
-                          {convertPrice price = $productPriceWithoutReduction|floatval-($productPriceWithoutReduction*$quantity_discount.reduction_with_tax)|floatval}
-                        {else}
-                          {convertPrice price = $productPriceWithoutReduction|floatval-($productPriceWithoutReduction*$quantity_discount.reduction)|floatval}
-                        {/if}
+                        {convertPrice price = $productPriceWithoutReduction|floatval-($productPriceWithoutReduction*$quantity_discount.reduction)|floatval}                        
                       {else}
                         {$quantity_discount.real_value|floatval}%
                       {/if}
