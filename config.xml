@@ -134,7 +134,6 @@
       <hook module="blockcart" hook="actionCartListOverride" position="1"/>
       <hook module="blockcart" hook="displayTop" position="2"/>
       <hook module="blockcategories" hook="displayHeader" position="6"/>
-      <hook module="blockcategories" hook="actionAdminLanguagesControllerStatusBefore" position="1"/>
       <hook module="blockcategories" hook="actionAdminMetaControllerUpdate_optionsBefore" position="1"/>
       <hook module="blockcategories" hook="actionCategoryAdd" position="1"/>
       <hook module="blockcategories" hook="actionCategoryDelete" position="1"/>
@@ -194,7 +193,6 @@
       <hook module="blocknewproducts" hook="actionProductAdd" position="2"/>
       <hook module="blocknewproducts" hook="actionProductDelete" position="2"/>
       <hook module="blocknewproducts" hook="actionProductUpdate" position="2"/>
-      <hook module="blocknewproducts" hook="displayHome" position="1"/>
       <hook module="blocknewproducts" hook="displayLeftColumn" position="7"/>
       <hook module="blocknewsletter" hook="displayHeader" position="18"/>
       <hook module="blocknewsletter" hook="actionCustomerAccountAdd" position="1"/>
