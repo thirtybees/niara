@@ -3,7 +3,7 @@ var del         = require('del');
 var mkdirp      = require('mkdirp');
 var glob        = require('glob-all');
 var fs          = require('fs');
-var jscs        = require('gulp-jscs');
+var eslint			= require('gulp-eslint');
 var sass        = require('gulp-sass');
 var sourcemaps  = require('gulp-sourcemaps');
 var notify      = require('gulp-notify');
@@ -116,7 +116,8 @@ gulp.task('format-js', function() {
 		'!./js/autoload/**/*.js',
 		'!./js/debug/**/*.js'
 	])
-		.pipe(jscs({fix: false}))
+		.pipe(eslint())
+		.pipe(eslint.format())
 		.pipe(gulp.dest('./js/'));
 });
 
