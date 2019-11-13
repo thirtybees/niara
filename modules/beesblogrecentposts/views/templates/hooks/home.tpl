@@ -24,7 +24,7 @@
 					<span class="tm-over">Latest <span>Blog </span> posts</span>
 				</a>
 			</h2>
-			<p>{l s='Read latest posts from our blog.' mod='beesblog'}</p>
+			<p>{l s='Read latest posts from our blog.' mod='beesblogrecentposts'}</p>
 		</div>
 		<div class="row">
 			{foreach $beesblogRecentPostsPosts as $post}

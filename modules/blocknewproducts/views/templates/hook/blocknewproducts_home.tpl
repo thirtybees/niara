@@ -20,8 +20,8 @@
 <div class="tm-home col-xs-12">
 {if isset($new_products) && $new_products}
 	<div class="tm-hp text-center">
-	<h2><span class="tm-over">{l s='Our' mod='blockbestsellers'} <span>{l s='new' mod='blockbestsellers'}</span> {l s='Products'}</span></h2>
-	<p>{l s='Browse our new arrivals.' mod='blockbestsellers'}</p>
+	<h2><span class="tm-over">{l s='Our' mod='blocknewproducts'} <span>{l s='new' mod='blocknewproducts'}</span> {l s='Products' mod='blocknewproducts'}</span></h2>
+	<p>{l s='Browse our new arrivals.' mod='blocknewproducts'}</p>
 	</div>
 	{include file="$tpl_dir./product-list.tpl" products=$new_products class='blocknewproducts tab-pane' id='blocknewproducts'}
 {else}
