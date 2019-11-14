@@ -206,7 +206,6 @@
 
 .btn-add-to-cart.disabled .icon {
   -webkit-animation: icon-spin 2s infinite linear;
-  -o-animation: icon-spin 2s infinite linear;
   animation: icon-spin 2s infinite linear;
 }
 
@@ -216,28 +215,23 @@
 
 @-webkit-keyframes icon-spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(359deg);
-  }
-}
-
-@-moz-keyframes icon-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
   }
 }
 
 @keyframes icon-spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
   }
 }
 

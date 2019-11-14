@@ -354,7 +354,8 @@ input[type="checkbox"] + .label-text:before {
 .product_list .show-if-product-item-hover {
   right: auto;
   left: 0;
-  transform: translate3d(-50px, 0px, 0px);
+  -webkit-transform: translate3d(-50px, 0px, 0px);
+          transform: translate3d(-50px, 0px, 0px);
 }
 
 #quantity_wanted_p .input-group {
@@ -579,13 +580,11 @@ input[type="checkbox"] + .label-text:before {
 /* Fancybox */
 .fancybox-button--left::after {
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .fancybox-button--right::after {
   -webkit-transform: rotate(-135deg);
-  -ms-transform: rotate(-135deg);
   transform: rotate(-135deg);
 }
 

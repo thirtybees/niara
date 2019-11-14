@@ -8,12 +8,17 @@ h1.product-listing {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate3d(50px, 0px, 0px);
+  -webkit-transform: translate3d(50px, 0px, 0px);
+          transform: translate3d(50px, 0px, 0px);
 }
 
 .product_list .product-container:hover .show-if-product-item-hover {
-  transform: translate3d(0px, 0, 0px);
+  -webkit-transform: translate3d(0px, 0, 0px);
+          transform: translate3d(0px, 0, 0px);
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 
 #category-products .page-heading {
@@ -31,12 +36,17 @@ h1.product-listing {
 
 .product_list.grid .show-if-product-grid-hover,
 .product_list.grid .hide-if-product-grid {
-  transform: translate3d(50px, 0px, 0px);
+  -webkit-transform: translate3d(50px, 0px, 0px);
+          transform: translate3d(50px, 0px, 0px);
 }
 
 .product_list.grid .product-container:hover .show-if-product-grid-hover {
-  transform: translate3d(0px, 0, 0px);
+  -webkit-transform: translate3d(0px, 0, 0px);
+          transform: translate3d(0px, 0, 0px);
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 
 .product_list.grid .product-container:hover .button-container {
