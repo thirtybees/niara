@@ -21,7 +21,7 @@
 		<div class="tm-hp text-center">
 			<h2>
 				<a href="{$beesblogRecentPostsBlogUrl|escape:'htmlall':'UTF-8'}" title="{l s='Recent posts' mod='beesblogrecentposts'}">
-					<span class="tm-over">Latest <span>Blog </span> posts</span>
+					<span class="tm-over">{l s='Latest [1]Blog[/1] posts' tags=['<span>'] mod='beesblogrecentposts'}</span>
 				</a>
 			</h2>
 			<p>{l s='Read latest posts from our blog.' mod='beesblogrecentposts'}</p>
