@@ -2,8 +2,6 @@
 @import "theme_variables";
 @import "vendor_variables";
 
-$quick-view-btn-size: 50px;
-$product-grid-item-hover-bg: #fff;
 
 h1.product-listing{
   text-transform: uppercase;
@@ -68,18 +66,6 @@ h1.product-listing{
 //
 // Component classes
 //
-.quick-view {
-  width: $quick-view-btn-size;
-  height: $quick-view-btn-size;
-  line-height: $quick-view-btn-size;
-  text-align: center;
-  display: block;
-  background: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
-    @media  (max-width: $screen-sm-max) {
-    display: none;
-  }
-}
 
 .color-list-container {
   display: none;

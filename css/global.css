@@ -9804,6 +9804,59 @@ ul.address {
   font-size: 17px;
 }
 
+.product_list_column {
+  text-align: center;
+}
+
+.product_list_column article {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.product_list_column article .product-price-button-wrapper, .product_list_column article .button-container {
+  margin: 10px 0;
+}
+
+.product_list_column article .product-container {
+  margin: 0;
+}
+
+.product_list_column .product-image-container {
+  position: relative;
+}
+
+.product_list_column .product-image-container .quick-view {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.product_list_column .functional-buttons {
+  text-align: left;
+}
+
+.product_list_column .price.product-price {
+  color: #ff6f61;
+  font-size: 1.3em;
+}
+
+.quick-view {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  display: block;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+}
+
+@media (max-width: 991px) {
+  .quick-view {
+    display: none;
+  }
+}
+
 .instant_search .productsSortForm {
   display: none;
 }

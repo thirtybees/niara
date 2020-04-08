@@ -1,0 +1,45 @@
+.product_list_column {
+    text-align: center;
+    article {
+
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $ps-border-color;
+        .product-price-button-wrapper, .button-container {
+            margin: 10px 0;
+        }
+        .product-container {
+            margin: 0;
+        }
+    }
+    .product-image-container {
+        position: relative;
+        .quick-view {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+    .functional-buttons {
+        text-align: left;
+    }
+    .price.product-price {
+        color: $brand-primary;
+        font-size: 1.3em;
+    }
+    .img-responsive {
+        //border: 1px solid #0a86bf;
+    }
+}
+.quick-view {
+    width: $quick-view-btn-size;
+    height: $quick-view-btn-size;
+    line-height: $quick-view-btn-size;
+    text-align: center;
+    display: block;
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    @media  (max-width: $screen-sm-max) {
+        display: none;
+    }
+}
