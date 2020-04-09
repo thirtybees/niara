@@ -56,22 +56,6 @@ h1.product-listing {
   transition: opacity .5s linear;
 }
 
-.quick-view {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  display: block;
-  background: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
-}
-
-@media (max-width: 991px) {
-  .quick-view {
-    display: none;
-  }
-}
-
 .color-list-container {
   display: none;
   margin-bottom: 10px;
