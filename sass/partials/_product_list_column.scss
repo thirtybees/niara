@@ -30,6 +30,18 @@
     .img-responsive {
         //border: 1px solid #0a86bf;
     }
+    > li {
+        @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+            width: 50%;
+            float: left;
+            &:nth-child(odd) {
+                clear: left;
+            }
+        }
+    }
+    .btn {
+        white-space: initial;
+    }
 }
 .quick-view {
     width: $quick-view-btn-size;

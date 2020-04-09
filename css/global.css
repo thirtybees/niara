@@ -9841,6 +9841,20 @@ ul.address {
   font-size: 1.3em;
 }
 
+@media (min-width: 480px) and (max-width: 767px) {
+  .product_list_column > li {
+    width: 50%;
+    float: left;
+  }
+  .product_list_column > li:nth-child(odd) {
+    clear: left;
+  }
+}
+
+.product_list_column .btn {
+  white-space: initial;
+}
+
 .quick-view {
   width: 50px;
   height: 50px;
