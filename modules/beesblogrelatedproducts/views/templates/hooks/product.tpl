@@ -39,7 +39,7 @@
                             <i class="icon icon-calendar"></i> {$post.published|date_format}
                             <i class="icon icon-eye"></i> {$post.viewed|intval}
                         </p>
-                        <p><a class="btn btn-primary" href="{$post.link|escape:'htmlall':'UTF-8'}" title="{$post.title|escape:'htmlall':'UTF-8'}">Read More</a></p>
+                        <p><a class="btn btn-primary" href="{$post.link|escape:'htmlall':'UTF-8'}" title="{$post.title|escape:'htmlall':'UTF-8'}">{l s='Read More' mod='beesblogrelatedproducts'}</a></p>
                     </div>
                 </div>
             </article>
