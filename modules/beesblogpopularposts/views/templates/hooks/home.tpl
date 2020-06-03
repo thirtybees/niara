@@ -47,7 +47,7 @@
 							</h5>
 							<p>{$post->content|truncate:'150'|strip_tags}</p>
 
-							<p><a class="btn btn-primary" href="{$post->link|escape:'htmlall':'UTF-8'}" title="{$post->title|escape:'htmlall':'UTF-8'}">Read More</a></p>
+							<p><a class="btn btn-primary" href="{$post->link|escape:'htmlall':'UTF-8'}" title="{$post->title|escape:'htmlall':'UTF-8'}">{l s='Read More' mod='beesblogpopularposts'}</a></p>
 						</div>
 					</div>
 				</article>
