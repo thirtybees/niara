@@ -10093,6 +10093,10 @@ p.required {
   text-align: center;
 }
 
+.delivery_option_price {
+  width: 20%;
+}
+
 .carrier_title {
   font-weight: bold;
 }
