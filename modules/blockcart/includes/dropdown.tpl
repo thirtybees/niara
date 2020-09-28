@@ -122,7 +122,7 @@
       </table>
     {/if}
 
-    {assign var='free_ship' value=count($cart->getDeliveryAddressesWithoutCarriers(true, $errors))}
+    {assign var='free_ship' value=count($cart->getDeliveryAddressesWithoutCarriers(true))}
 
     <div class="cart-prices">
 
