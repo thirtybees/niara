@@ -14,6 +14,7 @@
             <div class="form-group">
               <div><b>{l s='Grade' mod='productcomments'}</b></div>
               <div class="star_content clearfix"  itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+				<meta itemprop="ratingValue" content="{$comment.grade|escape:'html':'UTF-8'}">
                 {section name="i" start=0 loop=5 step=1}
                   {if $comment.grade <= $smarty.section.i.index}
                     <div class="star"></div>
