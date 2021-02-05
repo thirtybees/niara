@@ -133,7 +133,7 @@ function paginationButton(nbProductsIn, nbProductOut) {
   }
 }
 
-function reloadContent(paramsPlus) {
+function reloadContent(paramsPlus, slideUp=true) {
 
   var $form = $('#layered_form');
   var $categoryProducts = $('#category-products');
@@ -194,10 +194,8 @@ function reloadContent(paramsPlus) {
     }
   }
 
-  var slideUp = true;
   if (typeof paramsPlus === 'undefined' || !(typeof paramsPlus === 'string')) {
     paramsPlus = '';
-    slideUp = false;
   }
 
   // Get nb items per page
@@ -236,7 +234,7 @@ function reloadContent(paramsPlus) {
         $('.page-heading .cat-name').html(result.heading);
       }
 
-      $('#layered_block_left').replaceWith(utf8_decode(result.filtersBlock));
+      $('#layered_block_left').replaceWith($(utf8_decode(result.filtersBlock)).find('#layered_block_left'));
       $('.category-product-count, .heading-counter').replaceWith(result.categoryCount);
 
       if (result.nbRenderedProducts == result.nbAskedProducts) {
@@ -340,7 +338,7 @@ function reloadContent(paramsPlus) {
       window.lockLocationChecking = true;
 
       if (slideUp) {
-        $.scrollTo('.product_list', 400);
+        $('html, body').animate({scrollTop: $('#category-products').offset().top}, 400);
       }
       updateProductUrl();
 
@@ -382,7 +380,7 @@ function cancelFilter() {
       $('.' + rel).attr('checked', false);
       $('#layered_form').find('input[type=hidden][name=' + rel + ']').remove();
     }
-    reloadContent(true);
+    reloadContent();
     e.preventDefault();
   });
 }
@@ -514,7 +512,7 @@ function initFilters() {
             $('#layered_' + $(event.target).data('type') + '_range').html(span);
           },
           stop: function () {
-            reloadContent(true);
+            reloadContent();
           }
         };
 
@@ -537,7 +535,7 @@ function initLayered() {
   updateProductUrl();
   if (window.location.href.split('#').length === 2 && window.location.href.split('#')[1] !== '') {
     var params = window.location.href.split('#')[1];
-    reloadContent('&selected_filters=' + params);
+    reloadContent('&selected_filters=' + params, false);
   }
 }
 
@@ -560,17 +558,17 @@ function initLayered() {
         } else {
           $hiddenInput.remove();
         }
-        reloadContent(true);
+        reloadContent();
       });
 
       // @TODO Click on label
       $(document).on('click', '#layered_form input[type=checkbox]', function () {
-        reloadContent(true);
+        reloadContent();
       });
 
       // Doesn't work with document element
       $('body').on('change', '#layered_form select, #layered_form input[type=radio]', function () {
-        reloadContent(true);
+        reloadContent();
       });
 
       // Changing content of an input text
@@ -643,13 +641,13 @@ function initLayered() {
       $(document).off('change', '.selectProductSort').on('change', '.selectProductSort', function () {
         $('.selectProductSort').val($(this).val());
         if ($('#layered_form').length > 0) {
-          reloadContent('forceSlide');
+          reloadContent();
         }
       });
 
       $(document).off('change', 'select[name="n"]').on('change', 'select[name="n"]', function () {
         $('select[name=n]').val($(this).val());
-        reloadContent('forceSlide');
+        reloadContent();
       });
 
       paginationButton(false);
