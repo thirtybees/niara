@@ -23,7 +23,7 @@
     <h2><span class="tm-over">{l s='What others' mod='blockbestsellers'} <span>{l s='love' mod='blockbestsellers'}</span> {l s='most' mod='blockbestsellers'}</span></h2>
     <p>{l s='Browse our top selling products.' mod='blockbestsellers'}</p>
   </div>
-  {include file="$tpl_dir./product-list.tpl" products=$best_sellers class='blockbestsellers' id='blockbestsellers'}
+  {include file="$tpl_dir./product-list-column.tpl" products=$best_sellers class='blockbestsellers' id='blockbestsellers'}
 {else}
   <ul id="blockbestsellers" class="blockbestsellers">
     <li class="alert alert-info">{l s='No best sellers at this time.' mod='blockbestsellers'}</li>
