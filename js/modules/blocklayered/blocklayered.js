@@ -627,6 +627,13 @@ function initLayered() {
         }
       });
 
+      $(document).on('click', '#layered_toggle', function (e) {
+        e.preventDefault();
+        $('#layered_block_left .block_content').toggleClass('hidden-xs');
+        $(this).find('.icon').toggleClass('icon-plus');
+        $(this).find('.icon').toggleClass('icon-minus');
+      });
+
       // Global var
       window.layered_hidden_list = {};
 
