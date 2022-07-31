@@ -16,6 +16,12 @@
   line-height: $line-height-base;
 }
 
+@media (max-width: 767px) {
+  #layered_block_left .block_content {
+    display: none;
+  }
+}
+
 #enabled_filters {
   margin: 0 0 10px 0;
   background: #eee;

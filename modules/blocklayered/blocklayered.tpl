@@ -6,7 +6,7 @@
                     <a id="layered_toggle" class="visible-xs-block" href="#"><i class="icon icon-fw icon-plus"></i></a>
                     <h2 class="title_block section-title-column">{l s='Catalog' mod='blocklayered'}</h2>
                 </div>
-                <div class="block_content hidden-xs">
+                <div class="block_content">
                     <form action="#" id="layered_form">
                         <div>
                             {if isset($selected_filters) && $n_filters > 0}
