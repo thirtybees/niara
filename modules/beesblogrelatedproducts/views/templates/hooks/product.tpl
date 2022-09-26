@@ -34,7 +34,7 @@
                                 {$post.title|escape:'htmlall':'UTF-8'}
                             </a>
                         </h3>
-                        <p>{$post.content|truncate:'150'|strip_tags}</p>
+                        <p>{$post.content|strip_tags|truncate:'150'}</p>
                         <p>
                             <i class="icon icon-calendar"></i> {$post.published|date_format}
                             <i class="icon icon-eye"></i> {$post.viewed|intval}

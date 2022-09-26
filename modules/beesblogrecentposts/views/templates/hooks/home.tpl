@@ -46,7 +46,7 @@
 									<i class="icon icon-eye"></i> {$post->viewed|intval}
 								</span>
 							</h5>
-							<p>{$post->content|truncate:'150'|strip_tags}</p>
+							<p>{$post->content|strip_tags|truncate:'150'}</p>
 
 							<p><a class="btn btn-primary" href="{$post->link|escape:'htmlall':'UTF-8'}" title="{$post->title|escape:'htmlall':'UTF-8'}">{l s='Read More' mod='beesblogrecentposts'}</a></p>
 						</div>
