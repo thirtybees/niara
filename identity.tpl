@@ -89,17 +89,13 @@
             </div>
           </div>
         </div>
-        <div class="required form-group">
-          <label for="old_passwd" class="required">{l s='Current Password'}</label>
-          <input class="is_required validate form-control" type="password" data-validate="isPasswd" name="old_passwd" id="old_passwd" required>
-        </div>
         <div class="password form-group">
           <label for="passwd">{l s='New Password'}</label>
-          <input class="is_required validate form-control" type="password" data-validate="isPasswd" name="passwd" id="passwd">
+          <input class="is_required validate form-control" type="password" data-validate="isPasswd" name="passwd" id="passwd" autocomplete="new-password">
         </div>
         <div class="password form-group">
-          <label for="confirmation">{l s='Confirmation'}</label>
-          <input class="is_required validate form-control" type="password" data-validate="isPasswd" name="confirmation" id="confirmation">
+          <label for="passwd_confirmation">{l s='Confirmation'}</label>
+          <input class="is_required validate form-control" type="password" data-validate="isPasswd" name="passwd_confirmation" id="passwd_confirmation" autocomplete="new-password">
         </div>
         {if isset($newsletter) && $newsletter}
           <div class="checkbox">
@@ -149,6 +145,10 @@
         {if isset($HOOK_CUSTOMER_IDENTITY_FORM)}
           {$HOOK_CUSTOMER_IDENTITY_FORM}
         {/if}
+        <div class="required form-group">
+          <label for="old_passwd" class="required">{l s='Current Password'}</label>
+          <input class="is_required validate form-control" type="password" data-validate="isPasswd" name="old_passwd" id="old_passwd" autocomplete="current-password">
+        </div>
         <div class="form-group">
           <button type="submit" name="submitIdentity" class="btn btn-lg btn-success">
             <span>{l s='Save'} <i class="icon icon-chevron-right"></i></span>
@@ -168,3 +168,26 @@
     </li>
   </ul>
 </nav>
+
+<script>
+
+  let form = document.querySelector('button[name="submitIdentity"]').closest('form');
+
+  document.addEventListener('DOMContentLoaded', function(event) {
+    toggleCurrentPasswordField();
+  });
+
+  form.addEventListener("input", function (event) {
+    toggleCurrentPasswordField();
+  });
+
+  function toggleCurrentPasswordField() {
+
+    let email = document.getElementById('email');
+    let passwd = document.getElementById('passwd');
+    let passwd_confirmation = document.getElementById('passwd_confirmation');
+    let passwd_old = document.getElementById('old_passwd')
+
+    passwd_old.parentElement.style.display = (email.value==='{$cookie->email}' && !passwd.value && !passwd_confirmation.value) ? 'none' : '';
+  }
+</script>
