@@ -186,7 +186,7 @@
     let email = document.getElementById('email');
     let passwd = document.getElementById('passwd');
     let passwd_confirmation = document.getElementById('passwd_confirmation');
-    let passwd_old = document.getElementById('old_passwd')
+    let passwd_old = document.getElementById('old_passwd');
 
     passwd_old.parentElement.style.display = (email.value==='{$cookie->email}' && !passwd.value && !passwd_confirmation.value) ? 'none' : '';
   }
