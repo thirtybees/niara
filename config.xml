@@ -171,6 +171,7 @@
       <hook module="blockuserinfo" hook="displayTop" position="4"/>
       <hook module="blockviewed" hook="displayHeader" position="26"/>
       <hook module="blockviewed" hook="displayLeftColumn" position="13"/>
+      <hook module="ctconfiguration" hook="displayHeader" position="35"/>
       <hook module="ctconfiguration" hook="displayFooterProduct" position="1"/>
       <hook module="homefeatured" hook="displayHeader" position="28"/>
       <hook module="homefeatured" hook="displayHome" position="2"/>
