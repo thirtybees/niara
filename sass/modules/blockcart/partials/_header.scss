@@ -24,7 +24,6 @@ $bc-header-color: #121212;
 }
 
 #blockcart-header {
-
   // Make this block the same dimensions as input-lg (search block to the left)
   // @see /sass/vendor/bootstrap/bootstrap/_forms.scss
   height: $input-height-large;
@@ -38,33 +37,27 @@ $bc-header-color: #121212;
   overflow: hidden;
   font-weight: 300;
 
-  &:before{
-    content: "\f291";
+  .ajax_cart_icon {
     font-family: $font-icon;
     font-size: 1.6em;
     display: inline-block;
     margin-right: 5px;
-    vertical-align: 6%;
+    vertical-align: middle;
     color: $link-hover-color
   }
-  &:hover {
-    &:before {
-      color: $gray-darker;
-    }
+  &:hover .ajax_cart_icon {
+    color: $gray-darker;
   }
-  b{
+  b {
     font-weight: 500;
   }
   .ajax_cart_product_txt,
   .ajax_cart_product_txt_s,
-  .ajax_cart_no_product{
+  .ajax_cart_no_product {
     display: none !important;
   }
-  .ajax_cart_quantity{
-    position: absolute;
-    top: 0;
-    right: 38px;
-    display: block !important;
+  .ajax_cart_quantity {
+    display: inline-block;
     min-width: 20px;
     min-height: 20px;
     line-height: 20px;
@@ -72,5 +65,8 @@ $bc-header-color: #121212;
     text-align: center;
     color: #fff;
     border-radius: 50%;
+    padding: 0 5px;
+    margin-left: -20px;
+    vertical-align: top;
   }
 }
