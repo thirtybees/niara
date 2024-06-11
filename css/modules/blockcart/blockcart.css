@@ -37,17 +37,16 @@
   font-weight: 300;
 }
 
-#blockcart-header:before {
-  content: "\f291";
+#blockcart-header .ajax_cart_icon {
   font-family: "FontAwesome";
   font-size: 1.6em;
   display: inline-block;
   margin-right: 5px;
-  vertical-align: 6%;
+  vertical-align: middle;
   color: #ff6f61;
 }
 
-#blockcart-header:hover:before {
+#blockcart-header:hover .ajax_cart_icon {
   color: #121212;
 }
 
@@ -62,10 +61,7 @@
 }
 
 #blockcart-header .ajax_cart_quantity {
-  position: absolute;
-  top: 0;
-  right: 38px;
-  display: block !important;
+  display: inline-block;
   min-width: 20px;
   min-height: 20px;
   line-height: 20px;
@@ -73,6 +69,9 @@
   text-align: center;
   color: #fff;
   border-radius: 50%;
+  padding: 0 5px;
+  margin-left: -20px;
+  vertical-align: top;
 }
 
 #blockcart-dropdown {
