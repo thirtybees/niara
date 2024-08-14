@@ -48,7 +48,6 @@
             {/if}
         {/foreach}
     {/if}
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
     {if isset($js_defer) && !$js_defer && isset($js_files) && isset($js_def)}
         {$js_def}
         {foreach from=$js_files item=js_uri}
