@@ -23,7 +23,7 @@
                                 <a class="ajax_cart_block_remove_link" href="javascript:;" rel="nofollow"
                                    title="{l s='remove this product from my wishlist' mod='blockwishlist'}"
                                    onclick="javascript:WishlistCart('wishlist_block_list', 'delete', '{$product.id_product}', {$product.id_product_attribute}, '0', '{if isset($token)}{$token}{/if}');">
-                                    <i class="icon icon-remove-sign "></i>
+                                    <i class="icon icon-remove-sign"></i>
                                 </a>
                             </dt>
                             {if isset($product.attributes_small)}
