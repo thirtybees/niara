@@ -340,19 +340,19 @@ input[type="checkbox"] + .label-text:before {
 .bx-next {
   left: 10px;
   right: auto;
-
-  &:before {
-    content: "\f137";
-  }
+// obsolete see #homepage-slider
+//  &:before {
+//    content: "\f137";
+//  }
 }
 
 .bx-prev {
   right: 10px;
   left: auto;
-
-  &:before {
-    content: "\f138";
-  }
+// obsolete see #homepage-slider
+//  &:before {
+//    content: "\f138";
+//  }
 }
 
 .bx-wrapper .bx-controls-direction a:before {
@@ -652,20 +652,20 @@ input[type="checkbox"] + .label-text:before {
   margin: 6px 10px 6px 0;
 }
 
-.icon-angle-right:before {
-  content: "\f104";
+.fa-angle-right:before {
+  --fa: "\f104";
 }
 
-.icon-angle-left:before {
-  content: "\f105";
+.fa-angle-left:before {
+  --fa: "\f105";
 }
 
-.icon-chevron-right:before {
-  content: "\f053";
+.fa-chevron-right:before {
+  --fa: "\f053";
 }
 
-.icon-chevron-left:before {
-  content: "\f054";
+.fa-chevron-left:before {
+  --fa: "\f054";
 }
 
 /* Homeslider */

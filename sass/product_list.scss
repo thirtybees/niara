@@ -1,5 +1,6 @@
 
 @import "theme_variables";
+@import "theme_mixins";
 @import "vendor_variables";
 
 $quick-view-btn-size: 50px;
@@ -236,9 +237,8 @@ h1.product-listing{
       a{
         font-size: 0;
         &:before{
+          @include fas-pseudo;
           position: absolute;
-          content: "\f291";
-          font-family: 'Fontawesome';
           font-size: 20px;
           width: 50px;
           line-height: 50px;
@@ -249,10 +249,18 @@ h1.product-listing{
       }
     }
     .wishlist a:before{
-      content: '\f08a';
+      font-weight: 400;
+      content: '\f004'; // fa-heart
+    
+    }
+    .wishlist a.checked:before{
+      font-weight: 900; // regular fa-heart to solid fa-heart (outline to fill)
     }
     .compare a:before{
-      content: '\f021';
+      content: '\f021'; // fa-arrows-rotate
+    }
+    .compare a.checked:before{
+      content: '\f068'; // fa-minus
     }
     @media  (max-width: $screen-sm-max) {
       display: none;
@@ -260,8 +268,8 @@ h1.product-listing{
   }
 }
 
-.add_to_compare.checked .icon:before {
-  content: '\f068';
+.add_to_compare.checked .fas:before {
+  --fa: '\f068'; // fa-minus
 }
 
 .compare_mb{
@@ -322,7 +330,7 @@ h1.product-listing{
     font-size: large;
     padding: 6px 10px 0 0;
   }
-  .selected .icon{
+  .selected .fas{
     color: $link-hover-color;
   }
 }
