@@ -349,7 +349,7 @@
     <button type="submit" class="btn btn-lg btn-success" name="submitGuestAccount" id="submitGuestAccount">
           <span>
             {l s='Proceed to checkout'}
-            <i class="icon icon-chevron-right"></i>
+            <i class="fas fa-chevron-right"></i>
           </span>
     </button>
   </p>

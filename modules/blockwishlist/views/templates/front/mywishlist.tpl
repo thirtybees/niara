@@ -29,7 +29,7 @@
         </div>
         <div class="submit">
           <button id="submitWishlist" class="btn btn-lg btn-success" type="submit" name="submitWishlist">
-            <span>{l s='Save' mod='blockwishlist'} <i class="icon icon-chevron-right"></i></span>
+            <span>{l s='Save' mod='blockwishlist'} <i class="fas fa-chevron-right"></i></span>
           </button>
         </div>
       </fieldset>
@@ -79,17 +79,17 @@
               <td class="wishlist_default">
                 {if isset($wishlists[i].default) && $wishlists[i].default == 1}
                   <p class="is_wish_list_default">
-                    <i class="icon icon-check-square"></i>
+                    <i class="fas fa-square-check"></i>
                   </p>
                 {else}
                   <a href="#" onclick="javascript:event.preventDefault();(WishlistDefault('wishlist_{$wishlists[i].id_wishlist|intval}', '{$wishlists[i].id_wishlist|intval}'));">
-                    <i class="icon icon-square"></i>
+                    <i class="fas fa-square"></i>
                   </a>
                 {/if}
               </td>
               <td class="wishlist_delete">
                 <a href="#" onclick="javascript:event.preventDefault();return (WishlistDelete('wishlist_{$wishlists[i].id_wishlist|intval}', '{$wishlists[i].id_wishlist|intval}', '{l s='Do you really want to delete this wishlist ?' mod='blockwishlist' js=1}'));">
-                  <i class="icon icon-remove"></i>
+                  <i class="fas fa-xmark"></i>
                 </a>
               </td>
             </tr>

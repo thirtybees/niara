@@ -42,13 +42,13 @@
         <br/>
         <p class="socialsharing_beesblog hidden-print">
             <button data-type="twitter" type="button" class="btn btn-xs btn-twitter">
-                <i class="icon icon-twitter"></i> Tweet
+                <i class="fab fa-twitter"></i> Tweet
             </button>
             <button data-type="facebook" type="button" class="btn btn-xs btn-facebook">
-                <i class="icon icon-facebook"></i> Share
+                <i class="fab fa-facebook-f"></i> Share
             </button>
             <button data-type="pinterest" type="button" class="btn btn-xs btn-pinterest">
-                <i class="icon icon-pinterest"></i> Pinterest
+                <i class="fab fa-pinterest"></i> Pinterest
             </button>
         </p>
     {/if}

@@ -5,7 +5,7 @@
         <input type="hidden" value="{$order->id}" name="id_order">
         <input type="hidden" value="" name="submitReorder">
 
-        <a href="#" onclick="$(this).closest('form').submit(); return false;" class="btn btn-lg btn-success pull-right"><span>{l s='Reorder'} <i class="icon icon-chevron-right"></i></span></a>
+        <a href="#" onclick="$(this).closest('form').submit(); return false;" class="btn btn-lg btn-success pull-right"><span>{l s='Reorder'} <i class="fas fa-chevron-right"></i></span></a>
       </form>
     {/if}
     <p>
@@ -17,15 +17,15 @@
     <p><strong>{l s='Payment method'}</strong> <span>{$order->payment|escape:'html':'UTF-8'}</span></p>
     {if $invoice AND $invoiceAllowed}
       <p>
-        <i class="icon icon-file-text"></i>
+        <i class="fas fa-file-lines"></i>
         <a target="_blank" href="{$link->getPageLink('pdf-invoice', true)}?id_order={$order->id|intval}{if $is_guest}&amp;secure_key={$order->secure_key|escape:'html':'UTF-8'}{/if}">{l s='Download your invoice as a PDF file.'}</a>
       </p>
     {/if}
     {if $order->recyclable}
-      <p><span class="text-success"><i class="icon icon-2x icon-repeat"></i></span> {l s='You have given permission to receive your order in recycled packaging.'}</p>
+      <p><span class="text-success"><i class="fas fa-arrow-rotate-right fa-2x"></i></span> {l s='You have given permission to receive your order in recycled packaging.'}</p>
     {/if}
     {if $order->gift}
-      <p><span class="text-success"><i class="icon icon-2x icon-gift"></i></span> {l s='You have requested gift wrapping for this order.'}</p>
+      <p><span class="text-success"><i class="fas fa-gift fa-2x"></i></span> {l s='You have requested gift wrapping for this order.'}</p>
       <p><strong>{l s='Message'}</strong> {$order->gift_message|nl2br}</p>
     {/if}
   </div>
@@ -183,8 +183,8 @@
               <td>
                 <input class="order_qte_input form-control text-center"  name="order_qte_input[{$smarty.foreach.products.index}]" type="text" size="2" value="{$product.customizationQuantityTotal|intval}">
                 <div class="clearfix return_quantity_buttons">
-                  <a href="#" class="return_quantity_down btn btn-default button-minus"><i class="icon icon-fw icon-minus"></i></a>
-                  <a href="#" class="return_quantity_up btn btn-default button-plus"><i class="icon icon-fw icon-plus"></i></a>
+                  <a href="#" class="return_quantity_down btn btn-default button-minus"><i class="fas fa-minus fa-fw"></i></a>
+                  <a href="#" class="return_quantity_up btn btn-default button-plus"><i class="fas fa-plus fa-fw"></i></a>
                 </div>
                 <label for="cb_{$product.id_order_detail|intval}"><span class="order_qte_span editable">{$product.customizationQuantityTotal|intval}</span></label></td>
               {if $order->hasProductReturned()}
@@ -244,8 +244,8 @@
                   <td>
                     <input class="order_qte_input form-control text-center" name="customization_qty_input[{$customizationId|intval}]" type="text" size="2" value="{$customization.quantity|intval}">
                     <div class="clearfix return_quantity_buttons">
-                      <a href="#" class="return_quantity_down btn btn-default button-minus"><i class="icon icon-fw icon-minus"></i></a>
-                      <a href="#" class="return_quantity_up btn btn-default button-plus"><i class="icon icon-fw icon-plus"></i></a>
+                      <a href="#" class="return_quantity_down btn btn-default button-minus"><i class="fas fa-minus fa-fw"></i></a>
+                      <a href="#" class="return_quantity_up btn btn-default button-plus"><i class="fas fa-plus fa-fw"></i></a>
                     </div>
                     <label for="cb_{$product.id_order_detail|intval}"><span class="order_qte_span editable">{$customization.quantity|intval}</span></label>
                   </td>
@@ -282,8 +282,8 @@
               <td class="return_quantity">
                 <input class="order_qte_input form-control text-center" name="order_qte_input[{$product.id_order_detail|intval}]" type="text" size="2" value="{$productQuantity|intval}">
                 <div class="clearfix return_quantity_buttons pull-left">
-                  <a href="#" class="return_quantity_down btn btn-default button-minus"><i class="icon icon-fw icon-minus"></i></a>
-                  <a href="#" class="return_quantity_up btn btn-default button-plus"><i class="icon icon-fw icon-plus"></i></a>
+                  <a href="#" class="return_quantity_down btn btn-default button-minus"><i class="fas fa-minus fa-fw"></i></a>
+                  <a href="#" class="return_quantity_up btn btn-default button-plus"><i class="fas fa-plus fa-fw"></i></a>
                 </div>
                 <label for="cb_{$product.id_order_detail|intval}"><span class="order_qte_span editable">{$productQuantity|intval}</span></label></td>
               {if $order->hasProductReturned()}
@@ -336,7 +336,7 @@
         <textarea class="form-control" cols="67" rows="3" name="returnText"></textarea>
       </div>
       <div class="form-group">
-        <button type="submit" name="submitReturnMerchandise" class="btn btn-success"><span>{l s='Make an RMA slip'} <i class="icon icon-chevron-right"></i></span></button>
+        <button type="submit" name="submitReturnMerchandise" class="btn btn-success"><span>{l s='Make an RMA slip'} <i class="fas fa-chevron-right"></i></span></button>
         <input type="hidden" class="hidden" value="{$order->id|intval}" name="id_order">
       </div>
     </div>
@@ -438,7 +438,7 @@
       <div class="submit">
         <input type="hidden" name="id_order" value="{$order->id|intval}">
         <input type="submit" class="unvisible" name="submitMessage" value="{l s='Send'}">
-        <button type="submit" name="submitMessage" class="btn btn-lg btn-success"><span>{l s='Send'} <i class="icon icon-chevron-right"></i></span></button>
+        <button type="submit" name="submitMessage" class="btn btn-lg btn-success"><span>{l s='Send'} <i class="fas fa-chevron-right"></i></span></button>
       </div>
     </form>
   {else}

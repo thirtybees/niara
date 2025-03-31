@@ -45,17 +45,17 @@
                   <li>
                     {l s='Was this comment useful to you?' mod='productcomments'}
                     <button class="usefulness_btn btn btn-xs btn-link" data-is-usefull="1" data-id-product-comment="{$comment.id_product_comment}">
-                      <i class="icon icon-thumbs-up"></i> {l s='Yes' mod='productcomments'}
+                      <i class="fas fa-thumbs-up"></i> {l s='Yes' mod='productcomments'}
                     </button>
                     <button class="usefulness_btn btn btn-xs btn-link" data-is-usefull="0" data-id-product-comment="{$comment.id_product_comment}">
-                      <i class="icon icon-thumbs-down"></i> {l s='No' mod='productcomments'}
+                      <i class="fas fa-thumbs-down"></i> {l s='No' mod='productcomments'}
                     </button>
                   </li>
                 {/if}
                 {if !$comment.customer_report}
                   <li>
                     <a href="#" class="report_btn btn btn-xs btn-link" data-id-product-comment="{$comment.id_product_comment}">
-                      <i class="icon icon-flag"></i> {l s='Report abuse' mod='productcomments'}
+                      <i class="fas fa-flag"></i> {l s='Report abuse' mod='productcomments'}
                     </a>
                   </li>
                 {/if}

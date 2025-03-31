@@ -79,7 +79,7 @@
                     <a href="{$link->getPageLink('best-sales')|escape:'html'}"
                        title="{l s='All best sellers' mod='blockbestsellers'}"
                        class="btn btn-primary"><span>{l s='All best sellers' mod='blockbestsellers'} <i
-                                    class="icon icon-chevron-right"></i></span></a>
+                                    class="fas fa-chevron-right"></i></span></a>
                 </div>
             {else}
                 <p>{l s='No best sellers at this time' mod='blockbestsellers'}</p>

@@ -151,7 +151,7 @@
         {/if}
         <div class="form-group">
           <button type="submit" name="submitIdentity" class="btn btn-lg btn-success">
-            <span>{l s='Save'} <i class="icon icon-chevron-right"></i></span>
+            <span>{l s='Save'} <i class="fas fa-chevron-right"></i></span>
           </button>
         </div>
       </fieldset>

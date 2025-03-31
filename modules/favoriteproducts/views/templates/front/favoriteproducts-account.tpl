@@ -47,7 +47,7 @@
             <div class="product_desc">{$favoriteProduct.description_short|strip_tags|escape:'html':'UTF-8'}</div>
             <div class="remove">
               <a href="#" rel="ajax_id_favoriteproduct_{$favoriteProduct.id_product}">
-                <i class="icon icon-remove"></i>
+                <i class="fas fa-xmark"></i>
               </a>
             </div>
           </div>

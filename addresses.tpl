@@ -26,10 +26,10 @@
           {/foreach}
           <li class="address_update">
             <a class="btn btn-success" href="{$link->getPageLink('address', true, null, "id_address={$address.object.id|intval}")|escape:'html':'UTF-8'}" title="{l s='Update'}">
-              <span>{l s='Update'} <i class="icon icon-refresh"></i></span>
+              <span>{l s='Update'} <i class="fas fa-arrows-rotate"></i></span>
             </a>
             <a class="btn btn-danger" href="{$link->getPageLink('address', true, null, "id_address={$address.object.id|intval}&delete")|escape:'html':'UTF-8'}" data-id="addresses_confirm" title="{l s='Delete'}">
-              <span>{l s='Delete'} <i class="icon icon-remove"></i></span>
+              <span>{l s='Delete'} <i class="fas fa-xmark"></i></span>
             </a>
           </li>
         </ul>
@@ -47,7 +47,7 @@
 
 <div class="clearfix form-group">
   <a href="{$link->getPageLink('address', true)|escape:'html':'UTF-8'}" title="{l s='Add an address'}" class="btn btn-success">
-    <span><i class="icon icon-plus"></i> {l s='Add a new address'}</span>
+    <span><i class="fas fa-plus"></i> {l s='Add a new address'}</span>
   </a>
 </div>
 

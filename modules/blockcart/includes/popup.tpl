@@ -6,7 +6,7 @@
       <button type="button" class="close cross" title="{l s='Close window' mod='blockcart'}">&times;</button>
 
       <span class="text-success cart-title">
-        <i class="icon icon-check"></i> {l s='Product successfully added to your shopping cart' mod='blockcart'}
+        <i class="fas fa-check"></i> {l s='Product successfully added to your shopping cart' mod='blockcart'}
       </span>
 
       <div class="row">

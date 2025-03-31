@@ -59,7 +59,7 @@
                    title="{l s='Open quick view window'}"
                    data-fancybox-target="{$product.link|escape:'html':'UTF-8'}"
                 >
-                    <i class="icon icon-fullscreen"></i>
+                    <i class="fas fa-maximize"></i>
                 </a>
             {/if}
             {if $show_functional_buttons}
@@ -69,7 +69,7 @@
                         <div class="compare">
                             <a class="add_to_compare" title="{l s='Add to Compare'}" href="{$product.link|escape:'html':'UTF-8'}"
                                data-id-product="{$product.id_product}">
-                                <i class="icon icon-plus"></i> {l s='Add to Compare'}
+                                <i class="fas fa-arrows-rotate fa-fw"></i> {l s='Add to Compare'}
                             </a>
                         </div>
                     {/if}
@@ -157,11 +157,11 @@
                                data-id-product="{$product.id_product|intval}"
                                data-minimal_quantity="{if isset($product.product_attribute_minimal_quantity) && $product.product_attribute_minimal_quantity >= 1}{$product.product_attribute_minimal_quantity|intval}{else}{$product.minimal_quantity|intval}{/if}">
 
-                                <span><i class="icon icon-shopping-basket"></i>{l s='Add to cart'}</span>
+                                <span><i class="fas fa-basket-shopping"></i>{l s='Add to cart'}</span>
                             </a>
                         {else}
                             <span class="ajax_add_to_cart_button btn btn-primary disabled">
-              <span><i class="icon icon-shopping-basket"></i>{l s='Add to cart'}</span>
+              <span><i class="fas fa-basket-shopping"></i>{l s='Add to cart'}</span>
             </span>
                         {/if}
                     {/if}
@@ -175,7 +175,7 @@
                         <div class="compare">
                             <a class="add_to_compare" title="{l s='Add to Compare'}" href="{$product.link|escape:'html':'UTF-8'}"
                                data-id-product="{$product.id_product}">
-                                <i class="icon icon-plus"></i> {l s='Add to Compare'}
+                                <i class="fas fa-plus fa-fw"></i> {l s='Add to Compare'}
                             </a>
                         </div>
                     {/if}
