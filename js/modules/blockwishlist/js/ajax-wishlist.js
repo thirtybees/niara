@@ -220,7 +220,7 @@ function WishlistDelete(id, id_wishlist, msg) {
       if (data.id_default) {
         var td_default = $('#wishlist_' + data.id_default + ' > .wishlist_default');
         $('#wishlist_' + data.id_default + ' > .wishlist_default > a').remove();
-        td_default.append('<p class="is_wish_list_default"><i class="icon icon-check-square"></i></p>');
+        td_default.append('<p class="is_wish_list_default"><i class="fas fa-square-check"></i></p>');
       }
     }
   });
@@ -247,10 +247,10 @@ function WishlistDefault(id, id_wishlist) {
       var old_default_id = $('.is_wish_list_default').parents('tr').attr('id');
       var td_check = $('.is_wish_list_default').parent();
       $('.is_wish_list_default').remove();
-      td_check.append('<a href="#" onclick="javascript:event.preventDefault();(WishlistDefault(\'' + old_default_id + '\', \'' + old_default_id.replace('wishlist_', '') + '\'));"><i class="icon icon-square"></i></a>');
+      td_check.append('<a href="#" onclick="javascript:event.preventDefault();(WishlistDefault(\'' + old_default_id + '\', \'' + old_default_id.replace('wishlist_', '') + '\'));"><i class="fas fa-square"></i></a>');
       var td_default = $('#' + id + ' > .wishlist_default');
       $('#' + id + ' > .wishlist_default > a').remove();
-      td_default.append('<p class="is_wish_list_default"><i class="icon icon-check-square"></i></p>');
+      td_default.append('<p class="is_wish_list_default"><i class="fas fa-square-check"></i></p>');
     }
   });
 }
