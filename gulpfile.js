@@ -10,6 +10,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var notify = require('gulp-notify');
 var gulpif = require('gulp-if');
 var options = require('./package.json').options;
+var clip = require('gulp-clip-empty-files');
 
 var createFolders = [
 	'./cache/',
@@ -64,6 +65,8 @@ gulp.task('compile-css', function() {
 		)
 		.pipe(autoprefixer())
 		.pipe(gulpif(options.sourcemaps, sourcemaps.write('./')))
+		// remove empty files
+		.pipe(clip())
 		.pipe(gulp.dest('./css/'))
 		.pipe(displayNotification({
 			message: 'Theme CSS compilation successful for ' + options.themeName,
