@@ -10,7 +10,7 @@
         <p class="navbar-text">
             <i class="icon icon-phone"></i>
             {l s='Call us now:' mod='blockcontact'}
-            <a class="phone-link" href="tel:{$telnumber|escape:'html':'UTF-8'}"
+            <a class="phone-link" href="tel:{$telnumber|escape:'url':'UTF-8'}"
                title="{$telnumber|escape:'html':'UTF-8'}">{$telnumber|escape:'html':'UTF-8'}</a>
         </p>
     </li>
