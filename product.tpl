@@ -60,7 +60,7 @@
               <noscript>
                 <img class="img-responsive center-block"
                      itemprop="image"
-                     src="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
+                     src="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large', null, ImageManager::retinaSupport())|escape:'url':'UTF-8'}"
                      title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}"
                      alt="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}"
                      width="{$largeDefaultWidth|intval}"
@@ -72,7 +72,7 @@
                 {if !empty($webp)}
                   <source class="img-responsive center-block"
                        itemprop="image"
-                       srcset="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large', 'webp', ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
+                       srcset="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large', 'webp', ImageManager::retinaSupport())|escape:'url':'UTF-8'}"
                        title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}"
                        type="image/webp"
                   >
@@ -81,7 +81,7 @@
                 <img class="img-responsive center-block"
                      itemprop="image"
                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                     srcset="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
+                     srcset="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large', null, ImageManager::retinaSupport())|escape:'url':'UTF-8'}"
                      title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}"
                      alt="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}"
                      width="{$largeDefaultWidth|intval}"
@@ -99,7 +99,7 @@
               <noscript>
                 <img class="img-responsive center-block"
                      itemprop="image"
-                     src="{$img_prod_dir|escape:'html':'UTF-8'}{$lang_iso|escape:'html':'UTF-8'}-default-large.jpg"
+                     src="{$img_prod_dir|escape:'url':'UTF-8'}{$lang_iso|escape:'url':'UTF-8'}-default-large.jpg"
                      title="{$product->name|escape:'html':'UTF-8'}"
                      width="{$largeDefaultWidth|intval}"
                      height="{$largeDefaultHeight|intval}"
@@ -110,7 +110,7 @@
                 {if (!empty($webp))}
                   <source class="img-responsive center-block"
                           itemprop="image"
-                          srcset="{$img_prod_dir|escape:'html':'UTF-8'}{$lang_iso|escape:'html':'UTF-8'}-default-large.webp"
+                          srcset="{$img_prod_dir|escape:'url':'UTF-8'}{$lang_iso|escape:'url':'UTF-8'}-default-large.webp"
                           title="{$product->name|escape:'html':'UTF-8'}"
                           type="image/webp"
                   >
@@ -118,8 +118,8 @@
                 <!--[if IE 9]></video><![endif]-->
                 <img class="img-responsive center-block"
                      itemprop="image"
-                     src="{$img_prod_dir|escape:'html':'UTF-8'}{$lang_iso|escape:'html':'UTF-8'}-default-large.jpg"
-                     srcset="{$img_prod_dir|escape:'html':'UTF-8'}{$lang_iso|escape:'html':'UTF-8'}-default-large.jpg"
+                     src="{$img_prod_dir|escape:'url':'UTF-8'}{$lang_iso|escape:'url':'UTF-8'}-default-large.jpg"
+                     srcset="{$img_prod_dir|escape:'url':'UTF-8'}{$lang_iso|escape:'url':'UTF-8'}-default-large.jpg"
                      title="{$product->name|escape:'html':'UTF-8'}"
                      width="{$largeDefaultWidth|intval}"
                      height="{$largeDefaultHeight|intval}"
@@ -155,7 +155,7 @@
                         >
                           <noscript>
                             <img class="img-responsive"
-                                 src="{$link->getImageLink($product->link_rewrite, $image.id_image, 'cart', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
+                                 src="{$link->getImageLink($product->link_rewrite, $image.id_image, 'cart', null, ImageManager::retinaSupport())|escape:'url':'UTF-8'}"
                                  alt="{$imageTitle|escape:'htmlall':'UTF-8'}"
                                  title="{$imageTitle|escape:'htmlall':'UTF-8'}"
                                  itemprop="image"
@@ -166,14 +166,14 @@
                           <picture class="img-responsive" id="thumb_{$image.id_image|intval}">
                             <!--[if IE 9]><video style="display: none;"><![endif]-->
                             {if !empty($webp)}
-                              <source srcset="{$link->getImageLink($product->link_rewrite, $image.id_image, 'cart', 'webp', ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
+                              <source srcset="{$link->getImageLink($product->link_rewrite, $image.id_image, 'cart', 'webp', ImageManager::retinaSupport())|escape:'url':'UTF-8'}"
                                       title="{$imageTitle|escape:'htmlall':'UTF-8'}"
                                       itemprop="image"
                                       type="image/webp"
                               >
                             {/if}
                             <!--[if IE 9]></video><![endif]-->
-                            <img src="{$link->getImageLink($product->link_rewrite, $image.id_image, 'cart', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
+                            <img src="{$link->getImageLink($product->link_rewrite, $image.id_image, 'cart', null, ImageManager::retinaSupport())|escape:'url':'UTF-8'}"
                                  alt="{$imageTitle|escape:'htmlall':'UTF-8'}"
                                  title="{$imageTitle|escape:'htmlall':'UTF-8'}"
                                  itemprop="image"
@@ -192,8 +192,8 @@
                           {if !empty($lazy_load)}
                             <noscript>
                               <img class="img-responsive"
-                                   src="{$link->getImageLink($product->link_rewrite, $image.id_image, 'cart', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
-                                   srcset="{$link->getImageLink($product->link_rewrite, $image.id_image, 'cart', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
+                                   src="{$link->getImageLink($product->link_rewrite, $image.id_image, 'cart', null, ImageManager::retinaSupport())|escape:'url':'UTF-8'}"
+                                   srcset="{$link->getImageLink($product->link_rewrite, $image.id_image, 'cart', null, ImageManager::retinaSupport())|escape:'url':'UTF-8'}"
                                    alt="{$imageTitle|escape:'htmlall':'UTF-8'}"
                                    title="{$imageTitle|escape:'htmlall':'UTF-8'}"
                                    itemprop="image"
@@ -205,15 +205,15 @@
                           <picture class="img-responsive" id="thumb_{$image.id_image|intval}">
                             <!--[if IE 9]><video style="display: none;"><![endif]-->
                             {if !empty($webp)}
-                              <source srcset="{$link->getImageLink($product->link_rewrite, $image.id_image, 'cart', 'webp', ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
+                              <source srcset="{$link->getImageLink($product->link_rewrite, $image.id_image, 'cart', 'webp', ImageManager::retinaSupport())|escape:'url':'UTF-8'}"
                                       title="{$imageTitle}"
                                       itemprop="image"
                                       type="image/webp"
                               >
                             {/if}
                             <!--[if IE 9]></video><![endif]-->
-                            <img src="{$link->getImageLink($product->link_rewrite, $image.id_image, 'cart', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
-                                 srcset="{$link->getImageLink($product->link_rewrite, $image.id_image, 'cart', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
+                            <img src="{$link->getImageLink($product->link_rewrite, $image.id_image, 'cart', null, ImageManager::retinaSupport())|escape:'url':'UTF-8'}"
+                                 srcset="{$link->getImageLink($product->link_rewrite, $image.id_image, 'cart', null, ImageManager::retinaSupport())|escape:'url':'UTF-8'}"
                                  alt="{$imageTitle}"
                                  title="{$imageTitle}"
                                  itemprop="image"
