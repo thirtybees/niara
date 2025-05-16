@@ -89,7 +89,7 @@
 
     <div class="form-group">
       <button name="search_locations" class="btn btn-primary">
-        {l s='Search'} <i class="icon icon-search"></i>
+        {l s='Search'} <i class="fas fa-magnifying-glass"></i>
       </button>
     </div>
 

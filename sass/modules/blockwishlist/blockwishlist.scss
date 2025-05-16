@@ -159,6 +159,6 @@ ul.wlp_bought_list li .lnkdel {
   font-size: 14px;
 }
 
-.wishlist > a.checked .icon:before {
-  content: '\f005';
+.wishlist > a.checked .far:before {
+  font-weight: 900;
 }

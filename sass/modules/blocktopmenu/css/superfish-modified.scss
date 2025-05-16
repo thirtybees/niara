@@ -1,5 +1,6 @@
 
 @import "./../../../theme_variables";
+@import "./../../../theme_mixins";
 @import "./../../../vendor_variables";
 
 /*** ESSENTIAL STYLES ***/
@@ -51,14 +52,14 @@
       height: 30px;
       z-index: 2;
       &:after {
-        font-family: $font-icon;
-        content: "\f067";
+        @include fas-pseudo;
+        content: "\f067"; // fa-plus
         font-size: 20px;
         color: $brand-primary;
       }
       &.active {
         &:after {
-          content: "\f068";
+          content: "\f068"; // fa-minus
         }
       }
     }
@@ -90,7 +91,7 @@
   font-weight: 500;
   padding-bottom: 10px;
   &:before {
-    content: "\f0da";
+    content: "\f0da"; // fa-caret-right
     display: inline-block;
     font-family: $font-icon;
     padding-right: 10px;
@@ -208,16 +209,16 @@ ul.sf-menu li li li.sfHover ul {
       color: #fff;
     }
     &:after {
+      @iclude fas-pseudo;
       display: block;
-      font-family: $font-icon;
-      content: "\f067";
+      content: "\f067"; // fa-plus
       position: absolute;
       right: 15px;
       top: 18px;
       font-size: 26px;
     }
     &.active:after{
-      content: "\f068";
+      content: "\f068"; // fa-minus
     }
   }
 }

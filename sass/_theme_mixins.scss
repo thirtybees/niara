@@ -1,0 +1,22 @@
+@mixin fa-pseudo {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin fas-pseudo {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900; // Solid
+  @include fa-pseudo;
+}
+
+@mixin far-pseudo {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 400; // Regular
+  @include fa-pseudo;
+}
+
+@mixin fab-pseudo {
+  font-family: 'Font Awesome 6 Brands';
+  font-weight: 400;
+  @include fa-pseudo;
+}

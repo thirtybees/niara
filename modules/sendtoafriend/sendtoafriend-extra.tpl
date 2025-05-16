@@ -1,6 +1,6 @@
 <li class="sendtofriend">
   <a id="send_friend_button" href="#send_friend_form">
-    <i class="icon icon-fw icon-envelope-o"></i> {l s='Send to a friend' mod='sendtoafriend'}
+    <i class="far fa-envelope fa-fw"></i> {l s='Send to a friend' mod='sendtoafriend'}
   </a>
 
   <div style="display: none;">

@@ -1,6 +1,7 @@
 
 @import "theme_variables";
-@import "vendor_variables";
+@import "theme_mixins";
+//@import "vendor_variables";
 
 $buy-box-bg     : #fff;
 $buy-box-border : none;
@@ -209,14 +210,14 @@ $zoom-in-size: 110px;
 }
 
 .btn-add-to-cart {
-  &.added .icon:before {
-    content: '\f00c'; // fa-check
+  &.added .fas:before {
+    --fa: '\f00c'; // fa-check
   }
   &.disabled {
-    .icon {
+    .fas {
       @include animation(icon-spin 2s infinite linear);
       &:before {
-        content: '\f1ce'; // fa-circle-o-notch
+        --fa: '\f1ce'; // fa-circle-notch
       }
     }
   }

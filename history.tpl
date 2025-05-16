@@ -56,7 +56,7 @@
             <td class="history_invoice">
               {if (isset($order.invoice) && $order.invoice && isset($order.invoice_number) && $order.invoice_number) && isset($invoiceAllowed) && $invoiceAllowed == true}
                 <a class="btn btn-default" href="{$link->getPageLink('pdf-invoice', true, NULL, "id_order={$order.id_order}")|escape:'html':'UTF-8'}" title="{l s='Invoice'}" target="_blank">
-                  <i class="icon icon-file-text large"></i> {l s='PDF'}
+                  <i class="fas fa-file-lines"></i> {l s='PDF'}
                 </a>
               {else}
                 -
@@ -65,7 +65,7 @@
             <td class="history_detail">
               <a class="btn btn-default" href="javascript:showOrder(1, {$order.id_order|intval}, '{$link->getPageLink('order-detail', true, NULL, "id_order={$order.id_order|intval}")|escape:'html':'UTF-8'}');">
               <span>
-                {l s='Details'} <i class="icon icon-chevron-right"></i>
+                {l s='Details'} <i class="fas fa-chevron-right"></i>
               </span>
               </a>
               {if isset($reorderingAllowed) && $reorderingAllowed}
@@ -74,7 +74,7 @@
                 {else}
                   <a class="btn btn-default" href="{$link->getPageLink('order', true, NULL, "submitReorder&id_order={$order.id_order|intval}")|escape:'html':'UTF-8'}" title="{l s='Reorder'}">
                 {/if}
-                    <i class="icon icon-refresh"></i> {l s='Reorder'}
+                    <i class="fas fa-arrows-rotate"></i> {l s='Reorder'}
                   </a>
               {/if}
             </td>

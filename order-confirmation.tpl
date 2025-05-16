@@ -13,11 +13,11 @@
 {if $is_guest}
   <p>{l s='Your order ID is:'} <span class="bold">{$reference_order}</span> . {l s='Your order ID has been sent via email.'}</p>
   <p class="cart_navigation clearfix">
-    <a class="btn btn-lg btn-default" href="{$link->getPageLink('guest-tracking', true, NULL, "id_order={$reference_order|urlencode}&email={$email|urlencode}")|escape:'html':'UTF-8'}" title="{l s='Follow my order'}"><i class="icon icon-chevron-left"></i> {l s='Follow my order'}</a>
+    <a class="btn btn-lg btn-default" href="{$link->getPageLink('guest-tracking', true, NULL, "id_order={$reference_order|urlencode}&email={$email|urlencode}")|escape:'html':'UTF-8'}" title="{l s='Follow my order'}"><i class="fas fa-chevron-left"></i> {l s='Follow my order'}</a>
   </p>
 {else}
   <p class="cart_navigation clearfix">
-    <a class="btn btn-lg btn-default" href="{$link->getPageLink('history', true)|escape:'html':'UTF-8'}" title="{l s='Go to your order history page'}"><i class="icon icon-chevron-left"></i> {l s='View your order history'}</a>
+    <a class="btn btn-lg btn-default" href="{$link->getPageLink('history', true)|escape:'html':'UTF-8'}" title="{l s='Go to your order history page'}"><i class="fas fa-chevron-left"></i> {l s='View your order history'}</a>
   </p>
 {/if}
 {hook h='displayOrderConfirmationBelow'}

@@ -24,7 +24,7 @@
                         class="btn btn-primary"
                         href="{$link->getPageLink('stores')|escape:'html':'UTF-8'}"
                         title="{l s='Our stores' mod='blockstore'}">
-                    <span>{l s='Discover our stores' mod='blockstore'} <i class="icon icon-chevron-right"></i></span>
+                    <span>{l s='Discover our stores' mod='blockstore'} <i class="fas fa-chevron-right"></i></span>
                 </a>
             </div>
         </div>

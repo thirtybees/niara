@@ -10,23 +10,23 @@
     }
   }
   &.alert-success:before {
-    font-family: $font-icon;
+    @include fas-pseudo;
     margin-right: 0.5em;
-    content: "\f058"; // fa-check-circle
+    content: "\f058"; // fa-circle-check
   }
   &.alert-danger:before {
-    font-family: $font-icon;
+    @include fas-pseudo;
     margin-right: 0.5em;
-    content: "\f057"; // fa-times-circle
+    content: "\f057"; // fa-circle-xmark
   }
   &.alert-warning:before {
-    font-family: $font-icon;
+    @include fas-pseudo;
     margin-right: 0.5em;
-    content: "\f06a"; // fa-exclamation-circle
+    content: "\f06a"; // circle-exclamation
   }
   &.alert-info:before {
-    font-family: $font-icon;
+    @include fas-pseudo;
     margin-right: 0.5em;
-    content: "\f05a"; // fa-info-circle
+    content: "\f05a"; // fa-circle-info
   }
 }

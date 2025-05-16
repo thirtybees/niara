@@ -14,8 +14,8 @@
                                 </a>
                             </h5>
                             <span>
-                                <i class="icon icon-time"></i> {$post->published|date_format}
-                                <i class="icon icon-eye"></i> {$post->viewed|intval}
+                                <i class="far fa-clock"></i> {$post->published|date_format}
+                                <i class="far fa-eye"></i> {$post->viewed|intval}
                             </span>
                         </div>
                     </li>
@@ -23,7 +23,7 @@
             </ul>
             <br />
             <div>
-                <a href="{$beesblogPopularPostsBlogUrl|escape:'htmlall':'UTF-8'}" title="{l s='Bees blog' mod='beesblogpopularposts'}" class="btn btn-primary"><span>{l s='All posts' mod='beesblogpopularposts'} <i class="icon icon-chevron-right"></i></span></a>
+                <a href="{$beesblogPopularPostsBlogUrl|escape:'htmlall':'UTF-8'}" title="{l s='Bees blog' mod='beesblogpopularposts'}" class="btn btn-primary"><span>{l s='All posts' mod='beesblogpopularposts'} <i class="fas fa-chevron-right"></i></span></a>
             </div>
         </div>
     </div>

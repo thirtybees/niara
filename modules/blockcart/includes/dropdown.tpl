@@ -112,7 +112,7 @@
               <td class="delete">
                 {if strlen($discount.code)}
                   <a class="delete_voucher" href="{$link->getPageLink("$order_process", true)}?deleteDiscount={$discount.id_discount|intval}" title="{l s='Delete' mod='blockcart'}" rel="nofollow">
-                    <i class="icon icon-times"></i>
+                    <i class="fas fa-xmark"></i>
                   </a>
                 {/if}
               </td>
@@ -175,7 +175,7 @@
 
     <div class="cart-buttons">
       <a id="button_order_cart" class="btn btn-block btn-success" href="{$link->getPageLink("$order_process", true)|escape:"html":"UTF-8"}" title="{l s='Check out' mod='blockcart'}" rel="nofollow">
-        {l s='Check out' mod='blockcart'} <i class="icon icon-angle-right"></i>
+        {l s='Check out' mod='blockcart'} <i class="fas fa-angle-right"></i>
       </a>
     </div>
 
