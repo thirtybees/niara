@@ -30,7 +30,7 @@
 {else}
 	{if isset($showCategoryImage) && $showCategoryImage && isset($categoryImageUrl) && $categoryImageUrl}
 		<div>
-			<img class="img-responsive" alt="{$category->title|escape:'htmlall':'UTF-8'}" src="{$categoryImageUrl|escape:'htmlall':'UTF-8'}">
+			<img class="img-responsive" alt="{$category->title|escape:'htmlall':'UTF-8'}" src="{$link->getMediaLink($categoryImageUrl)|escape:'htmlall':'UTF-8'}">
 			<em>{$category->description}</em>
 			<br />
 			<br />

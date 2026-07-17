@@ -27,7 +27,7 @@
         </div>
         {assign var=imagePath value=Media::getMediaPath(BeesBlog::getPostImagePath($post->id))}
         {if ($imagePath)}
-            <img class="img-responsive" alt="{$post->title|escape:'htmlall':'UTF-8'}" src="{$imagePath|escape:'htmlall':'UTF-8'}">
+            <img class="img-responsive" alt="{$post->title|escape:'htmlall':'UTF-8'}" src="{$link->getMediaLink($imagePath)|escape:'htmlall':'UTF-8'}">
         {/if}
         <h4 class="title_block">{$post->title|escape:'htmlall':'UTF-8'}</h4>
         {include file="./post_info.tpl"}

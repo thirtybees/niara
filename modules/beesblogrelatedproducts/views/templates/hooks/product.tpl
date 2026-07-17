@@ -29,7 +29,7 @@
                             <a class="beesblogrecentposts-title" href="{$post.link|escape:'htmlall':'UTF-8'}" title="{$post.title|escape:'htmlall':'UTF-8'}">
                                 {assign var=imagePath value=Media::getMediaPath(BeesBlog::getPostImagePath($post.id))}
                                 {if ($imagePath)}
-                                    <img class="img-responsive" src="{$imagePath|escape:'htmlall':'UTF-8'}" title="{$post.title|escape:'htmlall':'UTF-8'}" />
+                                    <img class="img-responsive" src="{$link->getMediaLink($imagePath)|escape:'htmlall':'UTF-8'}" title="{$post.title|escape:'htmlall':'UTF-8'}" />
                                 {/if}
                                 {$post.title|escape:'htmlall':'UTF-8'}
                             </a>
