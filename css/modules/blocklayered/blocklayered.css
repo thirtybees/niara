@@ -1,3 +1,24 @@
+#layered_title {
+  padding-top: 10px;
+}
+
+#layered_title .title_block {
+  padding-top: 0;
+  margin-bottom: 0;
+}
+
+#layered_toggle {
+  float: right;
+  font-size: 16px;
+  line-height: 1.42857143;
+}
+
+@media (max-width: 767px) {
+  #layered_block_left .block_content {
+    display: none;
+  }
+}
+
 #enabled_filters {
   margin: 0 0 10px 0;
   background: #eee;
