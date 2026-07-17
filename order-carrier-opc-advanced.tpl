@@ -27,9 +27,12 @@
                     <table class="resume table table-bordered{if !$option.unique_carrier} hide{/if}">
                       <tr>
                         <td class="delivery_option_radio">
-                          <input id="delivery_option_{$id_address|intval}_{$option@index}" class="delivery_option_radio" type="radio" name="delivery_option[{$id_address|intval}]" data-key="{$key}" data-id_address="{$id_address|intval}" value="{$key}"{if isset($delivery_option[$id_address]) && $delivery_option[$id_address] == $key} checked="checked"{/if}><span class="label-text"></span>
+                          <label for="delivery_option_{$id_address|intval}_{$option@index}">
+                            <input id="delivery_option_{$id_address|intval}_{$option@index}" class="delivery_option_radio" type="radio" name="delivery_option[{$id_address|intval}]" data-key="{$key}" data-id_address="{$id_address|intval}" value="{$key}"{if isset($delivery_option[$id_address]) && $delivery_option[$id_address] == $key} checked="checked"{/if}><span class="label-text"></span>
+                          </label>
                         </td>
                         <td class="delivery_option_logo">
+                          <label for="delivery_option_{$id_address|intval}_{$option@index}">
                           {foreach $option.carrier_list as $carrier}
                             {if $carrier.logo}
                               <img class="order_carrier_logo" src="{$carrier.logo|escape:'htmlall':'UTF-8'}" alt="{$carrier.instance->name|escape:'htmlall':'UTF-8'}">
@@ -38,15 +41,17 @@
                               {if !$carrier@last} - {/if}
                             {/if}
                           {/foreach}
+                          </label>
                         </td>
                         <td>
+                          <label for="delivery_option_{$id_address|intval}_{$option@index}">
                           {if $option.unique_carrier}
                             {foreach $option.carrier_list as $carrier}
                               <strong>{$carrier.instance->name|escape:'htmlall':'UTF-8'}</strong>
+                              {if isset($carrier.instance->delay[$cookie->id_lang])}
+                                <br>{l s='Delivery time:'}&nbsp;{$carrier.instance->delay[$cookie->id_lang]|escape:'htmlall':'UTF-8'}
+                              {/if}
                             {/foreach}
-                            {if isset($carrier.instance->delay[$cookie->id_lang])}
-                              <br>{l s='Delivery time:'}&nbsp;{$carrier.instance->delay[$cookie->id_lang]|escape:'htmlall':'UTF-8'}
-                            {/if}
                           {/if}
                           {if count($option_list) > 1}
                             <br>
@@ -60,9 +65,11 @@
                               <span class="best_grade best_grade_price">{l s='The best price'}</span>
                             {/if}
                           {/if}
+                          </label>
                         </td>
                         <td class="delivery_option_price">
-                          <div class="delivery_option_price">
+                          <label for="delivery_option_{$id_address|intval}_{$option@index}">
+                            <div>
                             {if $option.total_price_with_tax && !$option.is_free && (!isset($free_shipping) || (isset($free_shipping) && !$free_shipping))}
                               {if $use_taxes == 1}
                                 {if $priceDisplay == 1}
@@ -76,7 +83,8 @@
                             {else}
                               {l s='Free'}
                             {/if}
-                          </div>
+                            </div>
+                          </label>
                         </td>
                       </tr>
                     </table>
@@ -261,9 +269,9 @@
         <p class="carrier_title">{l s='Leave a message'}</p>
         <div>
           <p>{l s='If you would like to add a comment about your order, please write it in the field below.'}</p>
-        <textarea class="form-control" cols="120" rows="2" name="message" id="message">{strip}
-            {if isset($oldMessage)}{$oldMessage|escape:'html':'UTF-8'}{/if}
-        {/strip}</textarea>
+            <textarea class="form-control" cols="120" rows="2" name="message" id="message">{strip}
+                {if isset($oldMessage)}{$oldMessage|escape:'html':'UTF-8'}{/if}
+            {/strip}</textarea>
         </div>
       {/if}
       {if $recyclablePackAllowed}
@@ -287,12 +295,12 @@
             {if $gift_wrapping_price > 0}
               &nbsp;<i>({l s='Additional cost of'}
               <span class="price" id="gift-price">
-                    {if $priceDisplay == 1}
-                      {convertPrice price=$total_wrapping_tax_exc_cost}
-                    {else}
-                      {convertPrice price=$total_wrapping_cost}
-                    {/if}
-                </span>
+                {if $priceDisplay == 1}
+                  {convertPrice price=$total_wrapping_tax_exc_cost}
+                {else}
+                  {convertPrice price=$total_wrapping_cost}
+                {/if}
+              </span>
               {if $use_taxes && $display_tax_label}
                 {if $priceDisplay == 1}
                   {l s='(tax excl.)'}

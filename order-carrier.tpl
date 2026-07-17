@@ -85,7 +85,7 @@
                         </td>
                         <td class="delivery_option_price">
                           <label for="delivery_option_{$id_address|intval}_{$option@index}">
-                            <div class="delivery_option_price">
+                            <div>
                             {if $option.total_price_with_tax && !$option.is_free && (!isset($free_shipping) || (isset($free_shipping) && !$free_shipping))}
                               {if $use_taxes == 1}
                                 {if $priceDisplay == 1}
