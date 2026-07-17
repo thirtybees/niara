@@ -67,7 +67,6 @@ $(document).ready(function() {
             // update token
             static_token = jsonData.token;
             updateNewAccountToAddressBlock(that.attr('data-adv-api'));
-            $("#header-navbar-right-nav").load(" #header-navbar-right-nav > *");
           }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -583,20 +582,11 @@ function updateNewAccountToAddressBlock(is_adv_api) {
             formatedAddressFieldsValuesList = json.formatedAddressFieldsValuesList;
           if (typeof json.order_opc_adress !== 'undefined' && json.order_opc_adress)
             $('#opc_new_account').html(json.order_opc_adress);
+
           // update block user info
-
-          // 1.5 template
-          if (json.block_user_info !== '' && $('#header_user').length == 1) {
-            var elt = $(json.block_user_info).find('#header_user_info').html();
-            $('#header_user_info').fadeOut('normal', function() {
-              $(this).html(elt).fadeIn();
-            });
-          }
-
-          // 1.6 temmplate
-          if (json.block_user_info_nav !== '' && $('.header_user_info').length == 1) {
-            $('.header_user_info').fadeOut('normal', function() {
-              $(this).html(json.block_user_info_nav).fadeIn();
+          if (json.block_user_info_nav !== '' && $('#blockuserinfo-login').length == 1) {
+            $('#blockuserinfo-login').fadeOut('normal', function() {
+              $(this).replaceWith(json.block_user_info_nav).fadeIn();
             });
           }
 
