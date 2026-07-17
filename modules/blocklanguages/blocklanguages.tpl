@@ -1,4 +1,4 @@
-{if !empty($languages)}
+{if !empty($languages) and count($languages) > 1}
 
   {foreach from=$languages key=k item=language name="languages"}
     {if $language.iso_code == $lang_iso}
