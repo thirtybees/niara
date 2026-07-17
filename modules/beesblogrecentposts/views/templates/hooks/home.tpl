@@ -42,8 +42,8 @@
 									{$post->title|escape:'htmlall':'UTF-8'}
 								</a>
 								<span>
-									<i class="icon icon-time"></i> {$post->published|date_format}
-									<i class="icon icon-eye"></i> {$post->viewed|intval}
+									<i class="far fa-clock"></i> {$post->published|date_format}
+									<i class="far fa-eye"></i> {$post->viewed|intval}
 								</span>
 							</h5>
 							<p>{$post->content|strip_tags|truncate:'150'}</p>

@@ -413,7 +413,7 @@ var ajaxCart = {
         if (parseFloat(discount.price_float) > 0) {
           var delete_link = '';
           if (discount.code.length) {
-            delete_link = '<a class="delete_voucher" href="' + discount.link + '" title="' + delete_txt + '"><i class="icon icon-times"></i></a>';
+            delete_link = '<a class="delete_voucher" href="' + discount.link + '" title="' + delete_txt + '"><i class="fas fa-xmark"></i></a>';
           }
 
           $vouchersTbody.append($(

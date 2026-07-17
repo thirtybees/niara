@@ -59,15 +59,13 @@ input[type="checkbox"], input[type="radio"]{
 
 /*Check box*/
 input[type="checkbox"] + .label-text:before{
-	content: "\f0c8";
-	font-family: "FontAwesome";
+	@include fas-pseudo;
+	content: "\f0c8"; // fa-square
 	speak: none;
 	font-style: normal;
-	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
-	-webkit-font-smoothing:antialiased;
 	width: 1em;
 	display: inline-block;
 	margin-right: 5px;
@@ -76,7 +74,7 @@ input[type="checkbox"] + .label-text:before{
 }
 
 input[type="checkbox"]:checked + .label-text:before{
-	content: "\f14a";
+	content: "\f14a"; // fa-square-check
 	color: #2980b9;
 	animation: effect 250ms ease-in;
 }
@@ -86,29 +84,27 @@ input[type="checkbox"]:disabled + .label-text{
 }
 
 input[type="checkbox"]:disabled + .label-text:before{
-	content: "\f0c8";
+	content: "\f0c8"; // fa-square
 	color: #ccc;
 }
 
 /*Radio*/
 
 input[type="radio"] + .label-text:before{
-	content: "\f10c";
-	font-family: "FontAwesome";
+	@include far-pseudo;
+	content: "\f111"; // fa-circle
 	speak: none;
 	font-style: normal;
-	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
-	-webkit-font-smoothing:antialiased;
 	width: 1em;
 	display: inline-block;
 	margin-right: 5px;
 }
 
 input[type="radio"]:checked + .label-text:before{
-	content: "\f192";
+	content: "\f192"; // fa-circle-dot
 	color: #8e44ad;
 	animation: effect 250ms ease-in;
 }
@@ -118,7 +114,9 @@ input[type="radio"]:disabled + .label-text{
 }
 
 input[type="radio"]:disabled + .label-text:before{
-	content: "\f111";
+	//@include fas-pseudo;
+	font-weight: 900;
+	content: "\f111"; // fa-circle
 	color: #ccc;
 }
 

@@ -338,7 +338,7 @@
                         href="{$link->getPageLink('cart', true, NULL, "add=1&amp;id_product={$product.id_product|intval}&amp;ipa={$product.id_product_attribute|intval}&amp;id_address_delivery={$product.id_address_delivery}&amp;id_customization={$id_customization}&amp;op=down&amp;token={$token_cart}")|escape:'html':'UTF-8'}"
                         rel="nofollow"
                         title="{l s='Subtract'}">
-                        <i class="icon icon-fw icon-minus"></i>
+                        <i class="fas fa-minus fa-fw"></i>
                       </a>
                     {else}
                       <a
@@ -346,7 +346,7 @@
                         class="cart_quantity_down btn btn-default button-minus disabled"
                         href="#"
                         title="{l s='Subtract'}">
-                        <i class="icon icon-fw icon-minus"></i>
+                        <i class="fas fa-minus fa-fw"></i>
                       </a>
                     {/if}
                     <a
@@ -355,7 +355,7 @@
                       href="{$link->getPageLink('cart', true, NULL, "add=1&amp;id_product={$product.id_product|intval}&amp;ipa={$product.id_product_attribute|intval}&amp;id_address_delivery={$product.id_address_delivery}&amp;id_customization={$id_customization}&amp;token={$token_cart}")|escape:'html':'UTF-8'}"
                       rel="nofollow"
                       title="{l s='Add'}">
-                      <i class="icon icon-fw icon-plus"></i>
+                      <i class="fas fa-plus fa-fw"></i>
                     </a>
                   </div>
                 {/if}
@@ -369,7 +369,7 @@
                     href="{$link->getPageLink('cart', true, NULL, "delete=1&amp;id_product={$product.id_product|intval}&amp;ipa={$product.id_product_attribute|intval}&amp;id_customization={$id_customization}&amp;id_address_delivery={$product.id_address_delivery}&amp;token={$token_cart}")|escape:'html':'UTF-8'}"
                     rel="nofollow"
                     title="{l s='Delete'}">
-                    <i class="icon icon-trash"></i>
+                    <i class="far fa-trash-can"></i>
                   </a>
                 {/if}
               </td>
@@ -416,7 +416,7 @@
                   href="{if $opc}{$link->getPageLink('order-opc', true)}{else}{$link->getPageLink('order', true)}{/if}?deleteDiscount={$discount.id_discount}"
                   class="price_discount_delete"
                   title="{l s='Delete'}">
-                  <i class="icon icon-trash"></i>
+                  <i class="far fa-trash-can"></i>
                 </a>
               {/if}
             </td>
@@ -527,12 +527,12 @@
     {if !$opc}
       <a  href="{if $back}{$link->getPageLink('order', true, NULL, 'step=1&amp;back={$back}')|escape:'html':'UTF-8'}{else}{$link->getPageLink('order', true, NULL, 'step=1')|escape:'html':'UTF-8'}{/if}"
           class="btn btn-lg btn-success pull-right standard-checkout btn-full" title="{l s='Proceed to checkout'}">
-        <span>{l s='Proceed to checkout'} <i class="icon icon-chevron-right"></i></span>
+        <span>{l s='Proceed to checkout'} <i class="fas fa-chevron-right"></i></span>
       </a>
     {/if}
     <a href="{if (isset($smarty.server.HTTP_REFERER) && ($smarty.server.HTTP_REFERER == $link->getPageLink('order', true) || $smarty.server.HTTP_REFERER == $link->getPageLink('order-opc', true) || strstr($smarty.server.HTTP_REFERER, 'step='))) || !isset($smarty.server.HTTP_REFERER)}{$link->getPageLink('index')}{else}{$smarty.server.HTTP_REFERER|regex_replace:'/[\?|&]content_only=1/':''|escape:'html':'UTF-8'|secureReferrer}{/if}"
        class="btn btn-lg btn-default btn-full" title="{l s='Continue shopping'}">
-      <i class="icon icon-chevron-left"></i> {l s='Continue shopping'}
+      <i class="fas fa-chevron-left"></i> {l s='Continue shopping'}
     </a>
   </p>
   <div class="clear"></div>

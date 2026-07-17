@@ -219,7 +219,7 @@
       <button type="submit" name="submitAddress" id="submitAddress" class="btn btn-lg btn-success">
         <span>
           {l s='Save'}
-          <i class="icon icon-chevron-right"></i>
+          <i class="fas fa-chevron-right"></i>
         </span>
       </button>
     </div>

@@ -38,7 +38,7 @@
     <p>
       <button type="submit" name="submitReturnMerchandise" class="btn btn-success">
        <span>
-         {l s='Make an RMA slip'} <i class="icon icon-chevron-right"></i>
+         {l s='Make an RMA slip'} <i class="fas fa-chevron-right"></i>
        </span>
       </button>
     </p>
@@ -100,7 +100,7 @@
           <td class="history_invoice">
             {if $return.state == 2}
               <a class="btn btn-default" href="{$link->getPageLink('pdf-order-return', true, NULL, "id_order_return={$return.id_order_return|intval}")|escape:'html':'UTF-8'}" title="{l s='Order return'} {l s='#'}{$return.id_order_return|string_format:"%06d"}">
-                <i class="icon icon-file-text"></i> {l s='Print out'}
+                <i class="fas fa-file-lines"></i> {l s='Print out'}
               </a>
             {else}
               --

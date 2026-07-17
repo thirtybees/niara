@@ -35,7 +35,7 @@
                                                                         <a href="#"
                                                                            data-rel="layered_{$filter.type_lite}_{$id_value}"
                                                                            title="{l s='Cancel' mod='blocklayered'}"><i
-                                                                                    class="icon icon-remove"></i></a>
+                                                                                    class="fas fa-xmark"></i></a>
                                                                         {l s='%1$s: %2$s' mod='blocklayered' sprintf=[$filter.name, $value.name]}
                                                                     </li>
                                                                 {/if}

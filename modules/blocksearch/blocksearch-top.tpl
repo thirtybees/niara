@@ -6,7 +6,7 @@
     <div class="input-group input-group-lg">
       <input class="form-control" type="search" id="search_query_top" name="search_query" placeholder="{l s='Search' mod='blocksearch'}" value="{$search_query|escape:'htmlall':'UTF-8'|stripslashes}" required aria-label="Search our site">
       <span class="input-group-btn">
-        <button class="btn btn-primary" type="submit" name="submit_search" title="{l s='Search' mod='blocksearch'}"><i class="icon icon-search"></i></button>
+        <button class="btn btn-primary" type="submit" name="submit_search" title="{l s='Search' mod='blocksearch'}"><i class="fas fa-magnifying-glass"></i></button>
       </span>
     </div>
   </form>

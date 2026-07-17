@@ -21,7 +21,7 @@
           <input class="form-control" type="password" id="confirm_password" name="confirm_password" autocomplete="new-password" required>
         </div>
         <div class="submit">
-          <button type="submit" class="btn btn-lg btn-success"><span>{l s='Change password'} <i class="icon icon-chevron-right"></i></span></button>
+          <button type="submit" class="btn btn-lg btn-success"><span>{l s='Change password'} <i class="fas fa-chevron-right"></i></span></button>
         </div>
       </fieldset>
     </form>

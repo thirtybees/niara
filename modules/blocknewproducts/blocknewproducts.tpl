@@ -41,7 +41,7 @@
                     <a href="{$link->getPageLink('new-products')|escape:'html'}"
                        title="{l s='All new products' mod='blocknewproducts'}"
                        class="btn btn-primary"><span>{l s='All new products' mod='blocknewproducts'} <i
-                                    class="icon icon-chevron-right"></i></span></a>
+                                    class="fas fa-chevron-right"></i></span></a>
                 </div>
             {else}
                 <p>&raquo; {l s='No new products at this time.' mod='blocknewproducts'}</p>

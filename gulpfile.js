@@ -25,6 +25,11 @@ var cleanUp = [
 	'.css/**/*.css.map'
 ];
 
+var compileSass = [
+	'./sass/**/*.scss',
+	'!./sass/vendor/*/*.scss'
+];
+
 gulp.task('create-folders', function(callback) {
 	var total = createFolders.length;
 	var done  = 0;
@@ -54,7 +59,7 @@ function displayNotification(msg) {
 }
 
 gulp.task('compile-css', function() {
-	return gulp.src('./sass/**/*.scss')
+	return gulp.src(compileSass)
 		.pipe(gulpif(options.sourcemaps, sourcemaps.init()))
 		.pipe(
 			sass({
@@ -73,7 +78,7 @@ gulp.task('compile-css', function() {
 
 
 gulp.task('watch-sass', function() {
-	gulp.watch('./sass/**/*.scss', gulp.series('compile-css'));
+	gulp.watch(compileSass, gulp.series('compile-css'));
 });
 
 gulp.task('clean-up', function() {

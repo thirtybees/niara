@@ -10,11 +10,11 @@
         </span>
     {/if}
     {if isset($showDate) && $showDate}
-        <i class="icon icon-time"></i>&nbsp;
+        <i class="far fa-clock"></i>&nbsp;
         {$post->published|date_format}
     {/if}
 
-    <i class="icon icon-sitemap"></i>&nbsp;
+    <i class="fas fa-sitemap"></i>&nbsp;
     <span>
         <a href="{BeesBlog::GetBeesBlogLink('beesblog_category', ['cat_rewrite' => $post->category->link_rewrite])}">
             {$post->category->title|escape:'htmlall':'UTF-8'}
@@ -22,7 +22,7 @@
     </span>
     {if isset($showComments) && $showComments && $post->comments_enabled}
         <span class="beesblog-comment-counter">
-            <i class="icon icon-comments"></i>&nbsp;
+            <i class="fas fa-comments"></i>&nbsp;
             <a title="{l s='0 Comments' mod='beesblog'}"
                href="{$postPath|escape:'htmlall':'UTF-8'}#disqus_thread"
                data-disqus-identifier="{'blog-'|cat:Context::getContext()->language->iso_code|strtolower|cat:'-'|cat:$post->id|intval}"
@@ -32,7 +32,7 @@
         </span>
     {/if}
     {if isset($showViewed) && $showViewed}
-        <i class="icon icon-eye-open"></i>
+        <i class="far fa-eye"></i>
         {l s=' views' mod='beesblog'} ({$post->viewed|escape:'htmlall':'UTF-8'})
     {/if}
 </div>

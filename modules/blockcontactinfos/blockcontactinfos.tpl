@@ -14,13 +14,13 @@
       {/if}
       {if !empty($blockcontactinfos_phone)}
         <li>
-          <i class="icon icon-phone"></i>
+          <i class="fas fa-phone"></i>
           <a href="tel:{$blockcontactinfos_phone|escape:'html':'UTF-8'}">{$blockcontactinfos_phone|escape:'html':'UTF-8'}</a>
         </li>
       {/if}
       {if !empty($blockcontactinfos_email)}
         <li>
-          <i class="icon icon-envelope-alt"></i>
+          <i class="far fa-envelope"></i>
           {mailto address=$blockcontactinfos_email|escape:'html':'UTF-8' encode="hex"}
         </li>
       {/if}

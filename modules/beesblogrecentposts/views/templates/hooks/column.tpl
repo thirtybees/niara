@@ -15,8 +15,8 @@
                                 </a>
                             </h5>
                             <span>
-                                <i class="icon icon-time"></i> {$post->published|date_format}
-                                <i class="icon icon-eye"></i> {$post->viewed|intval}
+                                <i class="far fa-clock"></i> {$post->published|date_format}
+                                <i class="far fa-eye"></i> {$post->viewed|intval}
                             </span>
                         </div>
                     </li>

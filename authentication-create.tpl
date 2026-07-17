@@ -262,7 +262,7 @@
     {if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'html':'UTF-8'}">{/if}
     <p class="required"><sup>*</sup>{l s='Required field'}</p>
     <button type="submit" name="submitAccount" id="submitAccount" class="btn btn-lg btn-success">
-      {l s='Register'} <i class="icon icon-chevron-right"></i>
+      {l s='Register'} <i class="fas fa-chevron-right"></i>
     </button>
   </div>
 </form>

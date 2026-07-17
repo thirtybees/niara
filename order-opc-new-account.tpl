@@ -20,7 +20,7 @@
         <a href="{$link->getPageLink('password', true)|escape:'html':'UTF-8'}" class="lost_password">{l s='Forgot your password?'}</a>
         <div class="submit">
           {if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'html':'UTF-8'}">{/if}
-          <button type="submit" id="SubmitLogin" name="SubmitLogin" class="btn btn-lg btn-success"><span><i class="icon icon-lock"></i> {l s='Sign in'}</span></button>
+          <button type="submit" id="SubmitLogin" name="SubmitLogin" class="btn btn-lg btn-success"><span><i class="fas fa-lock"></i> {l s='Sign in'}</span></button>
         </div>
       </div>
     </fieldset>
@@ -44,7 +44,7 @@
               <li>- {l s='Separate billing and shipping addresses'}</li>
             </ul>
             <p class="opc-button">
-              <button type="submit" class="btn btn-success" id="opc_createAccount"><span><i class="icon icon-user"></i> {l s='Create an account'}</span></button>
+              <button type="submit" class="btn btn-success" id="opc_createAccount"><span><i class="fas fa-user"></i> {l s='Create an account'}</span></button>
             </p>
           </div>
         </div>
@@ -414,7 +414,7 @@
             <p class="required opc-required pull-right">
               <sup>*</sup>{l s='Required field'}
             </p>
-            <button type="submit" name="submitAccount" id="submitAccount" class="btn btn-lg btn-success"><span>{l s='Save'} <i class="icon icon-chevron-right"></i></span></button>
+            <button type="submit" name="submitAccount" id="submitAccount" class="btn btn-lg btn-success"><span>{l s='Save'} <i class="fas fa-chevron-right"></i></span></button>
             <div id="opc_account_errors" class="alert alert-danger" style="display:none;"></div>
           </div>
           <div style="display: none;" id="opc_account_saved" class="alert alert-success">

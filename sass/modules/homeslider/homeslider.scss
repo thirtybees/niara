@@ -1,5 +1,6 @@
 
 @import "./../../theme_variables";
+@import "./../../theme_mixins";
 @import "./../../vendor_variables";
 
 #homepage-slider {
@@ -9,6 +10,7 @@
     // .bx-pager { bottom: auto; }
     .bx-next{
       &:before{
+        @include fas-pseudo;
         content: "\f054";
         font-size: 30px;
         line-height: 30px;
@@ -16,6 +18,7 @@
     }
     .bx-prev{
       &:before{
+        @include fas-pseudo;
         content: "\f053";
         font-size: 30px;
         line-height: 30px;

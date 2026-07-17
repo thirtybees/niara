@@ -19,7 +19,7 @@
     padding-bottom: 0.3em;
     padding-top: 0.3em;
   }
-  .icon-2x{
+  .fa-2x{
     font-size: 1.4em;
   }
   #newsletter-input.form-control{
@@ -35,8 +35,12 @@
     border-left:none;
     color: $gray-lighter;
   }
-  #blockcontactinfos .icon{
-    /*display: none;*/
+  #blockcontactinfos{
+    .fas,
+    .far,
+    .fab{
+      /*display: none;*/
+    }
   }
 }
 

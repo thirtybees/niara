@@ -22,14 +22,14 @@
       {if $nbComments != 0}
         <li>
           <a href="#product-reviews" class="reviews">
-            <i class="icon icon-fw icon-comment"></i> {l s='Read reviews' mod='productcomments'} (<span itemprop="reviewCount">{$nbComments}</span>)
+            <i class="fas fa-comment fa-fw"></i> {l s='Read reviews' mod='productcomments'} (<span itemprop="reviewCount">{$nbComments}</span>)
           </a>
         </li>
       {/if}
       {if ($too_early == false && ($is_logged || $allow_guests))}
         <li>
           <a class="open-comment-form" href="#new_comment_form">
-            <i class="icon icon-fw icon-pencil"></i> {l s='Write a review' mod='productcomments'}
+            <i class="fas fa-pencil fa-fw"></i> {l s='Write a review' mod='productcomments'}
           </a>
         </li>
       {/if}

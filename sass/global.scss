@@ -5,10 +5,12 @@
 
 // Vendor variable overrides
 @import "theme_variables";
+@import "theme_mixins";
 
 // Vendor styles
 @import "vendor/bootstrap";
 @import "vendor/font-awesome";
+@import "vendor/font-awesome-v4";
 
 // Vendor style overrides + new components
 @import "partials/alerts";

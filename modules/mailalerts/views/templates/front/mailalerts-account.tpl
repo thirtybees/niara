@@ -16,7 +16,7 @@
             </a>
             <div class="product-content">
             <span class="remove">
-              <i class="icon icon-remove" rel="ajax_id_mailalert_{$mailAlert.id_product}_{$mailAlert.id_product_attribute}"></i>
+              <i class="fas fa-xmark" rel="ajax_id_mailalert_{$mailAlert.id_product}_{$mailAlert.id_product_attribute}"></i>
             </span>
               <h5><a class="product-name" href="{$link->getProductLink($mailAlert.id_product, null, null, null, null, $mailAlert.id_shop)|escape:'html'}" title="{$mailAlert.name|escape:'html':'UTF-8'}">{$mailAlert.name|escape:'html':'UTF-8'}</a></h5>
               <div class="product-description"><small>{$mailAlert.attributes_small|escape:'html':'UTF-8'}</small></div>

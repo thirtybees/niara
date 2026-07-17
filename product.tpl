@@ -90,7 +90,7 @@
               </picture>
               {if !$jqZoomEnabled && !$content_only}
                 <span class="span_link" title="{l s='Zoom in'}">
-                    <i class="icon icon-search-plus"></i>
+                    <i class="fas fa-magnifying-glass-plus"></i>
                   </span>
               {/if}
             </a>
@@ -440,12 +440,12 @@
                       <input type="tel" min="1" name="qty" id="quantity_wanted" class="text text-center form-control" value="{if isset($quantityBackup)}{$quantityBackup|intval}{else}{if $product->minimal_quantity > 1}{$product->minimal_quantity}{else}1{/if}{/if}">
                       <div class="input-group-btn">
                         <a href="#" data-field-qty="qty" class="btn btn-default button-minus product_quantity_down" title="Decrease" aria-label="Decrease">
-                          <i class="icon icon-fw icon-angle-down"></i>
+                          <i class="fas fa-angle-down fa-fw"></i>
                         </a>
                       </div>
                       <div class="input-group-btn">
                         <a href="#" data-field-qty="qty" class="btn btn-default button-plus product_quantity_up" title="Increase" aria-label="Increase">
-                          <i class="icon icon-fw icon-angle-up"></i>
+                          <i class="fas fa-angle-up fa-fw"></i>
                         </a>
                       </div>
                     </div>
@@ -454,7 +454,7 @@
                 <div{if !$product->available_for_order || (isset($restricted_country_mode) && $restricted_country_mode) || $PS_CATALOG_MODE} class="unvisible"{/if}>
                   <p id="add_to_cart" class="buttons_bottom_block no-print" {if !$allow_oosp && $product->quantity <= 0}style="display:none"{/if}>
                     <button type="submit" name="Submit" class="btn btn-block btn-lg btn-success btn-add-to-cart">
-                      <i class="icon icon-shopping-basket"></i>
+                      <i class="fas fa-basket-shopping"></i>
                       <span>{if $content_only && (isset($product->customization_required) && $product->customization_required)}{l s='Customize'}{else}{l s='Add to cart'}{/if}</span>
                     </button>
                   </p>
@@ -471,7 +471,7 @@
             {if !empty($HOOK_EXTRA_LEFT)}{$HOOK_EXTRA_LEFT}{/if}
             <li>
               <a href="javascript:print();" title="{l s='Print this page'}">
-                <i class="icon icon-fw icon-print"></i> {l s='Print'}
+                <i class="fas fa-print fa-fw"></i> {l s='Print'}
               </a>
             </li>
           </ul>
@@ -611,7 +611,7 @@
                         <p class="text-muted">{$attachment.description|escape:'html':'UTF-8'}</p>
                       {/if}
                       <a class="btn btn-default btn-block" href="{$link->getPageLink('attachment', true, NULL, "id_attachment={$attachment.id_attachment}")|escape:'html':'UTF-8'}">
-                        <i class="icon icon-download"></i> {l s="Download"} ({Tools::formatBytes($attachment.file_size, 2)})
+                        <i class="far fa-circle-down"></i> {l s="Download"} ({Tools::formatBytes($attachment.file_size, 2)})
                       </a>
                     </div>
                   </div>
