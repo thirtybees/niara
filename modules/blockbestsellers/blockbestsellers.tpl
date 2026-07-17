@@ -31,7 +31,7 @@
                                    class="products-block-image content_img clearfix">
                                   {if !empty($lazy_load)}
                                     <noscript>
-                                      <img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'small', null, ImageManager::retinaSupport())|escape:'html'}"
+                                      <img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'small', null, ImageManager::retinaSupport())|escape:'url'}"
                                            alt="{$product.legend|escape:'html':'UTF-8'}"
                                            width="{getWidthSize|intval type='small'}"
                                            height="{getHeightSize|intval type='small'}"
@@ -41,13 +41,13 @@
                                   <picture class="img-responsive{if !empty($lazy_load)} tb-lazy-image{/if}">
                                     <!--[if IE 9]><video style="display: none;"><![endif]-->
                                     {if !empty($webp)}
-                                    <source {if !empty($lazy_load)}srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w" data-{/if}srcset="{$link->getImageLink($product.link_rewrite, $product.id_image, 'small', 'webp', ImageManager::retinaSupport())|escape:'html'}"
+                                    <source {if !empty($lazy_load)}srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w" data-{/if}srcset="{$link->getImageLink($product.link_rewrite, $product.id_image, 'small', 'webp', ImageManager::retinaSupport())|escape:'url'}"
                                             sizes="1px"
                                             type="image/webp"
                                     >
                                     {/if}
                                     <!--[if IE 9]></video><![endif]-->
-                                    <img {if !empty($lazy_load)}srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w" data-{/if}srcset="{$link->getImageLink($product.link_rewrite, $product.id_image, 'small', null, ImageManager::retinaSupport())|escape:'html'}"
+                                    <img {if !empty($lazy_load)}srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w" data-{/if}srcset="{$link->getImageLink($product.link_rewrite, $product.id_image, 'small', null, ImageManager::retinaSupport())|escape:'url'}"
                                          {if !empty($lazy_load)}src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="{/if}
                                          sizes="1px"
                                          alt="{$product.legend|escape:'html':'UTF-8'}"

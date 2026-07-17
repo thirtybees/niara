@@ -3,7 +3,7 @@
     <a href="{$link->getProductLink($product.id_product, $product.link_rewrite, $product.category, null, null, $product.id_shop, $product.id_product_attribute, false, false, true)|escape:'html':'UTF-8'}">
       {if !empty($lazy_load)}
         <noscript>
-          <img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'small', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
+          <img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'small', null, ImageManager::retinaSupport())|escape:'url':'UTF-8'}"
                alt="{$product.name|escape:'html':'UTF-8'}"
                width="{getWidthSize|intval type='small'}"
                height="{getHeightSize|intval type='small'}"
@@ -13,13 +13,13 @@
       <picture {if !empty($lazy_load)}class="tb-lazy-image"{/if}>
         <!--[if IE 9]><video style="display: none;"><![endif]-->
         {if !empty($webp)}
-          <source {if !empty($lazy_load)}srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w" data-{/if}srcset="{$link->getImageLink($product.link_rewrite, $product.id_image, 'small', 'webp', ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
+          <source {if !empty($lazy_load)}srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w" data-{/if}srcset="{$link->getImageLink($product.link_rewrite, $product.id_image, 'small', 'webp', ImageManager::retinaSupport())|escape:'url':'UTF-8'}"
                   alt="{$product.name|escape:'html':'UTF-8'}"
                   type="image/webp"
           >
         {/if}
         <!--[if IE 9]></video><![endif]-->
-        <img {if !empty($lazy_load)}srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w" data-{/if}srcset="{$link->getImageLink($product.link_rewrite, $product.id_image, 'small', null, ImageManager::retinaSupport())|escape:'html':'UTF-8'}"
+        <img {if !empty($lazy_load)}srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII= 1w" data-{/if}srcset="{$link->getImageLink($product.link_rewrite, $product.id_image, 'small', null, ImageManager::retinaSupport())|escape:'url':'UTF-8'}"
              {if !empty($lazy_load)}src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="{/if}
              alt="{$product.name|escape:'html':'UTF-8'}"
              width="{getWidthSize|intval type='small'}"

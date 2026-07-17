@@ -12,7 +12,7 @@
         {foreach from=$mailAlerts item=mailAlert name=myLoop}
           <li class="clearfix">
             <a class="products-block-image" href="{$link->getProductLink($mailAlert.id_product, null, null, null, null, $mailAlert.id_shop)}" title="{$mailAlert.name|escape:'html':'UTF-8'}">
-              <img src="{$link->getImageLink($mailAlert.link_rewrite, $mailAlert.cover, 'small')|escape:'html'}" alt="">
+              <img src="{$link->getImageLink($mailAlert.link_rewrite, $mailAlert.cover, 'small')|escape:'url'}" alt="">
             </a>
             <div class="product-content">
             <span class="remove">
