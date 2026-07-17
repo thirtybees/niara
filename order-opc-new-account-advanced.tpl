@@ -4,7 +4,7 @@
   <form action="{$link->getPageLink('authentication', true, NULL, "back=order-opc")|escape:'html':'UTF-8'}" method="post" id="login_form" class="box">
     <fieldset>
       <h3 class="page-subheading">{l s='Already registered?'}</h3>
-      <a href="{$link->getPageLink('authentication', true)|escape:'html':'UTF-8'}" id="openLoginFormBlock">&raquo; {l s='Click here'}</a>
+      <p class="opc-button"><button type="button" class="btn btn-success" id="openLoginFormBlock"><span>{l s='Click here'}</span></button></p>
       <div id="login_form_content" style="display:none;">
 
         <div id="opc_login_errors" class="alert alert-danger" style="display:none;"></div>
@@ -18,6 +18,9 @@
           <input class="form-control validate" type="password" id="login_passwd" name="login_passwd" data-validate="isPasswd">
         </div>
         <a href="{$link->getPageLink('password', true)|escape:'html':'UTF-8'}" class="lost_password">{l s='Forgot your password?'}</a>
+        <p class="opc-button">
+          <button type="button" class="btn btn-default" id="opc_back_to_account_choice_login"><span><i class="icon icon-chevron-left"></i> {l s='Back'}</span></button>
+        </p>
         <div class="submit">
           {if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'html':'UTF-8'}">{/if}
           <button type="submit" id="SubmitLogin" name="SubmitLogin" data-adv-api="1" class="btn btn-lg btn-success"><span><i class="icon icon-lock"></i> {l s='Sign in'}</span></button>
@@ -49,6 +52,9 @@
           </div>
         </div>
         <div id="opc_account_form" class="unvisible">
+          <p class="opc-button">
+            <button type="button" class="btn btn-default" id="opc_back_to_account_choice"><span><i class="icon icon-chevron-left"></i> {l s='Back'}</span></button>
+          </p>
           {$HOOK_CREATE_ACCOUNT_TOP}
 
           <div id="opc_account_errors" class="alert alert-danger" style="display:none;"></div>
