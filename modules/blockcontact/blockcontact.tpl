@@ -10,12 +10,12 @@
             {if $telnumber != ''}
                 <p class="tel">
                     <span class="label">{l s='Phone:' mod='blockcontact'}</span>
-                    <a href="tel:{$telnumber|escape:'html':'UTF-8'}" title="{$telnumber|escape:'html':'UTF-8'}">{$telnumber|escape:'html':'UTF-8'}</a>
+                    <a href="tel:{$telnumber|escape:'url':'UTF-8'}" title="{$telnumber|escape:'html':'UTF-8'}">{$telnumber|escape:'html':'UTF-8'}</a>
                 </p>
             {/if}
             {if $email != ''}
                 <address>
-                    <a href="mailto:{$email|escape:'html':'UTF-8'}"
+                    <a href="mailto:{$email|escape:'url':'UTF-8'}"
                        title="{l s='Contact our expert support team!' mod='blockcontact'}">
                         {l s='Contact our expert support team!' mod='blockcontact'}
                     </a>
