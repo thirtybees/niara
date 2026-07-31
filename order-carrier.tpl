@@ -85,7 +85,6 @@
                         </td>
                         <td class="delivery_option_price">
                           <label for="delivery_option_{$id_address|intval}_{$option@index}">
-                            <div class="delivery_option_price">
                             {if $option.total_price_with_tax && !$option.is_free && (!isset($free_shipping) || (isset($free_shipping) && !$free_shipping))}
                               {if $use_taxes == 1}
                                 {if $priceDisplay == 1}
@@ -99,7 +98,6 @@
                             {else}
                               {l s='Free'}
                             {/if}
-                            </div>
                         </label>
                         </td>
                       </tr>
@@ -113,14 +111,14 @@
                             </td>
                           {/if}
                           {assign var="first" value=current($option.carrier_list)}
-                          <td class="delivery_option_logo{if $first.product_list[0].carrier_list[0] eq 0} hide{/if}">
+                          <td class="delivery_option_logo">
                             {if $first.logo}
                               <img class="order_carrier_logo" src="{$first.logo|escape:'htmlall':'UTF-8'}" alt="{$first.instance->name|escape:'htmlall':'UTF-8'}">
                             {elseif !$option.unique_carrier}
                               {$first.instance->name|escape:'htmlall':'UTF-8'}
                             {/if}
                           </td>
-                          <td class="{if $first.product_list[0].carrier_list[0] eq 0} hide{/if}">
+                          <td>
                             <input type="hidden" value="{$first.instance->id|intval}" name="id_carrier">
                             {if isset($first.instance->delay[$cookie->id_lang])}
                               <i class="icon icon-info-sign"></i>
@@ -151,7 +149,7 @@
                                   {else}
                                     {$product.name|escape:'htmlall':'UTF-8'}
                                     {if isset($product.attributes) && $product.attributes}
-                                      {$product.attributes|escape:'htmlall':'UTF-8'}
+                                      &nbsp;{$product.attributes|escape:'htmlall':'UTF-8'}
                                     {/if}
                                     {if !$product@last}
                                       ,&nbsp;
@@ -164,7 +162,6 @@
                             {/if}
                           </td>
                           <td rowspan="{$option.carrier_list|@count}" class="delivery_option_price">
-                            <div class="delivery_option_price">
                               {if $option.total_price_with_tax && !$option.is_free && (!isset($free_shipping) || (isset($free_shipping) && !$free_shipping))}
                                 {if $use_taxes == 1}
                                   {if $priceDisplay == 1}
@@ -178,20 +175,19 @@
                               {else}
                                 {l s='Free'}
                               {/if}
-                            </div>
                           </td>
                         </tr>
                         {foreach $option.carrier_list as $carrier}
                           {if $carrier@iteration != 1}
                             <tr>
-                              <td class="delivery_option_logo{if $carrier.product_list[0].carrier_list[0] eq 0} hide{/if}">
+                              <td class="delivery_option_logo">
                                 {if $carrier.logo}
                                   <img class="order_carrier_logo" src="{$carrier.logo|escape:'htmlall':'UTF-8'}" alt="{$carrier.instance->name|escape:'htmlall':'UTF-8'}">
                                 {elseif !$option.unique_carrier}
                                   {$carrier.instance->name|escape:'htmlall':'UTF-8'}
                                 {/if}
                               </td>
-                              <td class="{if $carrier.product_list[0].carrier_list[0] eq 0} hide{/if}">
+                              <td>
                                 <input type="hidden" value="{$first.instance->id|intval}" name="id_carrier">
                                 {if isset($carrier.instance->delay[$cookie->id_lang])}
                                   <i class="icon icon-info-sign"></i>
@@ -222,7 +218,7 @@
                                       {else}
                                         {$product.name|escape:'htmlall':'UTF-8'}
                                         {if isset($product.attributes) && $product.attributes}
-                                          {$product.attributes|escape:'htmlall':'UTF-8'}
+                                          &nbsp;{$product.attributes|escape:'htmlall':'UTF-8'}
                                         {/if}
                                         {if !$product@last}
                                           ,&nbsp;
