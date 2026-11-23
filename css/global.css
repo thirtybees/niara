@@ -9598,7 +9598,12 @@ body.content_only {
 #footer #newsletter-input.form-control {
   background: #121212;
   border-color: #c8c8c8;
-  color: #777777;
+  color: #c8c8c8;
+}
+
+#footer #newsletter-input.form-control::placeholder {
+  color: #b0b0b0;
+  opacity: 1;
 }
 
 #footer .btn {
