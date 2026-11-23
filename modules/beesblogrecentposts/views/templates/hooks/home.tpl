@@ -37,7 +37,7 @@
 										<img class="img-responsive" src="{$imagePath|escape:'htmlall':'UTF-8'}" title="{$post->title|escape:'htmlall':'UTF-8'}" />
 									{/if}
 								</a>
-							<h5>
+							<h3>
 								<a class="beesblogrecentpostshome-title" href="{$post->link|escape:'htmlall':'UTF-8'}" title="{$post->title|escape:'htmlall':'UTF-8'}">
 									{$post->title|escape:'htmlall':'UTF-8'}
 								</a>
@@ -45,7 +45,7 @@
 									<i class="icon icon-time"></i> {$post->published|date_format}
 									<i class="icon icon-eye"></i> {$post->viewed|intval}
 								</span>
-							</h5>
+							</h3>
 							<p>{$post->content|strip_tags|truncate:'150'}</p>
 
 							<p><a class="btn btn-primary" href="{$post->link|escape:'htmlall':'UTF-8'}" title="{$post->title|escape:'htmlall':'UTF-8'}">{l s='Read More' mod='beesblogrecentposts'}</a></p>
